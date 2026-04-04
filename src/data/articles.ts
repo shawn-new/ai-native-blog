@@ -112,6 +112,47 @@ export const articles: Article[] = [
     }
   },
   {
+    id: "sanders-ai-response",
+    titleEn: "The Sanders AI Paradox: Why Stopping Progress Is the Wrong Fight",
+    titleZh: "桑德斯 AI 悖论：阻止进步是一场打错了的仗",
+    content: {
+      title: "The Sanders AI Paradox",
+      scenario: {
+        label: "Scenario: The Senator's Warning / 场景：参议员的警告",
+        english: "Bernie Sanders just dropped a YouTube video making a case that should be taken seriously: AI is being built by and for the billionaire class, and it will be weaponized against working people. He cites mass displacement, surveillance capitalism, and the concentration of AI infrastructure in the hands of a few mega-corporations. His diagnosis captures real anxieties. But his prescriptions—halt AI development, wait for big companies to comply with regulation, treat AI as an inherently top-down threat—are dangerously wrong. The antidote to corporate AI is not less AI. It is more of the right kind.",
+        chinese: "伯尼·桑德斯刚发布了一段 YouTube 视频，提出了一个值得认真对待的论点：AI 是由亿万富翁阶级为自身利益打造的，它将被用来对付普通劳动者。他列举了大规模的就业替代、监控资本主义，以及 AI 基础设施被少数巨型企业垄断等问题。他的诊断抓住了真实存在的忧虑。但他的处方——叫停 AI 发展、等待大公司服从监管、将 AI 视为一种天生自上而下的威胁——却大错特错。对抗企业 AI 的解药，不是更少的 AI，而是更多正确的 AI。"
+      },
+      points: {
+        label: "Three Rebuttals / 三点反驳",
+        items: [
+          {
+            titleEn: "1. AI Is the Most Democratizing Tool Since the Internet",
+            titleZh: "1. AI 是互联网以来最具民主化潜力的工具",
+            english: "Sanders frames AI as a top-down weapon wielded by corporations against individuals. The reality is the opposite asymmetry is also possible. A single person with a laptop and access to frontier AI models can now research legislation, fact-check political messaging, analyze financial disclosures, detect manipulation in media, and build advocacy tools—tasks that once required an entire team with institutional resources. The same AI that helps a hedge fund process earnings calls can help a teacher in rural Montana generate a nuanced lesson plan. The same model that powers a corporate content machine can help an independent journalist identify propaganda patterns. Sanders is right that corporations will exploit AI; he is wrong to conclude that ordinary people cannot exploit it right back. The answer is not to refuse the weapon—it is to arm yourself with it first.",
+            chinese: "桑德斯将 AI 描绘成企业对付个人的自上而下的武器。但现实是，反向的权力不对称同样可能发生。一个人拿着一台笔记本电脑，借助前沿 AI 模型，现在就能研究立法、核实政治信息、分析财务披露、识别媒体中的操纵手法，并构建倡导工具——而这些工作曾经需要一整支拥有机构资源的团队才能完成。同样的 AI 帮助对冲基金处理财报电话，也能帮助蒙大拿州乡村的教师生成有深度的课程计划。同一个模型驱动着企业的内容机器，也能帮助独立记者识别宣传模式。桑德斯说企业会利用 AI 是对的，但他由此得出普通人无法反过来利用它的结论，则是错的。答案不是拒绝这件武器——而是抢先武装自己。"
+          },
+          {
+            titleEn: "2. A Pause Doesn't Freeze the Status Quo—It Locks In the Power Imbalance",
+            titleZh: "2. 暂停不会冻结现状——它只会固化权力失衡",
+            english: "Sanders calls for halting the buildout of new AI infrastructure and slowing frontier development. This sounds protective. It is not. A pause today does not erase what Google, Microsoft, Amazon, and Meta already have. It freezes the advantage in place. The companies that have spent billions on proprietary training data, internal models, and AI-augmented workforces keep their edge permanently. The open-source community, the independent researchers, the scrappy startups who need the frontier to advance in order to compete—they are the ones left behind. The correct response to a monopoly threat is not to freeze the technology; it is to accelerate adversarial research and safety-first AI development. This means building models that are privacy-preserving by design, publicly auditable, resistant to manipulation, and optimized for individual empowerment rather than engagement metrics. Stopping progress is not a safety strategy—it is a surrender strategy that hands the existing players a permanent moat.",
+            chinese: "桑德斯呼吁叫停新 AI 基础设施的建设，并放慢前沿发展。这听起来像是在保护大众，但实际上并非如此。今天的暂停不会抹去谷歌、微软、亚马逊和 Meta 已经拥有的一切，它只会将现有优势永久固化。那些已经在专有训练数据、内部模型和 AI 增强型员工队伍上投入数十亿美元的公司，将永久保持领先。开源社区、独立研究者、需要前沿技术持续演进才能参与竞争的初创企业——这些人才是真正被甩在后面的。应对垄断威胁的正确方法，不是冻结技术，而是加速对抗性研究和安全优先的 AI 开发。这意味着构建在设计上保护隐私、可公开审计、抗操纵、以赋能个人为优化目标而非以提升参与指标为目标的模型。阻止进步不是一种安全策略——它是一种投降策略，将会把永久的护城河拱手相让给现有玩家。"
+          },
+          {
+            titleEn: "3. Waiting for Corporate Compliance Is Not a Strategy—It Is Wishful Thinking",
+            titleZh: "3. 等待企业合规不是策略——那是一厢情愿",
+            english: "Sanders' third pillar is regulatory pressure: force big companies to comply, and the problem is solved. This would be compelling if corporations had ever voluntarily constrained a tool that made them money. They have not. They lobby, litigate, and delay. By the time a regulatory framework passes, gets appealed, and is actually enforced, the technology has moved on by a generation. More critically, the assumption here is that the government can regulate what it does not itself understand or use. The track record is not encouraging. The real strategy is not to wait for compliance—it is to create conditions where complying with user-protective standards is the only commercially viable path. That means supporting open-source AI that shifts market expectations, building and adopting AI tools that work for individuals rather than against them, and funding adversarial research that exposes manipulation at scale. Act now, in your own hands, with the tools already available. The cavalry is not coming. You are the cavalry.",
+            chinese: "桑德斯的第三个支柱是监管压力：迫使大公司服从规定，问题就解决了。如果企业历史上曾经主动约束过任何一种能为他们赚钱的工具，这个论点会很有说服力。但这从来没有发生过。他们游说、诉讼、拖延。等到一个监管框架通过、经历上诉、并真正得以执行，技术已经迭代了整整一代。更关键的是，这里的前提假设是政府可以监管自己根本不了解、也不使用的东西，而这方面的记录并不令人鼓舞。真正的策略不是等待合规——而是创造条件，让遵守用户保护标准成为唯一商业上可行的路径。这意味着支持能改变市场预期的开源 AI，构建和采用为个人服务而非对抗个人的 AI 工具，并资助能够揭露规模化操纵行为的对抗性研究。现在就行动，用你自己的双手，用已有的工具。援兵不会来。你就是援兵。"
+          }
+        ]
+      },
+      conclusion: {
+        label: "Conclusion: The Right Fight / 总结：打对这场仗",
+        english: "Sanders is fighting the right enemy with the wrong weapons. Yes, unchecked corporate AI is a genuine threat. No, the solution is not to retreat, wait, or halt. The solution is to advance—with open-source models, safety-first research, individual AI literacy, and adversarial tools built to check the very systems he fears. The era of AI-native individuals is not the problem. It is the only plausible answer.",
+        chinese: "桑德斯在对抗正确的敌人，却使用了错误的武器。是的，不受约束的企业 AI 是真实存在的威胁。但解决方案不是退却、等待或叫停。解决方案是推进——借助开源模型、安全优先的研究、个人 AI 素养，以及专门为制衡他所担忧的那些系统而构建的对抗性工具。AI 原生个人的时代不是问题所在——它是唯一可能的答案。"
+      }
+    }
+  },
+  {
     id: "ai-native-moats",
     titleEn: "Moats in the AI Native Era: The Trinity of Data, Insight, and Workflow",
     titleZh: "AI Native 时代的护城河：三位一体",
