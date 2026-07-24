@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Allow: /article5-death-of-middle-management/
+Allow: /assets/
+Allow: /favicon.svg
+Disallow: /
+Crawl-delay: 86400
+
+User-agent: *
+Disallow: /

@@ -7,6 +7,18 @@ import { articles, type Article } from './data/articles';
 import './styles/App.css';
 
 const showLocalMetadata = import.meta.env.DEV;
+const articlePathById: Record<string, string> = {
+  'article5-death-of-middle-management': '/article5-death-of-middle-management/',
+};
+const hiddenArticleIds = new Set(['article5-death-of-middle-management']);
+
+const getArticleIdFromPath = (path: string) => {
+  const normalizedPath = path.endsWith('/') ? path : `${path}/`;
+  const entry = Object.entries(articlePathById).find(([, articlePath]) => articlePath === normalizedPath);
+  return entry?.[0] ?? null;
+};
+
+const getHomePath = () => getArticleIdFromPath(window.location.pathname) ? '/' : window.location.pathname || '/';
 
 const getArticleTimestamp = (article: Article) => {
   const timestamp = Date.parse(article.date);
@@ -28,7 +40,15 @@ function App() {
   const tocScrollOffset = 84 + 28;
 
   useEffect(() => {
-    const selectArticleFromHash = () => {
+    const selectArticleFromLocation = () => {
+      const pathArticleId = getArticleIdFromPath(window.location.pathname);
+      if (pathArticleId) {
+        const article = articles.find(a => a.id === pathArticleId);
+        setCurrentArticle(article ?? null);
+        window.scrollTo(0, 0);
+        return;
+      }
+
       const hash = window.location.hash.replace('#', '');
       if (hash && !hash.startsWith('section-')) {
         const article = articles.find(a => a.id === hash);
@@ -44,12 +64,12 @@ function App() {
       }
     };
 
-    window.addEventListener('hashchange', selectArticleFromHash);
-    window.addEventListener('popstate', selectArticleFromHash);
-    selectArticleFromHash();
+    window.addEventListener('hashchange', selectArticleFromLocation);
+    window.addEventListener('popstate', selectArticleFromLocation);
+    selectArticleFromLocation();
     return () => {
-      window.removeEventListener('hashchange', selectArticleFromHash);
-      window.removeEventListener('popstate', selectArticleFromHash);
+      window.removeEventListener('hashchange', selectArticleFromLocation);
+      window.removeEventListener('popstate', selectArticleFromLocation);
     };
   }, []);
 
@@ -89,7 +109,9 @@ function App() {
     return () => hero.removeEventListener('wheel', handleWheel);
   }, [currentArticle]);
 
-  const homepageArticles = [...articles].sort((a, b) => getArticleTimestamp(b) - getArticleTimestamp(a));
+  const homepageArticles = articles
+    .filter(article => !hiddenArticleIds.has(article.id))
+    .sort((a, b) => getArticleTimestamp(b) - getArticleTimestamp(a));
 
   const getFilteredMarkdown = (body: string) => {
     const hasLanguageMarkers = body.includes('**English:**') || body.includes('**中文：**');
@@ -137,7 +159,10 @@ function App() {
   };
 
   const navigateTo = (id: string | null) => {
-    const nextUrl = id ? `#${id}` : `${window.location.pathname}${window.location.search}`;
+    const params = window.location.search;
+    const articlePath = id ? articlePathById[id] : null;
+    const homePath = getHomePath();
+    const nextUrl = id ? `${articlePath ?? homePath}${params}${articlePath ? '' : `#${id}`}` : `${homePath}${params}`;
     window.history.pushState(null, '', nextUrl);
     const article = id ? articles.find(a => a.id === id) ?? null : null;
     setCurrentArticle(article);
