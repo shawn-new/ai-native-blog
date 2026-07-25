@@ -16,6 +16,10 @@ dist-ssr
 .codex-notes/
 CONTEXT.md
 
+# Test artifacts
+test-results/
+playwright-report/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
