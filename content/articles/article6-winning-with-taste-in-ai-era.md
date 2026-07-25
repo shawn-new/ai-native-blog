@@ -24,266 +24,275 @@ history:
   - "Mon Jun 01 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Concision pass"
   - "Thu Jun 05 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Minor compression, add hook"
   - "Thu Jun 05 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Goal-mode 5-pass polish"
+  - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): First-person rewrite, tighten prose"
+  - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Adversarial CTO-reader pass — promote thesis, answer the open questions, add counterarguments, replace checklist ending"
+  - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Add the rollback story as the trigger; add section on taste tested by harsh customers"
+  - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Second CTO pass — repair title/concession conflict, sharpen falsifier, cut weakest section, merge closing two sections, trim hedging"
+  - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Correct the author's vantage point on the opening story — not a witness, the one who pivoted the project afterward"
+  - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Close the story with what the eval changed after the pivot; add the objections you can only find by watching real use"
+  - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Third CTO pass — closing test now measures the actual claim and can fail; early signpost; tighten falsifier; resolve the customer-as-fast-vs-lagging-signal conflict; bilingual line fixes"
 ---
 
 # Winning in the AI Era: Taste Is the Bottleneck
 # AI 时代如何赢：关键是 Taste
 
-## Why Taste Matters Now
-## 为什么现在 Taste 重要
+## Coherence Stopped Being a Signal
+## 连贯不再是信号
 
 **English:**
 
-The demo works. The code compiles. The spec has the right sections. Then you ask: what happens when the agent fails halfway, the user needs to verify the output, or the integration takes six weeks instead of two?
+The demo works. The code compiles. The spec has all the right sections. Then someone asks: what happens when the agent fails halfway? How does the user verify the output? What if the integration takes six weeks instead of two?
 
-That is often when the room gets quiet.
+I have sat through that pause more than once. Here is the version of it I keep coming back to.
 
-AI makes the first artifact cheap — prototype, doc, code change, roadmap. The bottleneck has moved from producing the artifact to deciding whether it deserves trust.
+A team spent two months building an agentic product with no eval and no rubric. They were not careless, and the work was not sloppy. Everything they produced was coherent — the demos held up, the docs held up, each week looked like progress. What nobody could answer was the only question that mattered: is this version better than last week's?
 
-That decision is hard because AI output is plausible. It looks complete enough to pass review and create a feeling of progress. Plausible is not the same as usable, safe, maintainable, or worth building.
+Without that answer, every change was a guess. Customer feedback went from encouraging, to pointed, to quiet. By the time the complaints were unambiguous the real damage was done: customers had stopped believing the product would get better. That is a harder thing to lose than any single feature. It got rolled back.
 
-Taste is your ability to decide what should be shipped, revised, or killed before it consumes roadmap, budget, architecture, and team trust.
+I was not on that team. I am the one who pivoted the project afterward, which meant I could not leave the question open — before pointing the project anywhere new, I had to decide what had actually gone wrong.
+
+Working that out convinced me of something larger, and it is the actual subject of this post: coherence has stopped meaning that anyone thought it through.
+
+"We needed evals" is the most comfortable conclusion a post-mortem can reach. It blames nobody, it is purely technical, and it converts neatly into a project. So the harder reading deserves saying out loud: maybe the product was solving a problem nobody had, and the missing eval had nothing to do with the outcome.
+
+I still land on eval, for one reason. Without a rubric, that team could not have told those two stories apart. A team that can measure whether this week beat last week discovers in three weeks that it is aimed at the wrong problem. A team that cannot discovers it in two months, from a customer who has stopped replying.
+
+When we pivoted, we built one. The product did not become good overnight — other things had to change too. What changed immediately was narrower and more valuable than that: we could see which changes helped and which did not. The guessing stopped.
+
+That is why I think the bottleneck has moved. For most of my career, coherence was a decent proxy for quality. If a design doc held together, someone had probably thought it through, because writing it coherently cost about as much work as thinking it through. Reviewers leaned on that. I leaned on that.
+
+That proxy is gone. Coherent docs, coherent code, coherent strategy now cost minutes. Coherence still tells me an artifact is readable. It tells me nothing about whether it is true.
+
+So the first filter in most review processes is firing on a signal that carries no information. Something has to replace it, and the replacement is judgment applied before the metrics arrive. That is what I mean by taste.
 
 **中文：**
 
-Demo 能跑。代码能 compile。Spec 结构完整。然后你问：agent 中途失败怎么办？用户怎么验证输出？Integration 如果不是两周而是六周，计划还成立吗？
+Demo 能跑。代码能 compile。Spec 结构完整。然后有人问：agent 中途失败怎么办？用户怎么验证输出？Integration 如果不是两周而是六周呢？
 
-很多时候，房间就是在这里安静下来的。
+这种沉默我经历过不止一次。其中有一次我一直回想。
 
-AI 让第一个 artifact 变便宜了。瓶颈已经从生产 artifact，移动到判断它值不值得被信任。
+一个团队花两个月做一个 agentic 产品，没有 eval，没有 rubric。他们不是不认真，活也不糙。他们产出的东西全都是连贯的——demo 立得住，文档立得住，每一周看起来都像有进展。没有人能回答的，是唯一要紧的那个问题：这一版比上一版好吗？
 
-这个判断很难，因为 AI output 是 plausible 的。它看起来足够完整，可以通过 review，制造进展感。但 plausible 不等于 usable、safe、maintainable，也不等于值得 build。
+没有这个答案，每一次改动都是猜。客户的反馈从鼓励，到尖锐，到沉默。等到抱怨明确到无法回避的时候，真正的损失已经发生了：客户不再相信这个产品会变好。这比丢掉任何一个功能都难挽回。最后它被 rollback 了。
 
-Taste 是你在它们消耗 roadmap、budget、architecture 和团队 trust 之前，判断它们应该被 ship、revise，还是 kill 的能力。
+我不在那个团队里。我是后来 pivot 这个项目的人——也就是说，我没法让这个问题悬着：在把这个项目指向新方向之前，我得先判断上一轮到底错在哪。
+
+把这件事想清楚，也让我确认了一个更大的变化，那才是这篇文章真正要谈的：连贯，已经不再说明有人想清楚了。
+
+"我们缺 eval"是复盘会最舒服的结论。它不指向任何人，纯技术，而且可以立项。所以更难听的那种读法必须说出来：也许这个产品解决的问题本身就不存在，缺 eval 和后来的结果无关。
+
+我最后还是落在 eval 上，理由只有一个：没有 rubric，那个团队根本分不清这两种故事。一个能测出"这周比上周好没好"的团队，三周就会发现自己瞄错了问题。一个测不了的团队，要两个月才知道，而且是从一个已经不回消息的客户那里知道的。
+
+Pivot 的时候我们把 eval 建起来了。产品没有因此一夜变好——别的东西也得改。立刻变了的是一件更小、也更值钱的事：我们能看见哪些改动有用、哪些没用。猜停下来了。
+
+这就是我认为瓶颈已经移动的原因。过去很长一段时间里，连贯性是质量的一个不错的替代指标。一份设计文档如果自洽，通常说明有人真的想清楚了——因为把它写连贯，和把它想清楚，成本差不多。Reviewer 靠这个筛第一遍。我也靠这个。
+
+这个替代指标现在失效了。连贯的文档、连贯的代码、连贯的策略，几分钟就能产出。连贯性现在只说明这东西能读，不说明这东西是不是真的。
+
+也就是说，大多数 review 流程的第一道筛子，筛的是一个不带信息的信号。它必须被替换掉，而替换它的东西，是在指标出现之前就要做出的判断。这就是我说的 taste。
 
 ---
 
-## Taste Is Judgment Before The Metric Arrives
-## Taste 是指标到来前的判断
+## What Counts as an Objection
+## 什么才算一条反对意见
 
 **English:**
 
-Taste is not style. Here, taste means technical judgment under incomplete information.
+Taste is not style, and it is not a feeling you get about an artifact. Working definition: the ability to look at something plausible and say where it will break, before metrics, incidents, or confused users make the break obvious.
 
-Look at a plausible artifact and predict where it will fail — before metrics, incidents, or confused users make the failure obvious. Metrics arrive after the system touches reality. Taste operates before that.
+One test tells me whether I actually have that ability in a given moment. Can I write my objection as a failure path?
 
-Good taste starts as a concrete objection: no eval; no approval step; a prompt hiding a product decision; an agent that cannot explain what it changed; a UI with no safe correction path.
+"This feels wrong" fails the test. "The agent has no recovery path when it fails halfway" passes it. So does: there is no eval, so we cannot tell a regression from noise. There is no approval step before the write. This prompt contains a product decision nobody reviewed. The agent cannot say what it changed. The UI has no undo.
 
-Those objections are useful because you can act on them. "This feels wrong" is weak. "The agent has no recovery path when it fails halfway" is strong.
+Every one of those can be argued with, priced, and scheduled. "Feels wrong" can only be deferred to whoever has more seniority in the room.
 
-Coherence is now table stakes. AI produces coherent docs, code, strategy, and design. Coherence says the artifact is legible. Taste asks whether it is true enough to use.
+Not every objection can be found by reading the artifact, though. Some appear only when you watch someone use the thing.
+
+Engineers already have a word for the readable half of this: code smell. Nothing is broken, the tests pass, but the shape of the code tells you something is wrong. Interfaces have the same property and it is easier to miss, because documents flatten it. "The user confirms the action" is one line in a spec. It is one line in the demo too. Watch enough real sessions and it stops being a line. It is a step, repeated every single time, by someone whose actual work is already stacking up behind them.
+
+That extra step passes the failure-path test, which is what makes it an objection rather than a preference: people will start batching their work to avoid the confirmation, and then the confirmation stops protecting anything. But nobody finds it by reading. It is invisible in the artifact and obvious in the recording — which is why I do not trust judgment formed entirely from specs and demos, including my own.
+
+The failure-path test is worth more to a team than to a person. Kept in my head, it leaves when I leave. Put in the pull request template as one required line — *what happens when this fails* — it becomes something a new engineer inherits in their first week, and a vague answer becomes a reason to hold the merge rather than a reason to feel uneasy. I would rather hand someone that one line than an essay about judgment.
 
 **中文：**
 
-Taste 不是 style。在这里，taste 是 technical judgment under incomplete information。
+Taste 不是风格，也不是你对一个东西的感觉。可以这样定义：面对一个看似成立的方案，在指标、事故或困惑的用户把问题暴露出来之前，说出它会从哪里坏。
 
-看着一个 plausible artifact，在 metrics、incident 或困惑用户把失败暴露出来之前，判断它会在哪里坏。指标要等系统接触现实之后才出现。Taste 发生在那之前。
+有一个测试能告诉我，此刻我到底有没有这个能力：我的反对意见，能不能写成一条失败路径？
 
-好的 taste 从具体 objection 开始：没有 eval；没有 approval step；prompt 藏了 product decision；agent 说不清自己改了什么；UI 没有安全 correction path。
+"这里感觉不对"通不过。"Agent 中途失败时没有恢复路径"能通过。同样能通过的还有：没有 eval，所以我们分不清是退步还是噪音；写入之前没有确认步骤；这个 prompt 里藏了一个没人 review 过的产品决策；agent 说不清自己改了什么；界面没有撤销。
 
-"这里感觉不对"很弱。"Agent 中途失败时没有 recovery path"很强。
+这些都可以被反驳、被估价、被排期。"感觉不对"只能交给房间里资历最深的那个人裁决。
 
-Coherence 现在只是基本门槛。Coherence 说明 artifact 是 legible 的。Taste 问的是：它够不够真实，可以被使用？
+但不是所有反对意见都能靠读文档发现。有些只有在你看着别人用的时候才会冒出来。
+
+工程师对能读出来的那一半已经有一个词：code smell。什么都没坏，测试也过，但代码的形状告诉你有地方不对。界面也有同样的东西，而且更容易漏掉，因为文档会把它压平。"用户确认这个操作"在 spec 里是一行。在 demo 里也是一行。看够多的真实使用，它就不再是一行了：它是一个每次都要重复一遍的步骤，而做这件事的人，手头的正事本来就已经堆着了。
+
+这个多余步骤通得过失败路径测试，所以它是反对意见，不是偏好：人们会开始攒一批一起做，好绕开那次确认，于是这个确认不再保护任何东西。但没有人能读出它来。它在产出物里看不见，在录屏里一眼就能看见——这也是我不相信完全从 spec 和 demo 里长出来的判断的原因，包括我自己的。
+
+失败路径这条测试，对团队的价值大于对个人。留在我脑子里，我走了它就走了。写进 PR 模板，变成一行必填——*这东西失败时会发生什么*——它就成了新人第一周就继承到的东西，而含糊的回答会变成推迟合并的理由，不再只是一种不安。比起一篇讲判断力的文章，我更愿意给人这一行。
 
 ---
 
-## Taste Starts With Testable Claims
-## Taste 从可测试观点开始
+## Make the Claim Small Enough to Break
+## 把观点缩小到能被打碎
 
 **English:**
 
-You do not build taste by staying neutral. You build it by making claims reality can test.
+Neutrality does not build judgment. Claims that reality can break do. Which means I owe you my own, in a form you can attack.
 
-"AI coding is the future" is too broad. A better claim: AI coding works best when the reviewer understands the codebase, the task has tight feedback loops, and a bad first pass is cheap to fix.
+"AI coding is the future" is unbreakable and therefore useless. Here is the version I actually hold: AI coding pays off in proportion to how much of the correctness criteria already lives outside people's heads.
 
-Now you can test it. Does AI coding work better for scaffolding, migrations, tests, or refactors? Does it fail when the repo lacks tests, no one owns the changed area, or architecture conventions are undocumented?
+That ranks the work. Migrations do best, because the old behavior is the spec and you can diff against it. Scaffolding does well, because being conventional is the requirement. Test writing does well when the code under test is stable. Large refactors do worst, and not because they are hard — because the invariants that make a refactor correct are usually undocumented, so neither the model nor the reviewer can check the thing that matters.
 
-This is how taste sharpens. Make a claim small enough to break. Let reality break part of it. Update the map.
+I have had to narrow that claim once already. I used to say the variable was test coverage. It is not. It is whether failure is *loud*. A repo at eighty percent coverage whose tests never assert on the behavior you changed is worse than a thin smoke test that dies in ten seconds. Coverage measures how much code runs. I care about how fast a wrong change announces itself.
+
+A falsifier is only useful if I cannot wriggle out of it afterward, so here is one with the numbers filled in. Take a codebase over 100k lines with no assertion-level tests on the paths being touched. A team lands an agent-driven cross-module refactor there, big enough that no single reviewer read the whole diff, and ninety days later there has been no rollback and no P1 traced to it. Same team does it twice. That kills my model, and I would want to hear about it.
 
 **中文：**
 
-Taste 不是靠中立旁观训练出来的。它来自你提出一个能被现实测试的 claim。
+中立练不出判断力。能被现实打碎的观点才可以。那我就得把我自己的观点摆出来，摆成你能攻击的样子。
 
-"AI coding 是未来"太宽了。更好的 claim：AI coding 在 reviewer 理解 codebase、任务有 tight feedback loop、错误 first pass 容易修正时最有效。
+"AI coding 是未来"打不碎，所以没用。我真正持有的版本是：AI coding 的收益，正比于有多少正确性标准已经写在了人脑之外。
 
-现在你可以测试这个 claim：AI coding 更适合 scaffolding、migration、tests，还是 refactor？它会不会在 repo 缺测试、没人 owns 被修改区域、architecture convention 没写下来时失败？
+这句话能给工作排序。迁移最合适，因为旧行为本身就是规格，你可以直接对比。搭脚手架也合适，因为"照常规来"就是需求。写测试在被测代码稳定时合适。大型重构最不合适——不是因为它难，而是因为决定重构对不对的那些不变量通常没写下来，于是模型和 reviewer 都没法检查真正要紧的东西。
 
-Taste 就是这样变锋利的：提出一个小到可以被打碎的 claim，让现实打碎其中一部分，更新地图。
+这个观点我已经被迫改窄过一次。我以前说关键变量是测试覆盖率。不是。关键是失败够不够*响*。一个覆盖率八十、但测试从不断言你改动那部分行为的 repo，比一个十秒就挂掉的粗糙冒烟测试更糟。覆盖率衡量的是多少代码被跑过，我在意的是一个错误改动多快会自己叫出来。
+
+一个证伪条件如果事后能被我自己解释掉，就不算数，所以我把数字填进去：一个十万行以上的代码库，被改动的路径上没有断言级测试。某个团队在这里用 agent 完成了一次跨模块重构，改动大到没有任何一个 reviewer 完整读过整个 diff，上线九十天内没有回滚，也没有能追溯到它的 P1。同一个团队做到两次。那我的模型就是错的，我想知道。
 
 ---
 
-## Taste Needs Contact With Failure
-## Taste 需要接触失败
+## The Loop, and Three Ways Teams Kill It
+## 那个 Loop，以及团队砍掉它的三种方式
 
 **English:**
 
-Reading about frontier products helps. Watching demos helps. Taste improves fastest when you use the tool until its boundary appears.
+Demos hide the part that matters. In a demo, someone chose the input, the path, and the ending. Real workflows bring permission errors, retries, dirty data, partial failure, latency, audit requirements, and users who do not care how clever the system is.
 
-Use a coding agent until it produces a change you would not approve. Was the task underspecified? Did the repo lack tests? Did it miss an architecture convention?
+**Before:** an agent completes one impressive task, on a clean input, in the right environment.
 
-Use an AI research tool until it produces organized noise. Was retrieval shallow? Did the model confuse evidence with fluent summary?
+**After:** the system around the agent knows what to do when the agent is uncertain, slow, wrong, or half done — and the user can tell which of those just happened.
 
-Use a design tool until the output turns generic — then diagnose why. Weak prompt surface? Missing domain context? The failure itself is the data.
+Getting from Before to After means building a loop, and the loop has eight steps:
 
-The useful moment is not when the demo works. It is when the product almost works and you can name the missing piece clearly enough to act. That is where engineering detail turns into product judgment.
+user pain → input → model action → human inspection → correction → eval → write-back → owner
+
+Every step is a decision, and under schedule pressure three of them get cut in a predictable order.
+
+**Eval goes first**, because it is the only step with no visible output. That is the cut behind the two months I described at the top, and the cost is always deferred: someone changes a prompt, quality "feels" different, and there is no way to separate a regression from noise. Teams that reach this state stop touching the prompt. The system freezes at whatever quality it had on the day the last person who understood it left.
+
+**Write-back goes second.** Users correct the model, the correction fixes that one session, and nothing flows back. This one hurts most because corrections are the highest-quality labeled data the product will ever generate — a domain expert telling you exactly what was wrong, for free, at the moment of the error. Throwing it away means the product cannot improve at the thing its own users care most about.
+
+**Owner goes third, and this is the one I would fix first.** Agent-generated code has no author. When it breaks at 2 a.m., nobody has the context, because nobody built the context — the reviewer read a diff for eight minutes and approved it. Human code carries an invisible index: who wrote it, what they were worried about, what they tried first. Agent code arrives with none of that, and I have not seen a team replace it with anything.
 
 **中文：**
 
-读前沿产品总结有用。看 demo 有用。Taste 提升最快的地方，是你把工具用到边界出现。
+Demo 会把最要紧的部分藏起来。在 demo 里，有人替你选好了输入、路径和结尾。真实 workflow 里有权限错误、重试、脏数据、部分失败、延迟、审计要求，以及根本不关心系统有多聪明的用户。
 
-用 coding agent，用到它生成一段你不会 approve 的 change。是 task 没定义清楚？Repo 缺测试？它漏掉了架构约定？
+**Before：** Agent 在正确的环境、干净的输入上，完成了一个漂亮的任务。
 
-用 AI research tool，用到它生成结构化噪音。Retrieval 太浅？Model 把 evidence 和 fluent summary 混在一起？
+**After：** Agent 不确定、变慢、出错或做到一半时，它周围的系统知道该怎么办——而且用户分得清刚才发生的是哪一种。
 
-用设计工具，用到输出开始 generic，然后诊断原因。Prompt surface 太弱？系统缺 domain context？失败本身就是数据。
+从 Before 走到 After，要建一个 loop。这个 loop 有八步：
 
-有用的时刻是产品几乎可用，但你能把缺失部分说清楚，清楚到可以行动。这就是 engineering detail 变成 product judgment 的地方。
+user pain → input → model action → human inspection → correction → eval → write-back → owner
+
+每一步都是决策。而在进度压力下，其中三步被砍掉的顺序是可预测的。
+
+**Eval 最先被砍**，因为它是唯一没有可见产出的一步。开头那两个月砍掉的就是它，而代价总是延后出现：有人改了 prompt，质量"感觉"变了，但没有办法把退步和噪音分开。到这一步的团队会开始不敢碰 prompt。系统的质量就冻结在最后一个懂它的人离职那天。
+
+**Write-back 第二个被砍。** 用户纠正了模型，这次纠正修好了这一次会话，然后什么都没有流回去。这一刀最疼，因为纠正是这个产品能拿到的质量最高的标注数据——一个领域专家在错误发生的当下，免费告诉你到底哪里错了。扔掉它，等于这个产品在用户最在意的事情上不会变好。
+
+**Owner 第三个被砍，而这是我会最先补回来的一个。** Agent 生成的代码没有作者。它凌晨两点坏掉的时候，没有人有上下文，因为没有人建立过上下文——reviewer 花了八分钟看完 diff，点了同意。人写的代码带着一层看不见的索引：谁写的，他当时担心什么，他先试过什么。Agent 的代码不带这些，而我还没见过哪个团队拿别的东西补上。
 
 ---
 
-## Taste Is Built In Real Workflows
-## Taste 是在真实 Workflow 里练出来的
+## Borrow the Question, Not the Conclusion
+## 借问题，不借结论
 
 **English:**
 
-Demos hide where taste matters most. You choose the input, path, and ending. Real workflows give you permissions issues, retries, bad data, unclear ownership, partial failure, latency, audit requirements, and users who do not care how clever the system is.
+Judgment does not get stronger inside your own head. Taste still acts before the data — that is what it is for — but its accuracy comes from how many times it has been checked afterward by someone who is not you.
 
-The gap between demo and reality is where taste either proves itself or gets exposed.
+The fastest checker available is a customer with something at stake — provided you go to them. The ones who come to you arrive on the schedule from the top of this post. Long before you have an eval harness, you can sit with the people who use the thing and ask what broke. What makes their feedback useful is specificity, and specificity comes from stakes: someone tells you exactly which step cost them an hour because it actually cost them an hour. That is a different filter from loudness. The loudest customer is often the least specific one, and a roadmap can lose a quarter to whoever complains most fluently. So I go looking for the users who hurt most, not the ones who yell most, and then I still need measurement to tell me how many of them there are.
 
-**Before:** An agent completes one impressive task in the right environment with a clean input.
+Judgment can also be borrowed from people, and here most of us borrow the wrong layer. The wrong layer is vocabulary. Read enough of this genre and you can say *plausible artifact* or *contact with failure* without having earned either — and then it shows up in a design review as a more sophisticated way to say "feels wrong," which makes weak objections harder to challenge. That is the opposite of the point.
 
-**After:** The surrounding system knows what to do when the agent is uncertain, slow, wrong, or half done — and users can tell the difference.
-
-The same logic holds for interfaces and code:
-
-A UI is not good because it looks clean. It is good when the user can inspect state, understand consequence, reverse a mistake, and make the next decision without guessing.
-
-A code change is not good because it compiles. It is good when it preserves invariants, fits the architecture, has tests at the right boundary, and can be owned after the agent leaves.
-
-One review question cuts through all of it: what happens when this fails?
-
-If the answer is vague, taste has not done its job. Real workflows make bad judgment expensive. You ship something, watch where it bends, and learn which failure you should have caught earlier.
+The layer worth borrowing is the question. Conclusions do not transfer; they grew out of constraints you do not have. "Who operates this at 3 a.m.?" travels anywhere. "This should be a narrow workflow, not a platform" does not, because it was an answer to their situation. And the borrow only counts once you take the question back to your own constraints and let it be wrong there.
 
 **中文：**
 
-Demo 会隐藏最需要 taste 的部分。在 demo 里，你选择输入、路径和结尾。在真实 workflow 里，你要面对权限问题、retry、脏数据、不清楚的 owner、partial failure、latency、audit requirement，以及根本不关心系统有多聪明的用户。
+判断在自己脑子里不会变强。Taste 依然在数据之前行动——它的用处就在这里——但它的准确率，来自它事后被一个不是你的人核对过多少次。
 
-Demo 和现实之间的落差，正是 taste 证明自己或被暴露的地方。
+最快的核对者，是一个有切身利害的客户——前提是你主动去找他。等他自己找上门的时候，就是开头那个故事的时间表了。在你有 eval 之前很久，你就可以坐到真正在用的人旁边，问他们哪里坏了。他们的反馈之所以有用，是因为具体；而具体来自利害——一个人能说清是哪一步让他多花了一小时，是因为那一小时是真花掉的。这和"声音大"是两个筛子。喊得最响的客户往往是最不具体的那个，而一个 roadmap 可以被最会抱怨的人拿走一个季度。所以我找的是疼得最厉害的用户，不是嗓门最大的用户——找到之后，我仍然需要测量来告诉我这样的人有多少。
 
-**Before：** Agent 在正确的环境、干净的输入里完成了一个漂亮的任务。
+判断也可以从人身上借，而大多数人借错了层。错的那一层是词汇。这类文章读多了，你不需要付出任何代价，就能熟练说出"看似成立的方案""接触失败"。然后它出现在设计评审上，变成一种更高级的方式来说"感觉不对"，弱的反对意见反而更难被反驳。这和本意正好相反。
 
-**After：** Agent uncertain、slow、wrong 或 half done 时，周围的 system 也知道该怎么办——用户能感受到区别。
-
-同样的逻辑适用于 UI 和代码：
-
-好的 UI 不是因为它好看，而是让用户能 inspect state、理解 consequence、撤回错误，不用猜就能做下一个 decision。
-
-好的 code change 不是因为它能 compile，而是保留了 invariants、符合架构、在正确边界有 tests，agent 离开后还能被拥有。
-
-一个 review 问题可以穿透所有这些：这东西失败时会发生什么？
-
-如果答案很模糊，taste 还没完成工作。真实 workflow 让错误判断变贵。你 ship 一个东西，看它在哪里弯掉，然后学会哪个 failure 本来应该更早发现。
+值得借的那一层是问题。结论迁移不了，它长在你没有的约束上。"凌晨三点谁来运维这个"走到哪都成立。"这里应该做窄 workflow 而不是平台"走不了，因为那是对他的处境给出的答案。而且这个"借"只有在你把问题拿回自己的约束里、并允许它在那里出错之后，才算数。
 
 ---
 
-## Taste Improves By Studying Decisions
-## Taste 靠研究决策变好
+## Where I Could Be Wrong
+## 我可能错在哪里
 
 **English:**
 
-Studying finished products — UI, feature list, launch post, metrics — is the obvious move. But taste lives one layer deeper: in the decision trace behind the artifact.
+The title of this post is a strong claim. Two arguments against it are worth taking seriously, and I want the stronger one first.
 
-Why this onboarding flow? Why hide power behind a default? Why ship a narrow workflow instead of a broad platform?
+**The bottleneck may be eval infrastructure, not judgment.** Judgment has always been scarce, and scarce is not the same as bottleneck — the bottleneck is the thing that changed. What changed is the volume of plausible artifacts arriving per week. You do not fix a volume problem with a human filter. You fix it with measurement that scales.
 
-Reconstruct what happened. What constraint mattered most? Which alternative did we reject? What did we sacrifice? Which failure mode did we accept?
+That is the best case against my title, and it is where I still disagree. Writing an eval harness is maybe two weeks of engineering. Deciding what it measures is not engineering at all: what counts as a regression, what threshold blocks a release, who may override it and on what grounds. Every eval effort I have watched stall, stalled there — not in the code, in the definition, because signing the definition means owning the release you will one day block. If that is right, eval infrastructure is the form the answer takes and taste is the thing actually missing. I will mark that as my read rather than a measured fact. I have not counted stalled eval projects, and someone with better data may tell me they die in engineering after all.
 
-This matters especially in AI products, where the decision is rarely about features. A good AI workflow is a loop: user pain → input → model action → human inspection → correction → eval → write-back → owner. Every step is a design decision. Study how teams cut or compressed that loop — and what broke when they did.
+The practical order still holds, though. If you have no eval at all, go build it before you read another essay about judgment, including this one. Just do not expect the engineering to be the hard part.
+
+**The second argument: every cycle says this.** Code is cheap, vision is valuable — I heard it through offshoring, through the no-code wave, through the app-store gold rush. Each time, execution turned out to be the hard part anyway. That history should make you suspicious of this post.
+
+My answer is that the general version was probably wrong those times, and that I am making a narrower one. I am not saying ideas now matter more than execution. I am saying one specific heuristic broke: the reviewer's habit of treating a coherent artifact as evidence that someone thought it through. That habit is old, deeply wired, and now actively wrong.
 
 **中文：**
 
-研究 finished product — UI、feature list、launch post、metrics — 是最直觉的做法。但 taste 在更深一层：artifact 背后的 decision trace。
+这篇文章的标题是一个强断言。有两个反驳值得认真对待，我先说更强的那个。
 
-为什么是这个 onboarding flow？为什么把能力藏在 default 后面？为什么先 ship 窄 workflow 而不是宽 platform？
+**瓶颈可能是 eval 基础设施，不是判断力。** 判断力一直都稀缺，而稀缺和瓶颈不是一回事——瓶颈是那个*变了*的东西。变了的是每周涌进来的、看似成立的产出物的数量。数量问题不靠人肉筛子解决，靠能规模化的测量解决。
 
-重建当时发生了什么。最重要的 constraint 是什么？拒绝了哪个 alternative？牺牲了什么？接受了哪个 failure mode？
+这是反对我这个标题的最强版本，也是我仍然不同意的地方。写一套 eval harness 大概是两周工程。决定它测什么，则完全不是工程问题：什么算退步，什么阈值卡住发布，谁可以 override、凭什么。我见过的 eval 项目卡住，基本都卡在这里——不是卡在代码上，是卡在定义上，因为在定义上签字，等于认领了将来某一次被你卡住的发布。如果这是对的，那 eval 基础设施只是答案的形状，真正缺的还是 taste。这一条我标成我的判断，不是测量结果——我没统计过有多少 eval 项目死在哪一步，有数据的人可能会告诉我它们最终还是死在工程上。
 
-这在 AI 产品里更重要，因为决策很少只关于功能。好的 AI workflow 是一个 loop：user pain → input → model action → human inspection → correction → eval → write-back → owner。每一步都是设计决策。研究团队怎么压缩或跳过这个 loop——以及跳过后什么坏了。
+但实践顺序不变：如果你现在连 eval 都没有，先去建它，别再读讲判断力的文章了，包括这一篇。只是别指望工程是难的那部分。
+
+**第二个反驳：每一轮周期都这么说。** 代码不值钱，眼光值钱——外包那轮我听过，no-code 那轮我听过，"人人都能做 App"那轮我也听过。每一次，最后难的还是执行。这段历史应该让你对这篇文章保持怀疑。
+
+我的回答是：那几次的通用版说法大概是错的，而我提的是一个更窄的版本。我没有说现在想法比执行更重要。我说的是一个具体的启发式坏掉了：reviewer 习惯把"这东西写得连贯"当成"有人想清楚了"的证据。这个习惯很老，长在肌肉里，而它现在是错的。
 
 ---
 
-## Taste Can Be Borrowed Before It Is Yours
-## Taste 可以先借来，再长出来
+## Predictions You Can Fail
+## 能判错的预测
 
 **English:**
 
-Find specific operators: a founder whose strategy changes what we build, a designer whose interfaces feel inevitable, an engineer who removes complexity without weakening the system, a product leader who cuts scope without cutting ambition.
+Taste acts before the data arrives, which is also what makes the word so easy to abuse. "This lacks taste" can mean "I outrank you." I have heard it used that way, and I have used it that way.
 
-Then mimic them. First you copy the surface: how they summarize mess, push back, and turn vague concern into next step.
+One habit keeps me honest, and it costs about thirty seconds. Before shipping a call I care about, I write the prediction down in one sentence, with a number and a date. Then I set a reminder for that date and go look.
 
-Later you copy the habit underneath: how they separate urgent from loud, communicate uncertainty, and move through ambiguity without pretending it is gone.
+The thirty seconds are not the hard part. Looking is. What I found when I started looking is that most of my calls had never been predictions — they were preferences with a rationale attached, and they could not have been wrong, so they taught me nothing. A prediction that cannot fail is not judgment. It is decoration on a decision I had already made.
 
-Eventually you realize you were not copying style. You were borrowing a decision system. With enough reality, borrowed taste becomes your own judgment.
+You can run the same check backwards, on work you have already done. Pull up the last three calls you made — something you shipped, something you killed, something you sent back. For each one: what did you predict at the time, specifically enough to check now? Go check. Most people cannot start, because the prediction was never written down. That result is the useful one.
 
-**中文：**
+I am running the same test on this post. The claim on the table is that coherence stopped carrying information, and that review habits built on it are failing quietly. Here is the check, and it runs on evidence your team already has: pull up three artifacts that went through review last quarter without an argument. How many turned out to be wrong in a way the review should have caught? If that rate is no different from two years ago, coherence still carries information where you work, and I am wrong.
 
-找具体的 operator：一个 strategy 会改变我们构建方向的 founder，一个界面做得像"本来就该这样"的 designer，一个能移除复杂度但不削弱系统的 engineer，一个能砍 scope 但不砍 ambition 的 product leader。
-
-然后模仿他们。一开始复制表面：他们怎么总结混乱，怎么 push back，怎么把模糊担忧变成 next step。
-
-后来复制表层下面的习惯：他们怎么区分真正 urgent 和只是 loud，怎么沟通不确定性，怎么穿过 ambiguity 但不假装 ambiguity 消失。
-
-最后你会意识到，你模仿的不是风格。你是在借用一套 decision system。经过足够多的现实反馈，借来的 taste 会变成你自己的判断。
-
----
-
-## Taste Must Stay Accountable
-## Taste 必须接受问责
-
-**English:**
-
-Taste can become a lazy word. "This lacks taste" can mean "I do not like it." "This feels wrong" can mean "I cannot explain my objection."
-
-Real taste must predict something: users will trust this more; the workflow will be clearer; the system will be easier to operate; the eval will catch the important failure; the code will be easier to change.
-
-Taste can act before all data arrives — that is the point. But when data arrives, taste has to meet it. If users behave differently, update. If production fails, ask which assumption was wrong. If the metric contradicts your intuition, do not hide behind status.
-
-Vibes avoid accountability. Taste accepts it and still makes the call.
+I would rather hear that than not. It is the only version of this post that could teach me anything.
 
 **中文：**
 
-Taste 很容易变成懒词。"这个没有 taste"可能只是"我不喜欢"。"这里感觉不对"可能只是"我说不清楚反对理由"。
+Taste 在数据到来之前行动，这也是这个词特别容易被滥用的原因。"这个没有 taste"可以是"我职级比你高"的另一种说法。我听过有人这么用，我自己也这么用过。
 
-真正的 taste 必须能预测某些东西：用户会更信任这个版本；workflow 会更清楚；系统会更容易运维；eval 会抓住重要 failure；代码会更容易改。
+有一个习惯让我保持诚实，成本大概三十秒：在做一个我在意的决定之前，我把预测写成一句话，带一个数字和一个日期。然后在那个日期设一个提醒，到点去看。
 
-Taste 可以在数据完整之前行动——这正是它的意义。但数据来了，就必须面对数据。如果用户行为不同，就更新。如果 production 失败，就追问哪个 assumption 错了。如果 metric 和 intuition 冲突，不要躲在身份感后面。
+三十秒不是难的部分，去看才是。我开始去看之后发现：我的大部分决定从来就不是预测——它们是配了理由的偏好，不可能被判错，所以什么也没教给我。一个不可能失败的预测不叫判断，它是贴在一个我早就做完的决定上的装饰。
 
-Vibes 逃避问责。Taste 接受问责，然后仍然做判断。
+同样的核对可以往回做，用在已经做完的事情上。翻出你最近的三个决定：一个 ship 的，一个 kill 的，一个打回去的。每一个：你当时的预测是什么，具体到现在可以核对？去核对。大多数人卡在第一步，因为预测从来没被写下来。这个结果才是有用的。
 
----
+我对这篇文章做同样的测试。摆在桌上的观点是：连贯性不再携带信息，建立在它之上的 review 习惯正在悄悄失效。检验它用的是你团队已经有的材料：翻出上个季度三个没有争论就通过 review 的产出物，其中有几个后来被证明是错的，而且是 review 本该拦下的那种错？如果这个比例和两年前没有差别，那连贯性在你那里仍然携带信息，我就是错的。
 
-## The Practical Test
-## 最后的实用测试
-
-**English:**
-
-AI makes production cheaper. The scarce ability is no longer producing work — it is selecting, shaping, and rejecting work that is coherent but false before it consumes team capacity and leadership attention.
-
-Taste is that filter.
-
-Can you look at a plausible artifact and say where it will fail? Can you make the claim small enough to test? Can you use the tool long enough to find its boundary? Can you build the workflow around failure, not the demo? Can you read the decision trace behind a good product? Can you update when reality proves your taste wrong?
-
-In the AI era, winning depends less on whether you can generate the next artifact and more on whether you can tell which artifact deserves to exist.
-
-The next posts in this series go deeper on where taste actually develops — what real AI workflows expose, where borrowed judgment breaks down, and how you know when your taste has genuinely become your own.
-
-**中文：**
-
-AI 让生产变便宜了。稀缺的能力不再是产出工作，而是在它消耗团队 capacity 和 leadership attention 之前，选择、塑造，并拒绝那些连贯但不真实的工作。
-
-Taste 就是这个过滤器。
-
-你能不能看着一个 plausible artifact，说出它会在哪里失败？你能不能把 claim 缩小到可以测试？你能不能把工具用到边界出现？你能不能围绕 failure 而不是 demo 构建 workflow？你能不能读出好产品背后的 decision trace？你能不能在现实证明 taste 错了之后更新？
-
-AI 时代如何赢，取决于你能不能判断哪个 artifact 值得存在。
-
-这个系列的后续文章会更深入：真实 AI workflow 暴露了什么，借来的判断在哪里失效，以及你怎么知道 taste 已经真正变成了你自己的。
+我宁可听到这个结果。只有这一种版本的反馈，能让我学到东西。
