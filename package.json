@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "INCLUDE_DRAFTS=true npm run sync && vite",
-    "build": "npm run sync && tsc -b && vite build",
+    "build": "npm run sync && tsc -b && vite build && node scripts/prerender-routes.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "security:precommit": "node scripts/security-review-precommit.mjs",

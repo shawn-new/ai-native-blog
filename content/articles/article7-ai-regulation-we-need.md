@@ -1,5 +1,6 @@
 ---
 id: "article7-ai-regulation-we-need"
+slug: "the-ai-regulation-we-actually-need"
 titleEn: "The AI Regulation We Actually Need"
 titleZh: "我们真正需要的 AI 监管"
 category: "Commentary"

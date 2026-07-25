@@ -7,18 +7,29 @@ import { articles, type Article } from './data/articles';
 import './styles/App.css';
 
 const showLocalMetadata = import.meta.env.DEV;
-const articlePathById: Record<string, string> = {
-  'article5-death-of-middle-management': '/article5-death-of-middle-management/',
-};
 const hiddenArticleIds = new Set(['article5-death-of-middle-management']);
 
-const getArticleIdFromPath = (path: string) => {
-  const normalizedPath = path.endsWith('/') ? path : `${path}/`;
-  const entry = Object.entries(articlePathById).find(([, articlePath]) => articlePath === normalizedPath);
-  return entry?.[0] ?? null;
+const articlePath = (article: Article) => `/articles/${article.slug}`;
+
+const findArticleByPath = (path: string) => {
+  const match = path.replace(/\/+$/, '').match(/^\/articles\/([^/]+)$/);
+  if (!match) return null;
+  const slug = decodeURIComponent(match[1]).toLowerCase();
+  return articles.find(a => a.slug === slug) ?? null;
 };
 
-const getHomePath = () => getArticleIdFromPath(window.location.pathname) ? '/' : window.location.pathname || '/';
+// Links minted before articles had real URLs pointed at `/#<article id>`, and one
+// article had a hand-built path of its own. Both still exist in the wild, so resolve
+// them here and rewrite the address bar to the canonical URL instead of 404ing.
+const findArticleByLegacyLocation = (path: string, hash: string) => {
+  const legacyHashId = hash.replace(/^#/, '');
+  if (legacyHashId && !legacyHashId.startsWith('section-')) {
+    const byHash = articles.find(a => a.id === legacyHashId);
+    if (byHash) return byHash;
+  }
+  const legacyPathId = path.replace(/^\/+|\/+$/g, '');
+  return articles.find(a => a.id === legacyPathId) ?? null;
+};
 
 const getArticleTimestamp = (article: Article) => {
   const timestamp = Date.parse(article.date);
@@ -41,27 +52,28 @@ function App() {
 
   useEffect(() => {
     const selectArticleFromLocation = () => {
-      const pathArticleId = getArticleIdFromPath(window.location.pathname);
-      if (pathArticleId) {
-        const article = articles.find(a => a.id === pathArticleId);
-        setCurrentArticle(article ?? null);
+      const { pathname, hash, search } = window.location;
+
+      const article = findArticleByPath(pathname);
+      if (article) {
+        setCurrentArticle(article);
+        if (!hash) window.scrollTo(0, 0);
+        return;
+      }
+
+      const legacyArticle = findArticleByLegacyLocation(pathname, hash);
+      if (legacyArticle) {
+        window.history.replaceState(null, '', `${articlePath(legacyArticle)}${search}`);
+        setCurrentArticle(legacyArticle);
         window.scrollTo(0, 0);
         return;
       }
 
-      const hash = window.location.hash.replace('#', '');
-      if (hash && !hash.startsWith('section-')) {
-        const article = articles.find(a => a.id === hash);
-        if (article) {
-          setCurrentArticle(article);
-          window.scrollTo(0, 0);
-        } else {
-          setCurrentArticle(null);
-        }
-      } else if (!window.location.hash) {
-        setCurrentArticle(null);
-        window.scrollTo(0, 0);
-      }
+      // An in-page heading link keeps whatever article is already open.
+      if (hash.startsWith('#section-')) return;
+
+      setCurrentArticle(null);
+      window.scrollTo(0, 0);
     };
 
     window.addEventListener('hashchange', selectArticleFromLocation);
@@ -160,11 +172,8 @@ function App() {
 
   const navigateTo = (id: string | null) => {
     const params = window.location.search;
-    const articlePath = id ? articlePathById[id] : null;
-    const homePath = getHomePath();
-    const nextUrl = id ? `${articlePath ?? homePath}${params}${articlePath ? '' : `#${id}`}` : `${homePath}${params}`;
-    window.history.pushState(null, '', nextUrl);
     const article = id ? articles.find(a => a.id === id) ?? null : null;
+    window.history.pushState(null, '', `${article ? articlePath(article) : '/'}${params}`);
     setCurrentArticle(article);
     window.scrollTo(0, 0);
   };

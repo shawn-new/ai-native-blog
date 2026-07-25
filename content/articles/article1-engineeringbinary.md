@@ -1,5 +1,6 @@
 ---
 id: "article1-engineeringbinary"
+slug: "the-engineering-binary"
 titleEn: "The Engineering Binary: Product, Infrastructure, and the FDE Bridge"
 titleZh: "工程师的二元演变：产品、基座与 FDE 的桥梁"
 category: "Opinions"

@@ -1,5 +1,6 @@
 ---
 id: "article3-ai-native-moats"
+slug: "moats-in-the-ai-native-era"
 titleEn: "Moats in the AI Native Era: The Trinity of Data, Insight, and Workflow"
 titleZh: "AI Native 时代的护城河：数据、洞察与工作流的三位一体"
 category: "Opinions"

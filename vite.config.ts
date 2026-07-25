@@ -13,7 +13,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        deathOfMiddleManagement: resolve(__dirname, 'article5-death-of-middle-management/index.html'),
       },
     },
   },

@@ -35,6 +35,20 @@ const formatHistory = (value = []) =>
 
 const formatRelease = (value) => (value === 'draft' ? 'draft' : 'published');
 
+// URLs are permanent, titles are not. Prefer an explicit `slug:` in frontmatter so
+// rewording a headline never breaks a link that is already published; fall back to
+// deriving one from the English title for articles that have not pinned theirs.
+// Titles here read "Main Title: subtitle" or "Main Title — subtitle", and only the
+// part before that break belongs in a URL.
+const slugify = (value) =>
+  String(value)
+    .split(/[:—]/)[0]
+    .trim()
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
 const toArticle = (filename) => {
   const filePath = path.join(sourceDir, filename);
   const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -47,6 +61,7 @@ const toArticle = (filename) => {
 
   return {
     id: data.id || filename.replace(/\.md$/i, ''),
+    slug: data.slug ? slugify(data.slug) : slugify(titleEn),
     titleEn,
     titleZh,
     category: data.category || 'Opinions',
@@ -74,8 +89,20 @@ const articles = articleFiles
   .filter((article) => includeDrafts || article.release !== 'draft')
   .sort((a, b) => dateTimestamp(b) - dateTimestamp(a) || a.id.localeCompare(b.id));
 
+const duplicateSlugs = articles
+  .map((article) => article.slug)
+  .filter((slug, index, all) => all.indexOf(slug) !== index);
+
+if (duplicateSlugs.length > 0) {
+  throw new Error(
+    `Duplicate slug(s): ${[...new Set(duplicateSlugs)].join(', ')}. ` +
+      'Two articles would resolve to the same URL — pin a distinct `slug:` in frontmatter.',
+  );
+}
+
 const fileContent = `export interface Article {
   id: string;
+  slug: string;
   titleEn: string;
   titleZh: string;
   category: 'Opinions' | 'Commentary';

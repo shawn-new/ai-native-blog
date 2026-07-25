@@ -1,7 +1,8 @@
 ---
 id: "article6-winning-with-taste-in-ai-era"
-titleEn: "Winning in the AI Era: Taste Is the Bottleneck"
-titleZh: "AI 时代如何赢：关键是 Taste"
+slug: "your-teams-taste-is-the-bottleneck"
+titleEn: "Your Team's Taste Is the Bottleneck — and It Can Be Trained"
+titleZh: "团队的 taste 才是瓶颈，而且它可以被练出来"
 category: "Opinions"
 date: "2026-05-30"
 author: "Sean"
@@ -31,10 +32,11 @@ history:
   - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Correct the author's vantage point on the opening story — not a witness, the one who pivoted the project afterward"
   - "Fri Jul 24 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Close the story with what the eval changed after the pivot; add the objections you can only find by watching real use"
   - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Third CTO pass — closing test now measures the actual claim and can fail; early signpost; tighten falsifier; resolve the customer-as-fast-vs-lagging-signal conflict; bilingual line fixes"
+  - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Retitle — name the team as the unit and add the learnability claim; drop the broader 'winning' promise the body never made"
 ---
 
-# Winning in the AI Era: Taste Is the Bottleneck
-# AI 时代如何赢：关键是 Taste
+# Your Team's Taste Is the Bottleneck — and It Can Be Trained
+# 团队的 taste 才是瓶颈，而且它可以被练出来
 
 ## Coherence Stopped Being a Signal
 ## 连贯不再是信号

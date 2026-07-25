@@ -1,5 +1,6 @@
 ---
 id: "article2-saas-endgame"
+slug: "the-saas-endgame"
 titleEn: "The SaaS Endgame: UI Gets Thin, Value Moves Deeper"
 titleZh: "SaaS 的终局：UI 变薄，价值转向更深处"
 category: "Opinions"
