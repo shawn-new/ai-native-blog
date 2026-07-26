@@ -114,8 +114,22 @@ main {
 
 /* --- Hero --- */
 .hero {
-  padding: 8rem 0 5rem 0;
+  /* Fills the screen so the article list begins exactly where it ends. */
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hero:focus-visible {
+  outline: 1px solid var(--line-color);
+  outline-offset: -1px;
 }
 
 .hero h1 {
@@ -535,7 +549,7 @@ footer {
   }
 
   .hero {
-    padding: 10rem 0 8rem 0;
+    padding: 0;
   }
 
   .hero p {
@@ -630,7 +644,7 @@ footer {
   }
 
   .hero {
-    padding: 6rem 0 5rem 0;
+    padding: 0;
   }
 
   .hero h1 {

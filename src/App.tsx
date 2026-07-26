@@ -118,10 +118,17 @@ function App() {
     };
   }, [currentArticle, tocScrollOffset]);
 
-  // Hero snap scroll: the first scroll from the very top skips past the hero.
-  // Everything after that is left alone. Without the guards this hijacks every
-  // wheel-down while the pointer is over the hero, so scrolling back up and
-  // easing down again teleports the reader to the bottom of the hero instead.
+  // The hero fills the screen, so the article list starts exactly at its bottom.
+  const revealArticles = () => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    window.scrollTo({ top: hero.getBoundingClientRect().bottom + window.scrollY, behavior: 'smooth' });
+  };
+
+  // The first scroll from the very top skips past the hero in one move.
+  // Everything after that is left to the browser. Without the guards this
+  // hijacks every wheel-down while the pointer is over the hero, so scrolling
+  // back up and easing down again teleports the reader to the bottom again.
   useEffect(() => {
     if (currentArticle) return;
     const hero = heroRef.current;
@@ -131,8 +138,7 @@ function App() {
       if (snapped || e.deltaY <= 0 || window.scrollY > 4) return;
       snapped = true;
       e.preventDefault();
-      const bottom = hero.getBoundingClientRect().bottom + window.scrollY;
-      window.scrollTo({ top: bottom, behavior: 'smooth' });
+      revealArticles();
     };
     hero.addEventListener('wheel', handleWheel, { passive: false });
     return () => hero.removeEventListener('wheel', handleWheel);
@@ -256,7 +262,20 @@ function App() {
       <main className={currentArticle ? 'container' : 'container container-no-nav'}>
         {!currentArticle ? (
           <>
-            <section className="hero" ref={heroRef}>
+            <section
+              className="hero"
+              ref={heroRef}
+              onClick={revealArticles}
+              role="button"
+              tabIndex={0}
+              aria-label={locale === 'cn' ? '查看文章列表' : 'View articles'}
+              onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  revealArticles();
+                }
+              }}
+            >
               <h1>Sean's Blog</h1>
               <p>{locale === 'cn' ? '关于技术与商业的系统性思考' : 'Systemic Thoughts on Technology & Business'}</p>
             </section>
