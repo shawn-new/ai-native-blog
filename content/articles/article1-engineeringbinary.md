@@ -150,21 +150,19 @@ One line sums up the failure mode. If a client cannot reach meaningful usage wit
 
 That is only half the story, and the missing half is the important one. Being operated by hand is not a failure state that gets noticed and fixed. **It is a stable equilibrium.** The revenue is booked. The renewal depends on the person who is there. Pulling them out costs this quarter's number, and the accounts that need them most are the accounts with the largest contracts. On the P&L, a deployment held together by hand looks identical to a deployment that worked.
 
-Whether that equilibrium is a problem depends on something about the product, not about the role, and this is the distinction I think most discussion of FDEs is missing.
+Whether that equilibrium is a problem depends on the product rather than the role, which is the distinction most discussion of FDEs skips.
 
-If the company sells a platform, deployment work compounds. What the engineer learns at the first customer does not stay at the first customer: it becomes a connector, a schema mapping, a configuration surface, an extension to the object model. The next deployment inherits it and goes faster, and the platform is better afterward than it was before. Deployment is how the product finds out what it is missing. That is a software company, and its margins will migrate toward software margins on their own, because the same work is not being redone.
+If the company sells a platform, deployment work compounds. What the engineer learns at the first customer becomes a connector, a schema mapping, a configuration surface. The next deployment inherits it and goes faster. Deployment is how the product finds out what it is missing, and margins drift toward software margins on their own, because the same work is not redone.
 
-If the company sells software that is not a platform, none of that has anywhere to land. What the engineer learns stays inside that customer's deployment, because there is no shared surface for it to settle into. The second customer costs about what the first one did. At that point the business is priced in person-days whether or not it bills that way, and it is a consulting business wearing a software company's vocabulary.
+Without a platform underneath, none of that has anywhere to land. What the engineer learns stays inside that one deployment. The second customer costs about what the first did, and the business is priced in person-days whether or not it bills that way.
 
-So the diagnostic is not how the role is described in a job posting. It is whether deployment number six is meaningfully faster than deployment number two in the same segment, and whether you can point to the artifact each earlier deployment left behind. If nothing was left behind, the knowledge left with the engineer.
+So the diagnostic is not the job posting. It is whether deployment six is meaningfully faster than deployment two in the same segment, and whether you can point to what each earlier one left behind. If nothing was left behind, the knowledge left with the engineer.
 
-This also explains why *we'll abstract it next time* fails so reliably in the second case. There is no platform for the abstraction to go into. It is fragile even in the first case, because the cost of abstracting falls on the deployment team while the benefit lands on the product team, and only the deployment team is carrying a customer date. That asymmetry is why next time keeps not arriving. Nobody involved is being lazy.
+That also explains why *we'll abstract it next time* fails so reliably without a platform: the abstraction has nowhere to go. Even with one it stays fragile, because the cost falls on the deployment team while the benefit lands on the product team, and only the deployment team carries a customer date. Nobody is being lazy.
 
-Which is why this role needs unit economics attached to it, and almost no writing about it supplies them. Palantir is the useful public case, because it is the only company at scale that has had to explain the model to analysts every quarter, and both sides of that argument are really arguing about which of the two businesses above it is. The recurring argument is worth reading directly: the company reports software-grade adjusted gross margins, while skeptics point out that a share of forward-deployed engineering cost sits in R&D and sales and marketing rather than in cost of revenue, and that reclassifying it would move gross margin materially. Professional services have been running at roughly a fifth of revenue. The compressed version of the bear case is *a software multiple on a services gross margin*, and it has not been settled in either direction.
+Palantir is the public case worth reading directly, because it has had to explain this model to analysts every quarter, and both sides of that argument are really arguing about which of the two businesses it is. The company reports software-grade adjusted gross margins; skeptics note that some forward-deployed cost sits in R&D and sales and marketing rather than cost of revenue, and that reclassifying it would move the number materially. Professional services run at roughly a fifth of revenue. The bear case compresses to *a software multiple on a services gross margin*, and it is unsettled. The transferable lesson: copy the embedded engineer without the platform spine and you get bespoke deployments nobody can upgrade.
 
-The lesson generalizes past Palantir, and it is the one to take: the model works when there is a real platform underneath the bespoke work. Copy the embedded-engineer part without the platform spine and you do not get Palantir. You get a large number of bespoke deployments that nobody can upgrade.
-
-Two numbers make this legible inside your own company, and both are computable from data you already have. First, the trend in FDE hours required per new dollar of ARR. Falling means knowledge is compounding into the platform; flat or rising means the deployment organization is covering for an unfinished product, and you are booking that as revenue. Second, the share of FDE-written code that ends up merged into the main product, the direct measure of whether anything is being left behind. If you have never measured it, measure it before assuming it is high.
+Two numbers make this legible in your own company. First, FDE hours per new dollar of ARR: falling means knowledge is compounding into the platform, flat or rising means the deployment organization is covering for an unfinished product and you are booking it as revenue. Second, the share of FDE-written code merged into the main product. If you have never measured it, measure it before assuming it is high.
 
 
 **中文：**
@@ -177,21 +175,19 @@ Two numbers make this legible inside your own company, and both are computable f
 
 但这只说了一半，而漏掉的那一半更重要。**"被人工托管"不是一个会被发现并修正的失败状态，它是一个稳定均衡。** 收入已经确认了。续约挂在那个人身上。把他撤走，代价是这个季度的数字，而最需要他的客户恰好是合同额最大的客户。在损益表上，一个靠人力撑着的部署，和一个真的跑通了的部署，长得一模一样。
 
-但这个均衡是不是问题，取决于产品本身，而不取决于这个角色，我认为大多数关于 FDE 的讨论恰恰漏掉了这个区分。
+这个均衡是不是问题，取决于产品，而不取决于这个角色。大多数关于 FDE 的讨论都跳过了这个区分。
 
-**如果公司卖的是平台，部署工作是会复利的。** 工程师在第一个客户那里学到的东西不会停在第一个客户身上：它会变成一个连接器、一份 schema 映射、一个配置面、一次对象模型的扩展。下一次部署继承它，因此更快；而平台在这之后比之前更好。部署是产品发现自己缺什么的方式。这是一家软件公司，它的毛利率会自己往软件的毛利率迁移，因为同样的活没有被重做第二遍。
+**如果公司卖的是平台，部署工作会复利。** 工程师在第一个客户那里学到的东西，会变成一个连接器、一份 schema 映射、一个配置面。下一次部署继承它，因此更快。部署是产品发现自己缺什么的方式，毛利率会自己往软件的水平漂，因为同样的活没被重做第二遍。
 
-**如果公司卖的不是平台，而是别的软件，上面这些东西没有地方可以落。** 工程师学到的东西留在那一次部署里，因为没有一个共享的面让它沉淀下去。第二个客户的成本和第一个差不多。到这一步，这门生意就是按 person-day 计价的，不管它账面上怎么开票。它是一门穿着软件公司词汇的咨询生意。
+**底下没有平台，这些东西就无处可落。** 工程师学到的留在那一次部署里，第二个客户的成本和第一个差不多；不管账面上怎么开票，这门生意都是按 person-day 计价的。
 
-所以判别式不是招聘启事上怎么描述这个角色，而是：**同一个客户区间里，第六次部署有没有明显快过第二次？以及，你能不能指出前面每一次部署留下了什么工件？** 如果什么都没留下，那知识是跟着工程师走的。
+所以判别式不是招聘启事，而是：**同一个客户区间里，第六次部署有没有明显快过第二次？前面每一次部署留下了什么工件？** 什么都没留下，说明知识跟着工程师走了。
 
-这也解释了为什么"下次再抽象"在第二种公司里失败得如此可靠：**没有平台可以让这个抽象落进去。** 即使在第一种公司里它也很脆弱，因为抽象的成本落在部署团队，收益落在产品团队，而只有部署团队背着一个客户的交付日期。让"下次"永远不到来的是这个不对称。没有人在偷懒。
+这也解释了"下次再抽象"为什么在没有平台时失败得如此可靠：**抽象无处可去。** 就算有平台它也脆弱，因为成本落在部署团队、收益落在产品团队，而只有部署团队背着客户的交付日期。没有人在偷懒。
 
-所以这个角色必须配上单位经济账，而几乎所有写它的文章都不给。Palantir 是有用的公开样本，因为它是唯一一家做到规模、又必须每个季度向分析师解释这套模式的公司，而那场争论的两方，其实争的正是它属于上面两种生意里的哪一种。那场反复出现的争论值得直接去读：公司报出的是软件级别的调整后毛利率，而质疑者指出，有一部分前线部署工程的成本被计在研发和销售费用里、而不是营业成本里，重新归类会让毛利率明显下移；专业服务收入长期占营收约五分之一。空方的说法压缩成一句就是：**用软件的估值倍数，买一门服务的毛利率**。这场争论到今天没有向任何一方了结。
+Palantir 是值得直接去读的公开样本，因为它必须每个季度向分析师解释这套模式，而争论的两方争的正是它属于上面两种生意里的哪一种。公司报出的是软件级别的调整后毛利率；质疑者指出，部分前线部署成本被计在研发和销售费用里而非营业成本，重新归类会让这个数字明显下移；专业服务收入长期占营收约五分之一。空方压缩成一句就是：**用软件的估值倍数，买一门服务的毛利率**，至今未有定论。可迁移的结论是：只抄嵌入式工程师、不要底下那根产品脊椎，你得到的是一大堆没人能升级的定制部署。
 
-真正该带走的结论比 Palantir 本身更通用：这套模式成立的前提，是定制工作底下真的有一个平台。只抄嵌入式工程师那一半、不要底下那根产品脊椎，你得到的不是 Palantir，是一大堆没人能升级的定制部署。
-
-有两个数字能让这件事在你自己公司里变得可见，而且都能用你手上已有的数据算出来。第一，**每新增一美元 ARR 所需的 FDE 工时**的趋势。下降说明知识正在往平台里复利；持平或上升，说明部署组织在替一个没做完的产品兜底，而你把这件事记成了收入。第二，**FDE 写的代码最终被合并进主产品的比例**。这是"有没有东西被留下来"最直接的度量。如果你从来没量过，先量了再假设它很高。
+有两个数字能让这件事在你公司里变得可见。第一，**每新增一美元 ARR 所需的 FDE 工时**：下降说明知识在往平台里复利，持平或上升说明部署组织在替一个没做完的产品兜底，而你把它记成了收入。第二，**FDE 写的代码最终被合并进主产品的比例**。从来没量过，就先量了再假设它很高。
 
 
 ---

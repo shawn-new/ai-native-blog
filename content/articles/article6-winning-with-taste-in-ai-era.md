@@ -48,7 +48,7 @@ The demo works. The code compiles. The spec has all the right sections. Then som
 
 I have sat through that pause more than once. Here is the one I keep coming back to.
 
-A team spent two months building an agentic product with no eval and no rubric. They were not careless. The work was not sloppy. Everything they produced was coherent. The demos held up, the docs held up, every week looked like progress. Nobody could answer the only question that mattered: is this version better than last week's?
+A team spent two months building an agentic product with no eval and no rubric. They were not careless, and everything they produced was coherent. The demos held up, the docs held up, every week looked like progress. Nobody could answer the only question that mattered: is this version better than last week's?
 
 Without that answer, every change was a guess. Customer feedback went from encouraging to pointed to quiet. By the time the complaints were unambiguous, the real damage was done. Customers had stopped believing the product would get better. That is harder to lose than any single feature. It got rolled back.
 
@@ -56,13 +56,13 @@ I was not on that team. I am the one who pivoted the project afterward, so I cou
 
 Working that out convinced me of something bigger, and it is the real subject of this post. Coherence says much less than it used to about whether anyone thought it through.
 
-"We needed evals" is the most comfortable conclusion a post-mortem can reach. It blames nobody, it is purely technical, and it converts neatly into a project. So the harder reading deserves saying out loud: maybe the product was solving a problem nobody had, and the missing eval had nothing to do with the outcome.
+"We needed evals" is the most comfortable conclusion a post-mortem can reach. It blames nobody and converts neatly into a project. So the harder reading deserves saying out loud: maybe the product was solving a problem nobody had.
 
 I still land on eval, for one reason. Without a rubric, that team could not have told those two stories apart. A team that can measure whether this week beat last week finds out in three weeks that it is aimed at the wrong problem. A team that cannot finds out in two months, from a customer who has stopped replying.
 
-When we pivoted, we built one. The product did not become good overnight. Other things had to change too. What changed immediately was smaller and more valuable than that: we could see which changes helped and which did not. The guessing stopped.
+When we pivoted, we built one. The product did not become good overnight; other things had to change too. What changed immediately was smaller and more valuable: we could see which changes helped and which did not. The guessing stopped.
 
-That is why I think the bottleneck moved. For most of my career, coherence was a decent proxy for quality. If a design doc held together, someone had probably thought it through, because writing it coherently cost about as much work as thinking it through. Reviewers leaned on that. I leaned on that.
+That is why I think the bottleneck moved. For most of my career, coherence was a decent proxy for quality: writing a design doc that held together cost about as much work as thinking it through. Reviewers leaned on that. I leaned on that.
 
 That proxy got much weaker. Coherent docs, coherent code, coherent strategy now cost minutes. Coherence still tells me an artifact is readable, and incoherence is still a bad sign. What it no longer tells me is whether anyone checked that the thing is true.
 
@@ -76,7 +76,7 @@ Demo 能跑。代码能 compile。Spec 结构完整。然后有人问：agent �
 
 这种沉默我经历过不止一次。其中有一次我一直回想。
 
-一个团队花两个月做一个 agentic 产品，没有 eval，没有 rubric。他们不是不认真，活也不糙。他们产出的东西全都是连贯的。Demo 立得住，文档立得住，每一周看起来都像有进展。没有人能回答唯一要紧的那个问题：这一版比上一版好吗？
+一个团队花两个月做一个 agentic 产品，没有 eval，没有 rubric。他们不是不认真，产出的东西也全都是连贯的：demo 立得住，文档立得住，每一周看起来都像有进展。没有人能回答唯一要紧的那个问题：这一版比上一版好吗？
 
 没有这个答案，每一次改动都是猜。客户的反馈从鼓励，到尖锐，到沉默。等到抱怨明确到无法回避的时候，真正的损失已经发生了：客户不再相信这个产品会变好。这比丢掉任何一个功能都难挽回。最后它被 rollback 了。
 
@@ -84,13 +84,13 @@ Demo 能跑。代码能 compile。Spec 结构完整。然后有人问：agent �
 
 把这件事想清楚，也让我确认了一个更大的变化，那才是这篇文章真正要谈的：连贯这件事，现在能说明的东西比过去少得多。
 
-"我们缺 eval"是复盘会最舒服的结论。它不指向任何人，纯技术，而且可以立项。所以更难听的那种读法必须说出来：也许这个产品解决的问题本身就不存在，缺 eval 和后来的结果无关。
+"我们缺 eval"是复盘会最舒服的结论：不指向任何人，而且可以立项。所以更难听的那种读法必须说出来：也许这个产品解决的问题本身就不存在。
 
 我最后还是落在 eval 上，理由只有一个：没有 rubric，那个团队根本分不清这两种故事。一个能测出"这周比上周好没好"的团队，三周就会发现自己瞄错了问题。一个测不了的团队，要两个月才知道，而且是从一个已经不回消息的客户那里知道的。
 
-Pivot 的时候我们把 eval 建起来了。产品没有因此一夜变好，别的东西也得改。立刻变了的是一件更小、也更值钱的事：我们能看见哪些改动有用、哪些没用。猜停下来了。
+Pivot 的时候我们把 eval 建起来了。产品没有一夜变好，别的东西也得改。立刻变了的是更小也更值钱的一件事：我们能看见哪些改动有用、哪些没用。猜停下来了。
 
-这就是我认为瓶颈已经移动的原因。过去很长一段时间里，连贯性是质量的一个不错的替代指标。一份设计文档如果自洽，通常说明有人真的想清楚了，因为把它写连贯，和把它想清楚，成本差不多。Reviewer 靠这个筛第一遍。我也靠这个。
+这就是我认为瓶颈已经移动的原因。过去很长一段时间里，连贯性是质量不错的替代指标：把一份设计文档写连贯，和把它想清楚，成本差不多。Reviewer 靠这个筛第一遍。我也靠这个。
 
 这个替代指标现在弱了很多。连贯的文档、连贯的代码、连贯的策略，几分钟就能产出。连贯性仍然说明这东西能读，而不连贯依然是个坏信号。它不再说明的是：有没有人核对过这东西是不是真的。
 
