@@ -1,8 +1,8 @@
 ---
 id: "article2-saas-endgame"
 slug: "the-saas-endgame"
-titleEn: "The SaaS Endgame: When Nobody Opens the App, What Do You Charge For?"
-titleZh: "SaaS 的终局：没人打开 app 之后，你靠什么收费？"
+titleEn: "When Nobody Opens the App, What Do You Charge For?"
+titleZh: "没人打开 app 之后，你靠什么收费？"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
@@ -22,8 +22,8 @@ history:
   - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Adversarial SaaS-operator pass: add the pricing mechanics with real per-outcome and per-action numbers, narrow the false 'screen was the moat' premise, answer why this round differs from chatbots and voice, merge four layers into one, replace the strawman objection"
 ---
 
-# The SaaS Endgame: When Nobody Opens the App, What Do You Charge For?
-# SaaS 的终局：没人打开 app 之后，你靠什么收费？
+# When Nobody Opens the App, What Do You Charge For?
+# 没人打开 app 之后，你靠什么收费？
 
 ## The Screen Was Never The Whole Moat
 ## 屏幕从来不是全部的护城河

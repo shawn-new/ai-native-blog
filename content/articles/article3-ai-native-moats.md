@@ -1,8 +1,8 @@
 ---
 id: "article3-ai-native-moats"
 slug: "moats-in-the-ai-native-era"
-titleEn: "You Don't Have a Moat. You Have a Timer. Here's How to Check."
-titleZh: "你没有护城河，你有倒计时——以及怎么检查"
+titleEn: "You Don't Have a Moat. You Have a Timer."
+titleZh: "你没有护城河，你有倒计时"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
@@ -25,8 +25,8 @@ history:
   - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Add the control-loop argument for why a better model does not absorb the harness, and recast the three assets as what the loop requires rather than a taxonomy"
 ---
 
-# You Don't Have a Moat. You Have a Timer. Here's How to Check.
-# 你没有护城河，你有倒计时，以及怎么检查
+# You Don't Have a Moat. You Have a Timer.
+# 你没有护城河，你有倒计时
 
 ## The Death Is Chronic, Not Sudden
 ## 死法是慢性病，不是猝死

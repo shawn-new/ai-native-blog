@@ -1,8 +1,8 @@
 ---
 id: "article6-winning-with-taste-in-ai-era"
 slug: "your-teams-taste-is-the-bottleneck"
-titleEn: "Your Team's Taste Is the Bottleneck. It Can Be Trained."
-titleZh: "团队的 taste 才是瓶颈，而且它可以被练出来"
+titleEn: "Your Team's Taste Is the Bottleneck. Good News: It's Trainable."
+titleZh: "团队的 taste 才是瓶颈。好消息是，它可以练"
 category: "Opinions"
 date: "2026-05-30"
 author: "Sean"
@@ -36,8 +36,8 @@ history:
   - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Voice pass: strip em-dashes, plainer sentences, name the pattern in the loop section"
 ---
 
-# Your Team's Taste Is the Bottleneck. It Can Be Trained.
-# 团队的 taste 才是瓶颈，而且它可以被练出来
+# Your Team's Taste Is the Bottleneck. Good News: It's Trainable.
+# 团队的 taste 才是瓶颈。好消息是，它可以练
 
 ## Coherence Stopped Being a Signal
 ## 连贯不再是信号

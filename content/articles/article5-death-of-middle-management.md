@@ -24,7 +24,7 @@ history:
   - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Adversarial VP-reader pass: retitle to what the body actually argues, admit the job is more than translation, run the TLM span arithmetic, cite the delayering research, fix the opener's overreach, replace the closing signal with a falsifiable prediction"
 ---
 
-# Middle Management Won't Die. It Gets More Expensive
+# Middle Management Will Not Die. It Gets More Expensive.
 # 中层不会消失，它会变贵
 
 ## The Translation Work Is Breaking

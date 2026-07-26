@@ -1,13 +1,14 @@
 ---
 id: "article1-engineeringbinary"
 slug: "the-engineering-binary"
-titleEn: "Writing Code Got Cheap. Domain Knowledge Got Expensive."
-titleZh: "写代码变便宜了，领域知识变贵了"
+titleEn: "Writing Code Got Cheap. Ownership Did Not."
+titleZh: "写代码变便宜了，ownership 没有"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
 release: "published"
 keywords:
+  - "Ownership"
   - "Domain Knowledge"
   - "Product vs Infrastructure"
   - "FDE"
@@ -22,8 +23,8 @@ history:
   - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Adversarial FDE-operator pass: retitle away from the binary/three contradiction, treat the roles as axes rather than job categories, add the FDE unit economics and exit paths, locate where the loop actually breaks, replace the closing test with one that can fail"
 ---
 
-# Writing Code Got Cheap. Domain Knowledge Got Expensive.
-# 写代码变便宜了，领域知识变贵了
+# Writing Code Got Cheap. Ownership Did Not.
+# 写代码变便宜了，ownership 没有
 
 ## The Axis Rotated
 ## 分类的轴转了方向
@@ -40,7 +41,7 @@ So the interesting change is not that engineers got cheaper or more expensive. I
 
 That is the claim I want to defend, and it is falsifiable. If the ability to write in a language or framework were still the scarce thing, hiring would still be organized around it. If instead the scarce thing is understanding a problem well enough to own the decisions, hiring reorganizes around problems.
 
-Three domains of ownership sit in that space: owning a user outcome, owning a reusable primitive, owning the distance between a working product and a working deployment.
+Domain knowledge is the input. Ownership is what it buys, and ownership is the actual subject of this post: the part of the work that cannot be handed to a model, because someone has to answer for it. Three kinds of it sit in that space. Owning a user outcome. Owning a reusable primitive. Owning the distance between a working product and a working deployment.
 
 I should be precise about what kind of claim that is, because I got it wrong in the first version of this post. These are not three job categories. They are three axes, and people hold positions on more than one. An engineer who turns a client integration into a configuration option is doing deployment work and platform work in the same afternoon. At a fifty-person company one person holds all three, and the split does not describe anything real until an organization is large enough that a single person can no longer carry all three.
 
@@ -56,7 +57,7 @@ I should be precise about what kind of claim that is, because I got it wrong in 
 
 这是我要守的主张，而且它可以被证伪：如果"会用某个语言或框架"仍然是稀缺项，招聘就会继续围绕它组织；如果稀缺的是"把一个问题理解到足以承担它的决定"，招聘就会围绕问题重新组织。
 
-有三个 ownership 的领域落在这个空间里：拥有一个用户结果，拥有一个可复用原语，拥有"能跑的产品"和"能用的部署"之间那段距离。
+领域知识是输入，ownership 是它换来的东西，而 ownership 才是这篇文章真正要谈的：这份工作里没法交给模型的那一部分，因为总得有人为它负责。这个空间里有三种 ownership：拥有一个用户结果，拥有一个可复用原语，拥有"能跑的产品"和"能用的部署"之间那段距离。
 
 我要把这个主张的性质说准，因为这篇文章的第一版我说错了。**这不是三种岗位，是三条坐标轴**，而人同时站在不止一条轴上。一个工程师在客户现场把某个集成抽象成配置项，他在同一个下午里既在做部署工作也在做平台工作。在一家五十人的公司，这三件事由同一个人扛着，这个划分描述不了任何真实的东西。它要到组织大到一个人扛不动的时候才开始成立。
 
