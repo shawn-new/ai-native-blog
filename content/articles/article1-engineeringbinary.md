@@ -6,7 +6,7 @@ titleZh: "Scope 必须变大。它会长成什么形状"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
-release: "published"
+release: "draft"
 keywords:
   - "Scope"
   - "Ownership"
