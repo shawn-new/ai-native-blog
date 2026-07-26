@@ -63,7 +63,7 @@ A model is not that system. It is the decision function inside it: one component
 
 The minimum a system needs to exist: **at least one feedback loop and at least one way to take action.**
 
-Remove actuation and the model produces text about a gap it cannot close. Remove sensing and it closes gaps blindly and never learns whether it did. Remove the comparator and you are the team from the taste post: two months of coherent work with no way to tell if this version is better than the last.
+Remove actuation and the model produces text about a gap it cannot close. Remove sensing and it closes gaps blindly and never learns whether it did. Remove the comparator and you get two months of coherent work with no way to tell if this version is better than the last.
 
 In practice, a minimal good harness has four parts:
 
@@ -83,7 +83,7 @@ In practice, a minimal good harness has four parts:
 
 **一个系统得以存在的最低配置：至少一个反馈回路，加至少一种执行动作的方式。**
 
-去掉执行，模型只能产出关于一个它关不上的 gap 的文字。去掉传感，它盲目地去关 gap，永远不知道自己关上没有。去掉比较器，你就是 taste 那篇文章里的那个团队：两个月的连贯工作，没有任何办法知道这一版比上一版好没好。
+去掉执行，模型只能产出关于一个它关不上的 gap 的文字。去掉传感，它盲目地去关 gap，永远不知道自己关上没有。去掉比较器，你得到的是两个月的连贯工作，没有任何办法知道这一版比上一版好没好。
 
 在实践中，一个最小的好 harness 有四个部分：
 
@@ -97,14 +97,14 @@ In practice, a minimal good harness has four parts:
 
 ---
 
-## Why SaaS Survival Depends on It
-## 为什么 SaaS 公司的存活靠它
+## Why Every SaaS Company Needs Its Own Harness
+## 为什么每家 SaaS 公司都应该有自己的 Harness
 
 **English:**
 
 The death of a SaaS product without a harness is not sudden. It is chronic, and it starts in the price.
 
-The customer stays, and at renewal the price comes down, because a procurement team that can now name three adequate alternatives negotiates differently. Gross margin drifts as inference gets bundled into cheaper tiers. Net revenue retention slides from above a hundred to below it over eighteen to twenty-four months, while the logo-retention chart still looks healthy.
+I have watched this pattern more than once. The customer stays, and at renewal the price comes down, because a procurement team that can now name three adequate alternatives negotiates differently. Gross margin drifts as inference gets bundled into cheaper tiers. Net revenue retention slides from above a hundred to below it over eighteen to twenty-four months, while the logo-retention chart still looks healthy.
 
 One test cuts through all of it: **if a better base model can absorb your product, you do not have a moat. You have a timer.**
 
@@ -118,7 +118,7 @@ None of that arrives with a better model. All of it lives in the harness.
 
 没有 harness 的 SaaS 产品的死法不是突然的。它是慢性的，最先表现在价格上。
 
-客户没走，但续约时价格下来了：一个现在能说出三个够用替代品的采购团队，谈判姿态是不一样的。毛利率随着推理被打包进更便宜的档位而缓慢下移。净收入留存率在十八到二十四个月里从一百出头滑到一百以下，而 logo 留存率的图表看起来依然健康。
+这种模式我见过不止一次。客户没走，但续约时价格下来了：一个现在能说出三个够用替代品的采购团队，谈判姿态是不一样的。毛利率随着推理被打包进更便宜的档位而缓慢下移。净收入留存率在十八到二十四个月里从一百出头滑到一百以下，而 logo 留存率的图表看起来依然健康。
 
 一个测试穿透这一切：**如果一个更强的基础模型能吸收你的产品，你没有护城河，你只有倒计时。**
 
@@ -135,31 +135,31 @@ Harness 创造的是更强模型关不掉的距离。用户上个季度做的修
 
 **English:**
 
-The common counterargument: the harness is scaffolding. Models get better, the scaffolding falls away, and whatever you built on it was temporary.
+The common view: the harness is scaffolding. Models get better, the scaffolding falls away, and whatever you built on it was temporary.
 
-The reason it is wrong is structural, and it holds whatever the models do next.
+A stronger model does not automatically figure out two things that the harness exists to answer: **what counts as good**, and **how to get from here to good**.
 
-A model proposes what to do. By itself it does not know what the desired state is in your business, cannot observe what happened after it acted, and cannot act without something to act through. A better model makes a better proposal at one step of the loop. It does not supply the loop.
+"What counts as good" is not a capability question. It is an opinion. A human has to decide that this approval threshold is right for this customer, that this error rate is acceptable in this domain, that this output needs a second review and that one does not. Those definitions change per customer, per quarter, per regulatory cycle. No amount of model capability produces them, because they are not facts to be learned. They are choices to be made, and someone has to bear the cost of making them wrong.
 
-Computing a gap between actual and desired is not a capability question. It requires knowing what the desired state is, what to measure, and what counts as closed. Those are domain facts. They come from the customer's reality, not from the model's training.
+"How to get from here to good" requires acting in the world and observing what happened. The model can propose an action. It cannot execute it through the customer's systems, cannot observe the downstream outcome, and cannot take responsibility when the action causes damage. Execution requires permissions, audit trails, and integration with systems the model has no access to. Responsibility requires a person or an organization that will be accountable when things go wrong.
 
-This argument has a clear failure condition. If model providers begin shipping the loop itself — native sensing into your domain's systems, actuation with permissions and audit, memory of what happened last time — they are supplying the system rather than the decision function, and the harness really was temporary. That is already happening at the edges.
+These two gaps do not close with scale. A model that is ten times more capable still does not know what this customer considers acceptable, still cannot act through their systems, and still cannot bear the liability of a wrong decision. The harness is where those answers live and where those actions happen.
 
-The honest form of the claim: shipping a better decision function is far easier than shipping someone else's feedback loop, because the loop is made of that customer's reality. Every customer's approval rules are different. Every customer's "good enough" is different. Every customer's correction history is different. Absorbing the decision function is a model release. Absorbing the loop is a professional services engagement, one customer at a time.
+I would rather name the failure condition than let it float. If model providers begin shipping the loop itself — defining "good" for your domain, acting with permissions and audit, bearing the cost of being wrong — then the harness really was temporary. The honest form of my claim: that is a professional services business, not a model release, and it has to be built one customer at a time.
 
 **中文：**
 
-常见的反驳：harness 是脚手架。模型变强，脚手架脱落，你在上面建的东西只是暂时的。
+常见的观点：harness 是脚手架。模型变强，脚手架脱落，你在上面建的东西只是暂时的。
 
-这个说法错了，理由是结构性的，无论模型接下来怎么发展都成立。
+更强的模型不会自动搞清楚 harness 存在就是为了回答的两个问题：**什么算好**，以及**怎么从现状走到好**。
 
-模型提出该做什么。但它不知道你的业务里理想状态是什么，看不到自己行动之后发生了什么，也没有可以借以行动的东西。更强的模型让回路里某一步的提议更好，但它不提供这个回路。
+"什么算好"不是能力问题，是观点问题。需要人来决定：这个审批阈值对这个客户合适，这个错误率在这个领域可以接受，这个输出需要二次复核而那个不需要。这些定义随客户、随季度、随监管周期变化。再强的模型能力也产出不了它们，因为它们不是可以学到的事实，而是需要做出的选择——而且有人要为选错承担代价。
 
-算出实际状态和理想状态之间的 gap 不是能力问题。它要求你知道理想状态是什么、该测什么、以及什么算关上了。这些都是领域事实，来自客户的现实，不来自模型的训练。
+"怎么从现状走到好"要求在世界里行动并观测结果。模型可以提议一个动作，但它执行不了——执行需要在客户系统里操作的权限、审计轨迹和集成。模型也观测不了下游结果。更根本的是，它无法为行动造成的损害承担责任。责任需要一个会在出错时被追责的人或组织。
 
-这个论证有明确的失败条件。如果模型厂商开始交付回路本身——原生接入你所在领域系统的传感、带权限和审计的执行、对上次发生了什么的记忆——它们提供的就是整个系统而非决策函数，那时 harness 确实只是暂时的。这件事已经在边缘上发生了。
+这两个缺口不随规模缩小。一个强十倍的模型，仍然不知道这个客户认为什么可接受，仍然无法通过他们的系统执行动作，仍然无法承担一个错误决策的后果。Harness 是这些答案住的地方，也是这些动作发生的地方。
 
-这个主张诚实的形态：**交付一个更好的决策函数，比交付别人的反馈回路容易得多，因为那个回路是由客户的现实构成的。** 每个客户的审批规则不一样。每个客户的"够好"不一样。每个客户的修正历史不一样。吸收决策函数是一次模型发布。吸收回路是一次专业服务，一次一个客户。
+失败条件我宁愿写出来。如果模型厂商开始交付回路本身——替你的领域定义"好"、带权限和审计的执行、为做错买单——那时 harness 确实只是暂时的。我这个主张诚实的形态：**那是一门专业服务生意，不是一次模型发布，而且它必须一次一个客户地建。**
 
 ---
 
@@ -168,36 +168,57 @@ The honest form of the claim: shipping a better decision function is far easier 
 
 **English:**
 
-A harness is not a checklist. It is a system that runs, and building it requires three things that each take time to earn.
+The four parts above tell you what a harness is. Building one that lasts is a different question. The hard parts are not engineering — they are the things that take time to accumulate and cannot be bought on any schedule.
 
-**Sensing that others cannot replicate.** The most defensible form of data is outcome labels that take time to observe: did the loan get repaid, did the patient relapse, did the customer renew, did the part fail. A competitor with a better model still cannot compress the eighteen months it takes to find out. The second form is access locked behind a regulatory, contractual, or physical threshold. Everything else is supply chain. And data has a half-life — fraud patterns rotate, regulatory changes invalidate labels, customer behavior drifts. Accumulation only counts while it outruns decay.
+The first is data that a competitor cannot get by being smarter. The strongest form is outcome labels that take time to observe: did the loan get repaid, did the patient relapse, did the customer renew. A competitor with a better model still cannot compress the eighteen months it takes to find out. The second form is access locked behind a regulatory, contractual, or physical threshold. Everything else is supply chain. I would add one discipline that gets applied to other people's data stories but rarely to one's own: data has a half-life. Fraud patterns rotate. Regulatory changes invalidate labels. Accumulation only counts while it outruns decay.
 
-**Judgment encoded as artifacts.** Open your repository and count: schemas, label definitions, evaluation sets, approval rules, ranking functions, review queues. That list is the honest inventory of accumulated judgment. A company whose judgment lives entirely in two domain experts is selling consulting. Those two people become irreplaceable and then leave. Judgment that exists as code survives them.
+The second is judgment that exists outside people's heads. Open your repository and count: schemas, label definitions, evaluation sets, approval rules, ranking functions, review queues. That is the honest inventory of what your team has learned. A company whose judgment lives entirely in two domain experts is selling consulting. Those two people become irreplaceable and then leave. Judgment that exists as code survives them.
 
-**Workflow that owns the correction loop.** The place where users fix the output is where the label is generated, and that stream is the least copyable asset in an AI product, because it carries the answer, the preference, and the process at once. A product that owns this loop gets better from use. A product that does not is static, regardless of how good the model is.
+The third is a workflow that owns the correction loop. Where users fix the output is where the label is generated. That stream is the least copyable asset in an AI product, because it carries the answer, the preference, and the process at once. A product that owns this loop gets better from use. A product that does not is static regardless of how good the model is.
 
-Three numbers tell you whether the harness is working:
+Three numbers tell me whether a harness is actually working:
 
-**Correction rate over cohort age.** Same class of task, same cohort of users: what share of outputs gets edited in month one versus month nine? Falling means the system learns from use. Flat means usage only produces volume.
+Correction rate over cohort age. Same task, same users: what share of outputs gets edited in month one versus month nine? Falling means the system learns. Flat means usage only produces volume.
 
-**Share of decisions closed inside the product.** How many actions are executed in your system versus exported and executed elsewhere? This is the honest measure of whether you are a system of action or a report.
+Share of decisions closed inside the product. How many actions are executed in your system versus exported elsewhere? If users do the work somewhere else, you are a report, not a system of action.
 
-**Gross margin against inference cost.** If inference costs fall and your price holds, you are selling something other than model calls. If your price falls with inference cost, you were reselling the model.
+Gross margin against inference cost. If inference costs fall and your price holds, you are selling something other than model calls. If your price falls with inference cost, you were reselling the model.
 
 **中文：**
 
-Harness 不是一张清单。它是一个要跑起来的系统，建它需要三样各自要花时间才能挣到的东西。
+上面四个部分告诉你 harness 是什么。建一个能持续存在的 harness 是另一个问题。难的部分不是工程——是那些需要时间积累、按什么时间表都买不到的东西。
 
-**别人复制不了的感知。** 最有防御力的数据形态是需要时间才能观测到的结果标签：贷款有没有还上，病人有没有复发，客户有没有续约，零件有没有失效。一个拥有更强模型的竞争者，仍然压缩不了那十八个月。第二种是被监管、合同或物理门槛锁住的准入。除此之外的都属于供应链。而且数据有半衰期——欺诈模式会轮换，监管变化让历史标签作废，客户行为随宏观漂移。积累只在跑赢衰减的时候才算数。
+第一个是竞争对手靠更聪明拿不到的数据。最强的形态是需要时间才能观测到的结果标签：贷款有没有还上，病人有没有复发，客户有没有续约。一个拥有更强模型的竞争者，仍然压缩不了那十八个月。第二种是被监管、合同或物理门槛锁住的准入。除此之外的都属于供应链。我加一条纪律——人们常拿它衡量别人的数据故事，很少用在自己的上面：数据有半衰期。欺诈模式会轮换，监管变化让标签作废。积累只在跑赢衰减的时候才算数。
 
-**以工件形式沉淀的判断。** 打开你的代码库数一数：schema、标签定义、评测集、审批规则、排序函数、审核队列。这份清单是"积累下来的判断力"的诚实盘点。一家公司的判断如果全部活在两个领域专家的脑子里，它卖的就是咨询。那两个人变得不可替代，然后离职。以代码形式存在的判断能活过他们。
+第二个是存在于人脑之外的判断。打开你的代码库数一数：schema、标签定义、评测集、审批规则、排序函数、审核队列。这是你的团队学到了什么的诚实盘点。一家公司的判断如果全部活在两个领域专家的脑子里，它卖的就是咨询。那两个人变得不可替代，然后离职。以代码形式存在的判断能活过他们。
 
-**拥有修正回路的工作流。** 用户修改输出的那个地方，正是标签被生成的地方。这条数据流是 AI 产品里最难被复制的资产，因为它同时携带了答案、偏好和流程。拥有这个回路的产品从使用中变好。不拥有的产品是静态的，不管模型有多强。
+第三个是拥有修正回路的工作流。用户修改输出的那个地方，正是标签被生成的地方。这条数据流是 AI 产品里最难被复制的资产，因为它同时携带了答案、偏好和流程。拥有这个回路的产品从使用中变好。不拥有的产品是静态的，不管模型有多强。
 
-三个数字告诉你 harness 是不是在起作用：
+三个数字告诉我一个 harness 是不是真的在起作用：
 
-**修正率随 cohort 年龄的变化。** 同一类任务，同一批用户，第一个月和第九个月，输出被编辑的比例各是多少？下降说明系统从使用中学习。持平说明使用只产生了量。
+修正率随 cohort 年龄的变化。同一类任务，同一批用户，第一个月和第九个月，输出被编辑的比例各是多少？下降说明系统在学习。持平说明使用只产生了量。
 
-**决策在产品内闭环的比例。** 有多少动作在你的系统里执行，多少导出到别处执行？这是判断你到底是 system of action 还是一份报告，唯一诚实的度量。
+决策在产品内闭环的比例。有多少动作在你的系统里执行，多少导出到别处？如果用户在别处完成工作，你是一份报告，不是一个行动系统。
 
-**毛利率相对推理成本的走势。** 推理成本下降而你的价格守住了，说明你卖的不是模型调用。价格跟着推理成本一起降，说明你当初就是在转售模型。
+毛利率相对推理成本的走势。推理成本下降而你的价格守住了，说明你卖的不是模型调用。价格跟着推理成本一起降，说明你当初就是在转售模型。
+
+---
+
+## Recap
+## 收束
+
+**English:**
+
+A model call wrapped in a UI is the easiest product to build and the easiest to kill. The harness — eval, correction loop, actuation, domain logic — is what turns it into a system that survives.
+
+A stronger model does not replace the harness because it cannot answer the two questions the harness exists for: what counts as good (a human opinion, not a learned fact) and how to get there (action through real systems, with real liability). Those do not arrive with a model release. They are built one customer at a time.
+
+The test is simple. Score your system against a frontier model with a good prompt, every quarter. If your system pulls ahead, the harness is learning. If the model is catching up, you are being absorbed, and no amount of product narrative will change the renewal.
+
+**中文：**
+
+一个套了 UI 的模型调用是最容易做的产品，也是最容易被杀死的。Harness——eval、correction loop、执行、领域逻辑——是把它变成一个能活下来的系统的东西。
+
+更强的模型不会替代 harness，因为它回答不了 harness 存在就是为了回答的两个问题：什么算好（人的观点，不是可学到的事实），以及怎么到达好（通过真实系统的行动，承担真实的责任）。这些不随模型发布一起到来。它们一次一个客户地建。
+
+测试很简单。每个季度把你的系统和一个前沿模型加好 prompt 对比打分。你的系统在拉开距离，说明 harness 在学习。模型在追上来，说明你正在被吸收，再好的产品叙事也改变不了那次续约。
