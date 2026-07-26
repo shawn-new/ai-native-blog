@@ -107,7 +107,7 @@ Three more observables, all computable from data you already have:
 
 **English:**
 
-The common counterargument is that the harness around a model, the tools, the retrieval, the evaluation, the correction queue, is scaffolding. A temporary state. Models get better, the scaffolding falls away, and whatever you built on top of it was a bridge to somewhere you have now arrived.
+The common counterargument is that the harness around a model (the tools, the retrieval, the evaluation, the correction queue) is scaffolding. A temporary state. Models get better, the scaffolding falls away, and whatever you built on top of it was a bridge to somewhere you have now arrived.
 
 I disagree, and the reason is structural rather than a bet on how good models get.
 
@@ -117,15 +117,15 @@ A model is not that system. A model is the decision function inside it. One comp
 
 That is why the minimal useful harness is not a design preference. It is the minimum a system needs to exist at all: **at least one feedback loop and at least one way to take action.** Remove actuation and the model produces text about a gap it cannot close. Remove sensing and it closes gaps blindly and never learns whether it did. A better model makes a better proposal at one step of the loop. It does not supply the loop.
 
-Now the part that connects this to everything else in this post. Computing a gap is not a capability question. It requires knowing what the desired state is, what to measure, and what counts as closed, and those are domain facts, not model facts.
+Now the part that connects this to everything else in this post. Computing a gap is not a capability question. It requires knowing what the desired state is, what to measure, and what counts as closed. Those are domain facts, not model facts.
 
-That is what the three assets actually are. They are not three things to accumulate; they are what the loop requires in order to run. **Unique data** is the ability to sense an actual state others cannot see. **Insight** is knowing why a gap is a gap, which gaps matter, and which ones are noise. **Workflow** is the actuation path, plus the place where corrections re-enter and become the next reference. Data answers *what and where*, insight answers *why*, workflow answers *how*. The gap's five Ws, held by whoever runs the loop rather than whoever supplies the decision function.
+That is what the three assets actually are. They are not three things to accumulate; they are what the loop requires in order to run. **Unique data** is the ability to sense an actual state others cannot see. **Insight** is knowing why a gap is a gap, which gaps matter, and which ones are noise. **Workflow** is the actuation path, plus the place where corrections re-enter and become the next reference. Data answers *what and where*, insight answers *why*, workflow answers *how*. The gap's five Ws are held by whoever runs the loop, not by whoever supplies the decision function.
 
-This argument has a clear failure condition and I would rather name it than let it float. If model providers begin shipping the loop itself. Native sensing into your domain's systems, actuation with permissions and audit, memory of what happened last time. Then they are no longer supplying the decision function. They are supplying the system, and the harness really was temporary. That is already happening at the edges, and the honest form of my claim is that it is far easier to ship a better decision function than to ship someone else's feedback loop, because the loop is made of that customer's reality.
+This argument has a clear failure condition and I would rather name it than let it float. If model providers begin shipping the loop itself (native sensing into your domain's systems, actuation with permissions and audit, memory of what happened last time), then they are no longer supplying the decision function. They are supplying the system, and the harness really was temporary. That is already happening at the edges, and the honest form of my claim is that it is far easier to ship a better decision function than to ship someone else's feedback loop, because the loop is made of that customer's reality.
 
 **中文：**
 
-常见的反驳是：模型外面那层 harness，工具、检索、评测、修正队列，只是脚手架，是一个中间状态。模型会变强，脚手架会脱落，你在上面建的东西不过是一座通往你现在已经抵达之处的桥。
+常见的反驳是：模型外面那层 harness（工具、检索、评测、修正队列）只是脚手架，是一个中间状态。模型会变强，脚手架会脱落，你在上面建的东西不过是一座通往你现在已经抵达之处的桥。
 
 我不同意，而理由是结构性的，不是在赌模型能强到什么程度。
 
@@ -135,11 +135,11 @@ This argument has a clear failure condition and I would rather name it than let 
 
 所以"最小可用的 harness"不是一种设计偏好，它是**一个系统得以存在的最低配置：至少一个反馈回路，加至少一种执行动作的方式。** 去掉执行，模型只能产出关于一个它关不上的 gap 的文字；去掉传感，它会盲目地去关 gap，并且永远不知道自己关上没有。**更强的模型让回路里某一步的提议更好，但它不提供这个回路。**
 
-现在是把这件事和这篇文章其余部分连起来的那一步。**算出一个 gap 不是能力问题。** 它要求你知道理想状态是什么、该测什么、以及什么算关上了，而这些是领域事实，不是模型事实。
+现在是把这件事和这篇文章其余部分连起来的那一步。**算出一个 gap 不是能力问题。** 它要求你知道理想状态是什么、该测什么、以及什么算关上了。这些是领域事实，不是模型事实。
 
 这才是那三样资产真正的身份。**它们不是三样要去积累的东西，而是这个回路得以运转所必需的东西。** 独特数据是**感知别人看不见的实际状态**的能力。洞察是知道**为什么一个 gap 是 gap、哪些 gap 要紧、哪些只是噪音**。工作流是**执行路径**，以及修正重新进入回路、变成下一个参考值的那个位置。数据回答 what 和 where，洞察回答 why，工作流回答 how。**一个 gap 的五个 W，握在运转回路的人手里，而不是握在提供决策函数的人手里。**
 
-这个论证有一个明确的失败条件，我宁愿把它写出来也不想让它飘着：**如果模型厂商开始交付回路本身**：原生接入你所在领域系统的传感、带权限和审计的执行、对上一次发生了什么的记忆。那它们提供的就不再是决策函数，而是整个系统，那时 harness 确实只是暂时的。这件事已经在边缘上发生了。我这个主张诚实的形态是：**交付一个更好的决策函数，比交付别人的反馈回路容易得多，因为那个回路是由那个客户的现实构成的。**
+这个论证有一个明确的失败条件，我宁愿把它写出来也不想让它飘着：**如果模型厂商开始交付回路本身**（原生接入你所在领域系统的传感、带权限和审计的执行、对上一次发生了什么的记忆），那它们提供的就不再是决策函数，而是整个系统，那时 harness 确实只是暂时的。这件事已经在边缘上发生了。我这个主张诚实的形态是：**交付一个更好的决策函数，比交付别人的反馈回路容易得多，因为那个回路是由那个客户的现实构成的。**
 
 ---
 

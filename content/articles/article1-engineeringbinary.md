@@ -277,9 +277,9 @@ And the honest part: that rule gets suspended in any quarter where the revenue n
 
 The obvious objection: if AI lets anyone cross the stack, why wouldn't it compress ownership too?
 
-I used to answer that it only compresses *shallow* ownership. That answer is circular. "shallow" was defined as the compressible kind, so the claim could never lose. Here is the version that can.
+I used to answer that it only compresses *shallow* ownership. That answer is circular: "shallow" was defined as the compressible kind, so the claim could never lose. Here is the version that can.
 
-What AI compresses is not ownership but **how many owners you need**. One person can now hold more surface than before, which means the three axes collapse back into one person at small scale and only separate when the surface exceeds what one person can carry. My claim is therefore about organizations above a certain size, not about engineering in general. Below that size it is simply wrong, and I should have said so.
+What AI compresses is not ownership but **how many owners you need**. One person can now hold more surface than before, which means the three dimensions collapse back into one person at small scale and only separate when the surface exceeds what one person can carry. My claim is therefore about organizations above a certain size, not about engineering in general. Below that size it is simply wrong, and I should have said so.
 
 So here is what would falsify the rest of it. If two years from now the job descriptions for these three kinds of work are still largely interchangeable and the hiring funnels stay shared, the specialization I am describing did not happen. If deployment engineers mostly exit the company rather than moving into product or platform roles, then the loop is not a loop and that role is an absorption pit. And if FDE hours per new dollar of ARR do not fall at companies running this model, then the loop is a drawing rather than a machine.
 
@@ -291,9 +291,9 @@ I would rather name those than keep an argument that survives every observation.
 
 我以前的回答是：它只压缩*浅层* ownership。这个回答是循环的："浅层"的定义就是"可被压缩的那种"，所以这个主张永远不会输。下面是一个会输的版本。
 
-AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能持有比以前更大的面，这意味着在小规模下三条轴会塌回同一个人身上，只有当这个面超出一个人能扛的范围时它们才分开。所以我这个主张是关于**超过某个规模的组织**的，不是关于工程这件事本身。在那个规模以下它就是错的，我本该早点说清楚。
+AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能持有比以前更大的面，这意味着在小规模下这三个维度会塌回同一个人身上，只有当这个面超出一个人能扛的范围时它们才分开。所以我这个主张是关于**超过某个规模的组织**的，不是关于工程这件事本身。在那个规模以下它就是错的，我本该早点说清楚。
 
-那么，什么能证伪剩下的部分。如果两年后这三类工作的招聘 JD 仍然高度可互换、招聘漏斗仍然共用，那我说的分化没有发生。如果部署工程师的去向主要是离开公司、而不是转入产品或平台岗位，那这个回路就不是回路，那个位置是个吸收槽。如果在跑这套模式的公司里，每新增一美元 ARR 所需的 FDE 工时不下降，那这个回路是一张图，不是一台机器。
+那么，什么能证伪剩下的部分？如果两年后这三类工作的招聘 JD 仍然高度可互换、招聘漏斗仍然共用，那我说的分化没有发生。如果部署工程师的去向主要是离开公司、而不是转入产品或平台岗位，那这个回路就不是回路，那个位置是个吸收槽。如果在跑这套模式的公司里，每新增一美元 ARR 所需的 FDE 工时不下降，那这个回路是一张图，不是一台机器。
 
 我宁愿把这些写出来，也不想留着一个能在任何观察下都活下来的论证。
 
@@ -304,27 +304,27 @@ AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能
 
 **English:**
 
-When implementation was hard, narrow specialization was a good bargain. That bargain is ending.
+When writing code was hard, narrow specialization was a good bargain. That bargain is ending.
 
 The test I used to offer here was: what do you own that AI cannot own for you? Nobody fails that test, because the acceptable answers are printed next to the question. Two better ones:
 
-**What is the last decision you made that turned out wrong, and what did it cost, in money, or in weeks?** If you cannot name one, you are not an owner. You are an implementer with a wide surface area. Ownership is defined by carrying the downside, not by how many layers you touch.
+**What is the last decision you made that turned out wrong, and what did it cost in money or in weeks?** If you cannot name one, you are not an owner. You are an implementer with a wide surface area. Ownership is defined by carrying the downside, not by how many layers you touch.
 
 **If you left tomorrow, which decision could nobody reconstruct?** If the answer is none, you do not have ownership. You have workload.
 
-Both questions can be answered badly, which is what makes them worth asking. Next, I'll get into the outcome-owning role specifically. What the loop looks like when AI is doing the implementation, where judgment breaks down, and what separates engineers who own outcomes from engineers who ship features.
+Both questions can be answered badly, which is what makes them worth asking. Next, I'll get into owning a user outcome specifically. What the loop looks like when AI is doing the implementation, where judgment breaks down, and what separates engineers who own outcomes from engineers who ship features.
 
 **中文：**
 
-实现很难的时候，窄专业化是一笔划算的交易。这笔交易正在结束。
+写代码很难的时候，窄专业化是一笔划算的交易。这笔交易正在结束。
 
 我以前在这里给的测试是：你拥有什么，是 AI 无法替你拥有的？没有人会不及格，因为可接受的答案就印在问题旁边。换两个更好的：
 
-**你最近一次做错的决定是什么，代价是多少，多少钱，或者多少周？** 说不出来的人不是 owner，是一个覆盖面很宽的执行者。Ownership 的定义是承担下行，不是能碰多少层。
+**你最近一次做错的决定是什么？代价是多少钱、多少周？** 说不出来的人不是 owner，是一个覆盖面很宽的执行者。Ownership 的定义是承担下行，不是能碰多少层。
 
 **如果你明天离职，哪一个决定是没有人能重建的？** 如果答案是"没有"，你没有 ownership，你有工作量。
 
-这两个问题都可能被答砸，这正是它们值得问的原因。下一篇我会具体讲拥有结果的那个角色：当 AI 在做实现，真正的工作循环是什么样，判断力在哪里失效，以及拥有结果的工程师和只是发布功能的工程师，差距到底在哪里。
+这两个问题都可能被答砸，这正是它们值得问的原因。下一篇我会具体讲三种 ownership 里的第一种，拥有用户结果：当 AI 在做实现，真正的工作循环是什么样，判断力在哪里失效，以及拥有结果的工程师和只是发布功能的工程师，差距到底在哪里。
 
 ---
 
