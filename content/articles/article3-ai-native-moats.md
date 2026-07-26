@@ -37,13 +37,13 @@ The easiest AI product to build is also the easiest to kill.
 
 Take a legal summarization tool. It calls a frontier model, asks for a summary, formats the answer, wraps it in a clean UI. Users like it, because the old workflow was painful. Then the model provider ships long-context document analysis, or the legal suite adds the same feature, or another team rebuilds it over a weekend at a lower price.
 
-I used to describe that as a countdown, and the image was wrong in a way that matters. Code being copyable in a weekend is not the same as a business being takeable in a weekend. In between sit security review, procurement, integration, support, and reference customers, and I have watched easily-copied products live on those for years.
+The tempting image is a countdown. It is wrong in a way that matters. Code being copyable in a weekend is not the same as a business being takeable in a weekend. In between sit security review, procurement, integration, support, and reference customers, and I have watched easily-copied products live on those for years.
 
 The real death is slower and much easier to measure. It shows up first as **price**, not churn: the customer stays, and at renewal the price comes down, because a procurement team that can now name three adequate alternatives negotiates differently. Gross margin drifts down as inference gets bundled into cheaper tiers. Net revenue retention slides from comfortably above a hundred to below it over eighteen to twenty-four months, while the logo-retention chart still looks healthy.
 
 That is a chronic disease, not a horror film. Chronic is better, because chronic is observable early.
 
-The one test worth keeping from the original version of this post: **if a better base model can absorb your product, you do not have a moat. You have a timer.** Everything below is about how to tell which one you have, before the renewal tells you.
+One test matters more than any framework: **if a better base model can absorb your product, you do not have a moat. You have a timer.** Everything below is about how to tell which one you have, before the renewal tells you.
 
 **中文：**
 
@@ -51,13 +51,13 @@ The one test worth keeping from the original version of this post: **if a better
 
 想象一个法律摘要工具：调用前沿模型，让它总结文件，格式化答案，套上干净的 UI。用户喜欢，因为旧流程确实痛苦。然后模型厂商发布长上下文文档分析，或者法律软件套件加上同样的功能，或者另一个团队用更低的价格在一个周末复刻出来。
 
-我以前把这件事描述成倒计时。这个比喻错在一个要紧的地方：**代码能在一个周末被复制，不等于生意能在一个周末被夺走。** 中间隔着安全审查、采购流程、集成、支持和参考客户，而我见过大量极易复刻的产品靠这些活了很多年。
+最顺手的比喻是倒计时。这个比喻错在一个要紧的地方：**代码能在一个周末被复制，不等于生意能在一个周末被夺走。** 中间隔着安全审查、采购流程、集成、支持和参考客户，而我见过大量极易复刻的产品靠这些活了很多年。
 
 真正的死法慢得多，也好量得多。它最先表现为**价格**，不是流失：客户没走，但续约时价格下来了，因为一个现在能说出三个够用替代品的采购团队，谈判姿态是不一样的。毛利率随着推理被打包进更便宜的档位而缓慢下移。净收入留存率在十八到二十四个月里，从一百出头滑到一百以下，而 logo 留存率的图表看起来依然健康。
 
 这是慢性病，不是恐怖片。慢性病是更好的消息，因为它可以被早期观测。
 
-这篇文章原来那一版里，唯一值得留下的测试是：**如果一个更强的基础模型能吸收你的产品，你没有护城河，你只有倒计时。** 下面全部内容，都是关于怎么在续约通知你之前，先判断出你手上是哪一个。
+有一个测试比任何框架都重要：**如果一个更强的基础模型能吸收你的产品，你没有护城河，你只有倒计时。** 下面全部内容，都是关于怎么在续约通知你之前，先判断出你手上是哪一个。
 
 ---
 
@@ -66,7 +66,7 @@ The one test worth keeping from the original version of this post: **if a better
 
 **English:**
 
-Most moat frameworks, including the one I wrote here originally, share a defect: applied to a winner they explain the win, applied to a loser they explain the loss. A description that fits every outcome predicts none of them.
+Most moat frameworks share the same defect: applied to a winner they explain the win, applied to a loser they explain the loss. A description that fits every outcome predicts none of them.
 
 So before any taxonomy, one measurement. Every quarter, on your own evaluation set, score two things: your complete system, and a frontier model with a seriously written prompt. Record the gap.
 
@@ -84,7 +84,7 @@ Three more observables, all computable from data you already have:
 
 **中文：**
 
-大多数护城河框架，包括我原来写在这里的那个，共享同一个缺陷：拿它去解释赢家，它解释得通；拿它去解释输家，它也解释得通。**一个能吻合任何结果的描述，预测不了任何结果。**
+大多数护城河框架都有同一个缺陷：拿它去解释赢家，它解释得通；拿它去解释输家，它也解释得通。**一个能吻合任何结果的描述，预测不了任何结果。**
 
 所以在任何分类学之前，先给一个测量。每个季度，在你自己的评测集上，测两条线：你的完整系统，以及一个前沿模型加一个认真写的 prompt。记录这个差距。
 
@@ -148,9 +148,9 @@ This argument has a clear failure condition and I would rather name it than let 
 
 **English:**
 
-"We have a data moat" is the most common claim in this category and the one that survives diligence least often. I want to state the version I can defend, which is much narrower than what I wrote before.
+"We have a data moat" is the most common claim in this category and the one that survives diligence least often. The version I can defend is much narrower than the usual claim.
 
-Start with the strongest counterargument, because the original post disposed of it in half a clause. Three years ago, extracting contract clauses, classifying ticket intent, coding medical records, parsing invoices. All of these needed labeled proprietary data. Today a general model with a good prompt does most of them at a level that is adequate for most buyers. Proprietary data buys the last several points of accuracy. **The question is whether the customer will pay for those points**, and usually the answer is no unless those points cross a line where being wrong has a defined cost.
+Start with the strongest counterargument, because it usually gets disposed of in half a clause. Three years ago, extracting contract clauses, classifying ticket intent, coding medical records, parsing invoices. All of these needed labeled proprietary data. Today a general model with a good prompt does most of them at a level that is adequate for most buyers. Proprietary data buys the last several points of accuracy. **The question is whether the customer will pay for those points**, and usually the answer is no unless those points cross a line where being wrong has a defined cost.
 
 That gives the two cases where data genuinely holds:
 
@@ -160,13 +160,13 @@ That gives the two cases where data genuinely holds:
 
 Everything else is supply chain, not moat.
 
-And a discipline the original post applied to other people's moats but not to its own: **data has a half-life.** Fraud patterns rotate. A regulatory change can invalidate historical labels. Customer behavior drifts with the macro cycle. "It compounds through use" is only true while accumulation outruns decay, and that is a condition to check, not a property to assume.
+And a discipline usually applied to other people's moats but not to one's own: **data has a half-life.** Fraud patterns rotate. A regulatory change can invalidate historical labels. Customer behavior drifts with the macro cycle. "It compounds through use" is only true while accumulation outruns decay, and that is a condition to check, not a property to assume.
 
 **中文：**
 
-"我们有数据护城河"是这个品类里最常见的说法，也是最经不起尽调的那个。我要说的是我守得住的那个版本，它比我原来写的窄得多。
+"我们有数据护城河"是这个品类里最常见的说法，也是最经不起尽调的那个。我守得住的版本，比通常那个说法窄得多。
 
-先从最强的反驳开始，因为原文只用了半个从句就把它打发了。三年前，抽取合同条款、分类工单意图、病历编码、解析发票，这些都需要标注过的私有数据。今天，一个通用模型加一个好 prompt，在大多数场景做到的水平对大多数买家已经够用。私有数据买到的是最后那几个百分点的准确率。**问题是客户会不会为这几个点付钱**，而答案通常是不会，除非这几个点跨过了一条"错了要付明确代价"的线。
+先从最强的反驳开始，因为它通常只被半个从句打发掉。三年前，抽取合同条款、分类工单意图、病历编码、解析发票，这些都需要标注过的私有数据。今天，一个通用模型加一个好 prompt，在大多数场景做到的水平对大多数买家已经够用。私有数据买到的是最后那几个百分点的准确率。**问题是客户会不会为这几个点付钱**，而答案通常是不会，除非这几个点跨过了一条"错了要付明确代价"的线。
 
 由此得出数据真正成立的两种情况：
 
@@ -176,7 +176,7 @@ And a discipline the original post applied to other people's moats but not to it
 
 除此之外的，都是供应链，不是护城河。
 
-还有一条纪律，原文用它衡量别人的护城河，却没用在自己偏爱的那个上面：**数据是有半衰期的。** 欺诈模式会轮换。一次监管变化可以让历史标签作废。客户行为随宏观周期漂移。"使用会让它复利"只在积累速度快过衰减速度时成立。**这是一个需要检查的条件，不是一个可以假设的属性。**
+还有一条纪律，人们常拿它衡量别人的护城河，却很少用在自己偏爱的那个上面：**数据是有半衰期的。** 欺诈模式会轮换。一次监管变化可以让历史标签作废。客户行为随宏观周期漂移。"使用会让它复利"只在积累速度快过衰减速度时成立。**这是一个需要检查的条件，不是一个可以假设的属性。**
 
 ---
 
@@ -210,21 +210,21 @@ That is also the transition from a system of record to a system of action. Once 
 
 **English:**
 
-The original version of this post handled distribution by saying it "buys attention" but cannot substitute for owned learning. That was a strawman, and I want to retract it properly.
+The easy dismissal of distribution is that it "buys attention" but cannot substitute for owned learning. That is a strawman, and it deserves to be dropped properly.
 
 In enterprise software, distribution is not attention. It is a signed master agreement, a completed security review, an existing budget line, a vendor number already in the procurement system, and a salesperson who has had dinner with the CIO. Those structurally lower customer acquisition cost and shorten the sales cycle, and they compound. Frequently faster than a learning loop does.
 
-The examples run against me. Teams took the collaboration market from Slack largely by being bundled into an enterprise agreement, with none of the trinity this post is built on. And Salesforce, which I used as an example of deep workflow ownership, had the strongest enterprise sales machine of its era *first*, and grew the account and pipeline vocabulary afterward. I had the causality backwards: deep workflow is often the **result** of winning distribution, not the cause.
+The examples run against me. Teams took the collaboration market from Slack largely by being bundled into an enterprise agreement, with none of the trinity this post is built on. And Salesforce, the standard example of deep workflow ownership, had the strongest enterprise sales machine of its era *first*, and grew the account and pipeline vocabulary afterward. The causality usually runs the other way: deep workflow is often the **result** of winning distribution, not the cause.
 
 So the honest boundary condition: this framework applies where distribution is roughly matched, or where the category is new enough that no incumbent holds the channel. Inside a category where someone can bundle, they usually win, and the moat you build has to be good enough to survive being un-bundled rather than good enough to win on its own.
 
 **中文：**
 
-这篇文章的原版处理分发的方式，是说它"能买到注意力"但无法替代自有学习。那是一个稻草人，我要正式收回它。
+对分发最省事的打发是说它"能买到注意力"，但无法替代自有学习。那是一个稻草人，应该被正式放弃。
 
 在企业软件里，分发不是注意力。它是一份已签的主协议、一次已经通过的安全审查、一条已经存在的预算线、一个已经在采购系统里的供应商编号，以及一个和 CIO 一起吃过饭的销售。这些东西**结构性地压低获客成本、缩短销售周期，而且它们会复利，往往比学习回路复利得更快。**
 
-例子是反对我的。Teams 从 Slack 手里拿走协作市场，主要靠的是被打包进企业协议，而这篇文章赖以成立的三样它一样都没有。而 Salesforce（我原来拿它当"拥有深工作流"的例子）是**先**有了那个时代最强的企业销售机器，**然后**才长出 account 和 pipeline 那套工作流语言的。我把因果写反了：**深工作流常常是赢得分发之后的结果，不是原因。**
+例子是反对我的。Teams 从 Slack 手里拿走协作市场，主要靠的是被打包进企业协议，而这篇文章赖以成立的三样它一样都没有。而 Salesforce（讲深工作流时最常被举的例子）是**先**有了那个时代最强的企业销售机器，**然后**才长出 account 和 pipeline 那套工作流语言的。因果通常是反过来的：**深工作流常常是赢得分发之后的结果，不是原因。**
 
 所以诚实的适用边界是：这个框架适用于分发大致打平的地方，或者品类新到没有在位者握住渠道的时候。在一个有人可以打包的品类里，通常是打包的人赢；而你建的护城河，标准不是"好到能靠自己赢"，是"好到能在被打包之后活下来"。
 
@@ -239,9 +239,9 @@ A framework that takes no risk is worth nothing, so here is the risk.
 
 If a company holding all three. Outcome-linked proprietary data, judgment encoded as artifacts, and a workflow owning the correction loop. Nonetheless loses more than a fifth of its pricing power to general capability improvement within twenty-four months, then the trinity is not what determines outcomes, and I would want to know it.
 
-I also expect the honest use of this to be diagnostic rather than promotional. A founder who tells me their insight layer is currently two domain experts and that this is their largest risk is using it as a knife. A founder who tells me they have all three is using it as a mirror, and the mirror is what I was accidentally writing when I first published this.
+I also expect the honest use of this to be diagnostic rather than promotional. A founder who tells me their insight layer is currently two domain experts and that this is their largest risk is using it as a knife. A founder who tells me they have all three is using it as a mirror, and a mirror is what this kind of framework turns into by default.
 
-The version I would defend now is much smaller than the version I started with: one measurement that can fail, two conditions under which data survives, one property that makes workflow defensible, and an admission that distribution outranks all of it more often than the genre likes to say. If your convergence gap is widening this quarter, the rest is commentary. If it is narrowing, no amount of framework will save the renewal.
+The version worth defending is much smaller than the one this genre usually offers: one measurement that can fail, two conditions under which data survives, one property that makes workflow defensible, and an admission that distribution outranks all of it more often than the genre likes to say. If your convergence gap is widening this quarter, the rest is commentary. If it is narrowing, no amount of framework will save the renewal.
 
 **中文：**
 
@@ -249,6 +249,6 @@ The version I would defend now is much smaller than the version I started with: 
 
 如果一家公司三样俱全（带结果标签的私有数据、以工件形式沉淀下来的判断、一个拥有修正回路的工作流），却仍然在二十四个月内，因为通用能力的提升而丢掉超过五分之一的定价能力，那么这个三位一体就不是决定结果的东西，而我想知道这件事。
 
-我还预期它诚实的用法是诊断，不是宣传。一个创始人告诉我"我们的洞察层目前就是两个领域专家的脑子，这是我们最大的风险"，他是在**把它当刀用**。一个创始人告诉我"我们三样都有"，他是在**把它当镜子用**，而我第一次发表这篇文章时，无意中写的正是那面镜子。
+我还预期它诚实的用法是诊断，不是宣传。一个创始人告诉我"我们的洞察层目前就是两个领域专家的脑子，这是我们最大的风险"，他是在**把它当刀用**。一个创始人告诉我"我们三样都有"，他是在**把它当镜子用**，而这类框架如果不设防，默认就会变成那面镜子。
 
-我现在愿意守的版本，比我最初那版小得多：**一个可能失败的测量，两种数据得以存活的条件，一条让工作流可防守的属性，以及一句承认：分发赢过上面这一切的频率，比这个文体愿意承认的高。** 如果你这个季度的收敛差距在扩大，剩下的都是注解；如果它在缩小，再完整的框架也救不了那次续约。
+我愿意守的版本，比这个文体通常给的小得多：**一个可能失败的测量，两种数据得以存活的条件，一条让工作流可防守的属性，以及一句承认：分发赢过上面这一切的频率，比这个文体愿意承认的高。** 如果你这个季度的收敛差距在扩大，剩下的都是注解；如果它在缩小，再完整的框架也救不了那次续约。

@@ -43,7 +43,7 @@ That is the claim I want to defend, and it is falsifiable. If the ability to wri
 
 Domain knowledge is the input. Ownership is what it buys, and ownership is the actual subject of this post: the part of the work that cannot be handed to a model, because someone has to answer for it. Three kinds of it sit in that space. Owning a user outcome. Owning a reusable primitive. Owning the distance between a working product and a working deployment.
 
-I should be precise about what kind of claim that is, because I got it wrong in the first version of this post. These are not three job categories. They are three dimensions, and one person sits on more than one of them. An engineer who turns a client integration into a configuration option is doing deployment work and platform work in the same afternoon. At a fifty-person company one person holds all three, and the split does not describe anything real until an organization is large enough that a single person can no longer carry all three.
+I should be precise about what kind of claim that is. These are not three job categories. They are three dimensions, and one person sits on more than one of them. An engineer who turns a client integration into a configuration option is doing deployment work and platform work in the same afternoon. At a fifty-person company one person holds all three, and the split does not describe anything real until an organization is large enough that a single person can no longer carry all three.
 
 **中文：**
 
@@ -59,7 +59,7 @@ I should be precise about what kind of claim that is, because I got it wrong in 
 
 领域知识是输入，ownership 是它换来的东西，而 ownership 才是这篇文章真正要谈的：这份工作里没法交给模型的那一部分，因为总得有人为它负责。这个空间里有三种 ownership：拥有一个用户结果，拥有一个可复用原语，拥有"能跑的产品"和"能用的部署"之间那段距离。
 
-我要把这个主张的性质说准，因为这篇文章的第一版我说错了。**这不是三种岗位，是三个维度**，而一个人同时占着不止一个。一个工程师在客户现场把某个集成抽象成配置项，他在同一个下午里既在做部署工作也在做平台工作。在一家五十人的公司，这三件事由同一个人扛着，这个划分描述不了任何真实的东西。它要到组织大到一个人扛不动的时候才开始成立。
+这个主张的性质要说准。**这不是三种岗位，是三个维度**，而一个人同时占着不止一个。一个工程师在客户现场把某个集成抽象成配置项，他在同一个下午里既在做部署工作也在做平台工作。在一家五十人的公司，这三件事由同一个人扛着，这个划分描述不了任何真实的东西。它要到组织大到一个人扛不动的时候才开始成立。
 
 ---
 
@@ -146,9 +146,9 @@ Signal: self-service rate. Tickets keep coming. The platform is leaking. Ticket 
 
 **After:** A forward deployed engineer closes that gap. They write the integration layer, watch where users hesitate, learn which model outputs need explanation and which are actually wrong.
 
-Here is the sentence I used to end this section on: if a client cannot reach meaningful usage without a permanent FDE on-site, the product has not been deployed. It is being operated by hand.
+One line sums up the failure mode. If a client cannot reach meaningful usage without a permanent FDE on-site, the product has not been deployed. It is being operated by hand.
 
-I now think that sentence is only half the story, and the missing half is the important one. Being operated by hand is not a failure state that gets noticed and fixed. **It is a stable equilibrium.** The revenue is booked. The renewal depends on the person who is there. Pulling them out costs this quarter's number, and the accounts that need them most are the accounts with the largest contracts. On the P&L, a deployment held together by hand looks identical to a deployment that worked.
+That is only half the story, and the missing half is the important one. Being operated by hand is not a failure state that gets noticed and fixed. **It is a stable equilibrium.** The revenue is booked. The renewal depends on the person who is there. Pulling them out costs this quarter's number, and the accounts that need them most are the accounts with the largest contracts. On the P&L, a deployment held together by hand looks identical to a deployment that worked.
 
 Whether that equilibrium is a problem depends on something about the product, not about the role, and this is the distinction I think most discussion of FDEs is missing.
 
@@ -173,9 +173,9 @@ Two numbers make this legible inside your own company, and both are computable f
 
 **之后：** FDE（forward deployed engineer，前线部署工程师）跨过这道鸿沟。他写集成层，观察用户在哪一步犹豫，判断哪些模型输出需要解释、哪些是真的错了。
 
-这一节我以前是用下面这句话收尾的：客户没有常驻 FDE 就无法稳定使用，说明产品还没完成部署，它只是被人工托管着。
+有一句话能概括这个失败模式：客户没有常驻 FDE 就无法稳定使用，说明产品还没完成部署，它只是被人工托管着。
 
-现在我认为这句话只说了一半，而漏掉的那一半更重要。**"被人工托管"不是一个会被发现并修正的失败状态，它是一个稳定均衡。** 收入已经确认了。续约挂在那个人身上。把他撤走，代价是这个季度的数字，而最需要他的客户恰好是合同额最大的客户。在损益表上，一个靠人力撑着的部署，和一个真的跑通了的部署，长得一模一样。
+但这只说了一半，而漏掉的那一半更重要。**"被人工托管"不是一个会被发现并修正的失败状态，它是一个稳定均衡。** 收入已经确认了。续约挂在那个人身上。把他撤走，代价是这个季度的数字，而最需要他的客户恰好是合同额最大的客户。在损益表上，一个靠人力撑着的部署，和一个真的跑通了的部署，长得一模一样。
 
 但这个均衡是不是问题，取决于产品本身，而不取决于这个角色，我认为大多数关于 FDE 的讨论恰恰漏掉了这个区分。
 
@@ -277,7 +277,7 @@ And the honest part: that rule gets suspended in any quarter where the revenue n
 
 The obvious objection: if AI lets anyone cross the stack, why wouldn't it compress ownership too?
 
-I used to answer that it only compresses *shallow* ownership. That answer is circular: "shallow" was defined as the compressible kind, so the claim could never lose. Here is the version that can.
+The easy answer is that it only compresses *shallow* ownership. That answer is circular: "shallow" was defined as the compressible kind, so the claim could never lose. Here is the version that can.
 
 What AI compresses is not ownership but **how many owners you need**. One person can now hold more surface than before, which means the three dimensions collapse back into one person at small scale and only separate when the surface exceeds what one person can carry. My claim is therefore about organizations above a certain size, not about engineering in general. Below that size it is simply wrong, and I should have said so.
 
@@ -289,7 +289,7 @@ I would rather name those than keep an argument that survives every observation.
 
 最明显的反驳：如果 AI 让任何人都能跨栈，它为什么不会也压缩 ownership？
 
-我以前的回答是：它只压缩*浅层* ownership。这个回答是循环的："浅层"的定义就是"可被压缩的那种"，所以这个主张永远不会输。下面是一个会输的版本。
+容易给的回答是：它只压缩*浅层* ownership。但这个回答是循环的："浅层"的定义就是"可被压缩的那种"，所以这个主张永远不会输。下面是一个会输的版本。
 
 AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能持有比以前更大的面，这意味着在小规模下这三个维度会塌回同一个人身上，只有当这个面超出一个人能扛的范围时它们才分开。所以我这个主张是关于**超过某个规模的组织**的，不是关于工程这件事本身。在那个规模以下它就是错的，我本该早点说清楚。
 
@@ -306,7 +306,7 @@ AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能
 
 When writing code was hard, narrow specialization was a good bargain. That bargain is ending.
 
-The test I used to offer here was: what do you own that AI cannot own for you? Nobody fails that test, because the acceptable answers are printed next to the question. Two better ones:
+The obvious test is: what do you own that AI cannot own for you? Nobody fails that test, because the acceptable answers are printed next to the question. Two better ones:
 
 **What is the last decision you made that turned out wrong, and what did it cost in money or in weeks?** If you cannot name one, you are not an owner. You are an implementer with a wide surface area. Ownership is defined by carrying the downside, not by how many layers you touch.
 
@@ -318,7 +318,7 @@ Both questions can be answered badly, which is what makes them worth asking. Nex
 
 写代码很难的时候，窄专业化是一笔划算的交易。这笔交易正在结束。
 
-我以前在这里给的测试是：你拥有什么，是 AI 无法替你拥有的？没有人会不及格，因为可接受的答案就印在问题旁边。换两个更好的：
+最容易想到的测试是：你拥有什么，是 AI 无法替你拥有的？没有人会不及格，因为可接受的答案就印在问题旁边。换两个更好的：
 
 **你最近一次做错的决定是什么？代价是多少钱、多少周？** 说不出来的人不是 owner，是一个覆盖面很宽的执行者。Ownership 的定义是承担下行，不是能碰多少层。
 

@@ -64,7 +64,7 @@ Sanders's video and policy push make one argument: control of AI is concentratin
 The policy is the AI Data Center Moratorium Act. S.4214, introduced by Sanders on March 25, 2026, with a House companion, H.R.9442, introduced by Alexandria Ocasio-Cortez on June 24. It is worth reading past the press release, because the provisions are both broader and more conditional than the coverage suggests.
 
 - The trigger is **20 megawatts** of power demand, together with liquid cooling and racks rated at 20kW or above. Twenty megawatts is a mid-sized facility, not only a hyperscaler campus.
-- It covers **upgrades to existing data centers**, not just new construction. That is the provision with the most immediate effect, and the one most often left out of summaries. Including my own earlier draft of this post.
+- It covers **upgrades to existing data centers**, not just new construction. That is the provision with the most immediate effect, and the one most often left out of summaries.
 - The pause lifts when **"strong national safeguards" are in place**. There is no sunset date, no numeric threshold, and no named agency that certifies the condition has been met.
 - Projects must show they will **not raise consumer utility bills** and must obtain **local approval**. There are **union labor and prevailing wage requirements**, and a **ban on government subsidies** for data center construction or operation.
 - A separate title bans **US exports of AI computing infrastructure** to countries without comparable safeguards.
@@ -78,7 +78,7 @@ Sanders 的视频和政策动作说的是同一件事：AI 的控制权正在集
 政策载体是 AI Data Center Moratorium Act，参议院 S.4214，Sanders 于 2026 年 3 月 25 日提出；众议院对应法案 H.R.9442，Alexandria Ocasio-Cortez 于 6 月 24 日提出。值得越过新闻稿去读条款，因为实际内容比报道里的既更宽，也更带条件。
 
 - 触发门槛是 **20 兆瓦**用电需求，加上液冷、机柜功率 20kW 以上这些技术条件。20 兆瓦是中型设施的量级，不只是巨头园区。
-- 它覆盖**既有数据中心的扩容**，不只是新建。这是影响最直接的一条，也是各种摘要最常漏掉的一条，包括我自己这篇文章的早前版本。
+- 它覆盖**既有数据中心的扩容**，不只是新建。这是影响最直接的一条，也是各种摘要最常漏掉的一条。
 - 暂停在**"强有力的国家级保护到位"**时解除。没有 sunset 日期，没有量化门槛，也没有指定哪个机构来认定条件已经达成。
 - 项目必须证明**不会推高居民电费**，并且必须取得**地方批准**。法案还包含**工会用工和 prevailing wage 要求**，以及**禁止政府补贴**数据中心的建设与运营。
 - 另有一部分禁止**向缺乏同等保护的国家出口 AI 算力基础设施**。
@@ -98,9 +98,9 @@ Sanders is worried about concentrated power. The worry is valid. A pause distrib
 
 **Build:** Capacity that keeps growing is capacity that keeps getting cheaper per unit of work, and cheap capability is what puts tools in the hands of people who cannot fund their own.
 
-I have to be careful with the second half of that argument, because the version I used to make was too convenient. I previously wrote that a pause would squeeze out open-source communities, independent developers, and educators. That claim requires three steps: a pause slows supply growth, slower supply growth raises inference prices, and higher inference prices push out the smallest users. Only the first step is solid, and it affects new capacity rather than existing capacity. Token prices have fallen steeply for three years, driven mostly by model efficiency and chip generations rather than by data center count. And if compute genuinely tightened, the first cuts would likely land on marginal internal training runs, not on the consumer subscriptions that anchor these companies' revenue. The squeeze might run the opposite direction from the one I claimed.
+The second half of that argument needs care, because the convenient version of it does not hold. The claim that a pause squeezes out open-source communities, independent developers, and educators requires three steps: a pause slows supply growth, slower supply growth raises inference prices, and higher inference prices push out the smallest users. Only the first step is solid, and it affects new capacity rather than existing capacity. Token prices have fallen steeply for three years, driven mostly by model efficiency and chip generations rather than by data center count. And if compute genuinely tightened, the first cuts would likely land on marginal internal training runs, not on the consumer subscriptions that anchor these companies' revenue. The squeeze might run the opposite direction from the one usually claimed.
 
-So the honest version of the claim is narrower: an open-ended pause hurts the firms that need to build, and those firms are the only plausible source of competition for the incumbents. That is a smaller argument than the one I was making. It is the one I can defend.
+So the honest version of the claim is narrower: an open-ended pause hurts the firms that need to build, and those firms are the only plausible source of competition for the incumbents. That is a smaller argument than the sweeping one. It is the one I can defend.
 
 **中文：**
 
@@ -110,9 +110,9 @@ Sanders 的核心担心是权力集中。这个担心成立。但暂停不分散
 
 **建造：** 持续增长的产能，意味着单位工作的成本持续下降；而便宜的能力，正是让工具进入那些无力自建的人手里的前提。
 
-第二半我必须说得小心，因为我以前用的版本对自己太方便了。我之前写过：暂停会把开源社区、独立开发者和教育者挤出去。这个说法需要三跳，暂停放慢供给增长，供给增长放慢推高推理价格，推理价格上涨挤出最小的用户。只有第一跳站得住，而且它影响的是新增产能，不是存量。过去三年 token 价格大幅下跌，主因是模型效率和芯片代际，不是数据中心数量。而且如果算力真的紧张，先被砍的多半是边际收益最低的内部训练 run，不是撑起这些公司现金流的消费级订阅。挤出的方向，可能和我说的正好相反。
+第二半必须说得小心，因为那个方便的版本站不住。"暂停会把开源社区、独立开发者和教育者挤出去"这个说法需要三跳：暂停放慢供给增长，供给增长放慢推高推理价格，推理价格上涨挤出最小的用户。只有第一跳站得住，而且它影响的是新增产能，不是存量。过去三年 token 价格大幅下跌，主因是模型效率和芯片代际，不是数据中心数量。而且如果算力真的紧张，先被砍的多半是边际收益最低的内部训练 run，不是撑起这些公司现金流的消费级订阅。挤出的方向，可能和通常的说法正好相反。
 
-所以诚实的版本要窄得多：开放式暂停伤害的是那些必须建设的公司，而这些公司是巨头唯一可能的竞争来源。这比我原来的主张小。但这是我守得住的那个。
+所以诚实的版本要窄得多：开放式暂停伤害的是那些必须建设的公司，而这些公司是巨头唯一可能的竞争来源。这比那个更大的主张小。但这是我守得住的那个。
 
 ---
 

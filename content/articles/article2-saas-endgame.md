@@ -113,7 +113,7 @@ When a product does not own the context, it becomes an execution surface for som
 
 **English:**
 
-I originally wrote this as four separate layers. They are not separate. They are four faces of owning context, and pretending otherwise made the list look more systematic than the idea actually is.
+It is tempting to treat these as four separate layers. They are not. They are four faces of owning context, and pretending otherwise made the list look more systematic than the idea actually is.
 
 **The facts.** The canonical version of work: customers, contracts, employees, tickets, invoices, inventory, incidents, audit logs. An agent can answer only if it knows which data is true, act only if it has permission, and automate only if it can write the result somewhere trusted.
 
@@ -129,7 +129,7 @@ I think the moat survives, but it has to be relocated to survive honestly. What 
 
 **中文：**
 
-这一部分我原来写成了四个独立的层。它们并不独立。它们是"拥有 context"这一件事的四个面，把它们拆开写，只是让这个清单显得比这个想法本身更成体系。
+很容易把这部分拆成四个独立的层。它们并不独立。它们是"拥有 context"这一件事的四个面，把它们拆开写，只是让这个清单显得比这个想法本身更成体系。
 
 **事实。** 工作的标准版本：客户、合同、员工、ticket、发票、库存、incident、审计日志。Agent 要回答问题，必须知道哪份数据是真的；要执行动作，必须有权限；要自动化，必须能把结果写回一个可信的地方。
 
@@ -228,7 +228,7 @@ One event is worth more than the argument: in June 2026 Salesforce agreed to acq
 
 **English:**
 
-Everything in the previous two sections is about owning an asset. This one is not. Distribution and deployment are about having a path into the customer at all, and this is the only item on my original list that was not a restatement of the others.
+Everything in the previous two sections is about owning an asset. This one is not. Distribution and deployment are about having a path into the customer at all, and this is the only item on the list that is not a restatement of the others.
 
 Reaching production inside a real enterprise means passing security review, integrating with identity, satisfying procurement, and surviving a pilot. Companies that can do that repeatedly have something a better model does not confer.
 
@@ -236,7 +236,7 @@ The counterintuitive part, and the piece of this I believe most: **a services mo
 
 **中文：**
 
-前面两节讲的都是"拥有一项资产"。这一节不是。分发和部署讲的是**你有没有一条进入客户的通道**，它是我原来那份清单上唯一一项不是在换个说法重复其他项的东西。
+前面两节讲的都是"拥有一项资产"。这一节不是。分发和部署讲的是**你有没有一条进入客户的通道**，它是这份清单上唯一一项不是在换个说法重复其他项的东西。
 
 在一家真实企业里走到生产环境，意味着通过安全审查、对接身份系统、满足采购要求、熬过 POC。能反复做到这件事的公司，握着的是一个更好的模型给不了的东西。
 
@@ -253,7 +253,7 @@ I previously ended this post with an objection I had already answered, that bad 
 
 **Human-in-the-loop means more interface, not less.** The more autonomous the agent, the more the review, correction, and approval surfaces matter. That is not a thinning of UI; it is a relocation of it from execution to supervision, and supervision interfaces are harder to build than forms. If that is what happens, "UI gets thin" is exactly the wrong description.
 
-**Renewals often have nothing to do with whether the product is good.** Process lock-in, compliance certification, sunk integration cost, and a procurement team that does not want another evaluation. A product that agents route around entirely can still renew for three years. Any version of this argument that treats B2B software as a market decided by product quality is missing how the money actually behaves, and that was the deepest flaw in my original draft.
+**Renewals often have nothing to do with whether the product is good.** Process lock-in, compliance certification, sunk integration cost, and a procurement team that does not want another evaluation. A product that agents route around entirely can still renew for three years. Any version of this argument that treats B2B software as a market decided by product quality is missing how the money actually behaves. That is the deepest flaw this kind of argument has.
 
 **Open context protocols cut against my conclusion.** The more context exchange gets standardized, the more portable it becomes, and "owning context" starts to resemble owning a table that can be exported. My answer is the accountability argument above, and I hold it loosely: if standardized context turns out to be genuinely portable including its audit and permission semantics, the moat I am describing gets much thinner than I think.
 
@@ -263,7 +263,7 @@ I previously ended this post with an objection I had already answered, that bad 
 
 **人在环内意味着更多界面，不是更少。** Agent 越自主，审核、纠错、批准这些界面就越关键。这不是 UI 变薄，是 UI 从"执行"搬到了"监督"，而监督界面比表单更难做。如果事情朝这个方向走，"UI 变薄"恰恰是错误的描述。
 
-**续约经常和产品好不好完全无关。** 流程绑定、合规认证、已经沉没的集成成本，以及一个不想再做一次评估的采购团队。一个被 agent 完全绕过去的产品，照样可以续三年。任何把 B2B 软件当成一个由产品优劣决定胜负的市场的论证，都没搞懂钱实际上是怎么走的。**这是我这篇文章原稿里最深的一处外行味。**
+**续约经常和产品好不好完全无关。** 流程绑定、合规认证、已经沉没的集成成本，以及一个不想再做一次评估的采购团队。一个被 agent 完全绕过去的产品，照样可以续三年。任何把 B2B 软件当成一个由产品优劣决定胜负的市场的论证，都没搞懂钱实际上是怎么走的。**这是这类论证里最深的一处外行味。**
 
 **开放的 context 协议正在削弱我的结论。** Context 交换越标准化，它就越可迁移，而"拥有 context"就越接近"拥有一张可以导出的表"。我的回答是上面那个问责论证，但我持有得并不牢固：如果标准化的 context 最终连同它的审计和权限语义一起变得真正可迁移，那我描述的这条护城河会比我以为的薄得多。
 
@@ -274,7 +274,7 @@ I previously ended this post with an objection I had already answered, that bad 
 
 **English:**
 
-The last version of this post ended by naming the sequencing question and promising to answer it in a future post. That is serving the appetizer and describing the meal, so here is the answer I actually hold.
+Naming the sequencing question and then deferring it to a future post would be serving the appetizer and describing the meal. So here is the answer I actually hold.
 
 Enter where you can own an outcome end to end in one narrow domain, then earn the record. Not the reverse. Trying to become the system of record first means competing on implementation and procurement against incumbents who have spent a decade there, with no wedge. Owning a narrow outcome gets you write access for one workflow; write access produces correction history; correction history is the part nobody can buy; and a product that holds the corrections eventually holds the truth.
 
@@ -284,7 +284,7 @@ So the test I would apply to my own roadmap: **which layer do I enter first, and
 
 **中文：**
 
-这篇文章上一版的结尾，是把"先进入哪一层"这个问题点出来，然后说下一篇再讲。那等于上了前菜然后开始描述主菜，所以这里给出我真正持有的答案。
+把"先进入哪一层"点出来、然后留给下一篇，等于上了前菜就开始描述主菜。所以这里给出我真正持有的答案。
 
 **从"能在一个窄领域里端到端拥有一个结果"进入，然后再去挣那份记录。反过来不行。** 上来就想成为 system of record，意味着在实施和采购这两件事上和已经深耕十年的在位者硬碰硬，而你没有楔子。拥有一个窄结果能换来一条工作流的写权限；写权限产生修正历史；修正历史是没人能买到的那部分；而一个握住修正的产品，最终会握住事实。
 

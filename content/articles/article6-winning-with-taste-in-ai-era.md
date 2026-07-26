@@ -148,7 +148,7 @@ Neutrality does not build judgment. Claims that reality can break do. So I owe y
 
 That ranks the work. Migrations do best, because the old behavior is the spec and you can diff against it. Scaffolding does well, because being conventional is the requirement. Test writing does well when the code under test is stable. Large refactors do worst, and not because they are hard. The invariants that make a refactor correct are usually undocumented, so neither the model nor the reviewer can check the thing that matters.
 
-I have had to narrow that claim once already. I used to say the variable was test coverage. It is not. It is whether failure is *loud*. A repo at eighty percent coverage whose tests never assert on the behavior you changed is worse than a thin smoke test that dies in ten seconds. Coverage measures how much code runs. I care about how fast a wrong change announces itself.
+That claim needs narrowing. The obvious variable is test coverage. It is not the right one. It is whether failure is *loud*. A repo at eighty percent coverage whose tests never assert on the behavior you changed is worse than a thin smoke test that dies in ten seconds. Coverage measures how much code runs. I care about how fast a wrong change announces itself.
 
 A falsifier is only useful if I cannot wriggle out of it afterward, so here is one with the numbers filled in. Take a codebase over 100k lines with no assertion-level tests on the paths being touched. A team lands an agent-driven cross-module refactor there, big enough that no single reviewer read the whole diff, and ninety days later there has been no rollback and no P1 traced to it. Same team does it twice. That kills my model, and I would want to hear about it.
 
@@ -160,7 +160,7 @@ A falsifier is only useful if I cannot wriggle out of it afterward, so here is o
 
 这句话能给工作排序。迁移最合适，因为旧行为本身就是规格，你可以直接对比。搭脚手架也合适，因为"照常规来"就是需求。写测试在被测代码稳定时合适。大型重构最不合适，不是因为它难，而是因为决定重构对不对的那些不变量通常没写下来，于是模型和 reviewer 都没法检查真正要紧的东西。
 
-这个观点我已经被迫改窄过一次。我以前说关键变量是测试覆盖率。不是。关键是失败够不够*响*。一个覆盖率八十、但测试从不断言你改动那部分行为的 repo，比一个十秒就挂掉的粗糙冒烟测试更糟。覆盖率衡量的是多少代码被跑过，我在意的是一个错误改动多快会自己叫出来。
+这个观点还要再窄一点。最容易想到的变量是测试覆盖率。不是它。关键是失败够不够*响*。一个覆盖率八十、但测试从不断言你改动那部分行为的 repo，比一个十秒就挂掉的粗糙冒烟测试更糟。覆盖率衡量的是多少代码被跑过，我在意的是一个错误改动多快会自己叫出来。
 
 一个证伪条件如果事后能被我自己解释掉，就不算数，所以我把数字填进去：一个十万行以上的代码库，被改动的路径上没有断言级测试。某个团队在这里用 agent 完成了一次跨模块重构，改动大到没有任何一个 reviewer 完整读过整个 diff，上线九十天内没有回滚，也没有能追溯到它的 P1。同一个团队做到两次。那我的模型就是错的，我想知道。
 

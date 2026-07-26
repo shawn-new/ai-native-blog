@@ -45,10 +45,12 @@ const getInitialLocale = (): 'en' | 'cn' => {
 
 function App() {
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
-  const [locale, setLocale] = useState<'en' | 'cn'>(getInitialLocale);
+  // Locale is chosen by the URL (?lang=cn) and does not change after load.
+  const [locale] = useState<'en' | 'cn'>(getInitialLocale);
   const [activeSlug, setActiveSlug] = useState<string>('');
   const heroRef = useRef<HTMLElement>(null);
-  const tocScrollOffset = 84 + 28;
+  // Keep in step with --nav-height in App.css.
+  const tocScrollOffset = 56 + 28;
 
   useEffect(() => {
     const selectArticleFromLocation = () => {
@@ -204,19 +206,6 @@ function App() {
   const renderDraftTag = (article: Article) =>
     showLocalMetadata && article.release === 'draft' ? <span className="draft-tag">Draft</span> : null;
 
-  const toggleLocale = () => {
-    const nextLocale = locale === 'cn' ? 'en' : 'cn';
-    const url = new URL(window.location.href);
-    if (nextLocale === 'cn') {
-      url.searchParams.set('lang', 'cn');
-    } else {
-      url.searchParams.delete('lang');
-      url.searchParams.delete('locale');
-    }
-    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
-    setLocale(nextLocale);
-    setActiveSlug('');
-  };
 
   const renderArticleCard = (article: Article, index: number) => (
     <div key={article.id} className="article-card" onClick={() => navigateTo(article.id)}>
@@ -245,16 +234,8 @@ function App() {
         <nav>
           <div className="container nav-content">
             <div className="logo" onClick={() => navigateTo(null)}>
-              Sean
+              Sean Blog
             </div>
-            <button
-              className="language-switch"
-              type="button"
-              onClick={toggleLocale}
-              aria-label={locale === 'cn' ? 'Switch to English' : '切换到中文'}
-            >
-              {locale === 'cn' ? 'EN' : '中'}
-            </button>
           </div>
         </nav>
       ) : null}

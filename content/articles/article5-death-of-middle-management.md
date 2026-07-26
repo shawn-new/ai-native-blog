@@ -34,9 +34,9 @@ history:
 
 I watched it happen in a single meeting. An executive said: "We need to win enterprise." Three days later, a director presented a slide deck interpreting that sentence. A week after that, a manager had turned the slides into a roadmap. By the time an engineer got a ticket, the original intent was buried under four layers of formatting.
 
-My reaction at the time was that nobody in that chain had added an insight. I have since had to walk that back, because I was sitting at the bottom of the chain and could not see most of what happened. I do not know how many competing proposals that director killed in those three days, or which peer he talked out of blocking the work. The best middle-management work produces things that do not happen, and from downstream, prevention is indistinguishable from idleness.
+My reaction in the room was that nobody in that chain had added an insight. That reaction was wrong, and it was wrong for a reason I could not see from where I sat: I was at the bottom of the chain. I do not know how many competing proposals that director killed in those three days, or which peer he talked out of blocking the work. The best middle-management work produces things that do not happen, and from downstream, prevention is indistinguishable from idleness.
 
-So the meeting proves something smaller than I originally claimed. It proves that a chain like that contains real format-conversion work, and format conversion is now nearly free.
+So the meeting proves something much smaller than that reaction suggested. It proves that a chain like that contains real format-conversion work, and format conversion is now nearly free.
 
 **Before:** A vague executive goal passed through meetings, docs, alignment calls, planning cycles, and reporting chains before a team could act.
 
@@ -50,9 +50,9 @@ The new bottleneck is not "can someone write the plan?" It is "can someone tell 
 
 我在一次会议里亲眼看到这件事发生。高层说："我们要赢 enterprise。"三天后，director 做了一套 slide 来解释这句话。又过一周，manager 把 slide 变成了 roadmap。工程师拿到 ticket 时，原始意图已经被四层格式化埋掉。
 
-我当时的反应是：这条链上没有一个人增加了洞察。后来我不得不收回这句话，我坐在链条最下游，看不见中间真正发生了什么。我不知道那个 director 在那三天里杀掉了几个抢同一批人头的提案，也不知道他说服了哪个平级不要否决这件事。中层最好的工作，产出是**某些事情没有发生**；而从下游看，"阻止了坏事"和"什么都没干"长得一模一样。
+我当时在会上的反应是：这条链上没有一个人增加了洞察。这个反应是错的，而它错在一个我从那个位置看不见的地方：我坐在链条最下游。我不知道那个 director 在那三天里杀掉了几个抢同一批人头的提案，也不知道他说服了哪个平级不要否决这件事。中层最好的工作，产出是**某些事情没有发生**；而从下游看，"阻止了坏事"和"什么都没干"长得一模一样。
 
-所以这场会议能证明的事，比我原来主张的小得多：这样一条链上确实存在真实的格式转换工作，而格式转换现在几乎免费了。
+所以这场会议能证明的事，比那个反应暗示的小得多：这样一条链上确实存在真实的格式转换工作，而格式转换现在几乎免费了。
 
 **之前：** 一个模糊的高层目标，要经过会议、文档、alignment call、planning cycle 和汇报链，团队才能开始行动。
 
@@ -69,23 +69,23 @@ The new bottleneck is not "can someone write the plan?" It is "can someone tell 
 
 **English:**
 
-My original argument had a flaw I want to name before going further, because everything downstream depends on it. I defined middle management as translation, carrying the message, formatting the output, and then showed that translation is automatable. That is close to circular. I picked the part of the job AI can do and called it the job.
+The argument so far has a flaw worth naming before going further, because everything downstream depends on it. It defines middle management as translation, carrying the message, formatting the output, and then showed that translation is automatable. That is close to circular. I picked the part of the job AI can do and called it the job.
 
 Here is what the definition left out. Performance calibration, which is not scoring people but arguing for your people in a room where good ratings are a limited quota. Compensation, including the pay-equity gaps that only surface when someone actually audits them. Hiring loops and the closing call. Performance improvement plans, which have to be simultaneously humane and legally defensible. Harassment complaints, where the evidence is not permitted to exist in any system. Retention. The forty-eight hours when someone has decided to leave and has not said so yet. Career development, which is the reason people stay.
 
 None of that is translation. None of it is automatable, and the reason is not that models are too weak. It is that much of this work is deliberately kept out of the systems a model can read. A calibration argument lives in a room. A complaint is confidential by design. You cannot connect an AI to evidence that is not allowed to be written down.
 
-Which means my thesis has to shrink. Automating the translation work removes part of a manager's week. I used to think it was most of it. I no longer do, and I would rather say that plainly than keep the bigger claim and hope nobody who has done the job reads carefully.
+Which means my thesis has to shrink. Automating the translation work removes part of a manager's week. It is tempting to think that is most of it. It is not, and I would rather say that plainly than keep the bigger claim and hope nobody who has done the job reads carefully.
 
 **中文：**
 
-在往下走之前，我要先说出我原来那个论证里的一个漏洞，因为后面所有内容都依赖它。我把中层管理定义为"翻译"，传递信息、格式化输出，然后论证翻译可以被自动化。这接近循环论证：我挑了这份工作里 AI 能做的那部分，然后管它叫这份工作。
+在往下走之前，要先说出上面这个论证里的一个漏洞，因为后面所有内容都依赖它。它把中层管理定义为"翻译"，传递信息、格式化输出，然后论证翻译可以被自动化。这接近循环论证：我挑了这份工作里 AI 能做的那部分，然后管它叫这份工作。
 
 这个定义漏掉的是这些。绩效校准，它不是打分，是在一个好评级属于有限配额的房间里，为你的人争取。薪酬，包括那些只有真去审计才会浮出来的同工不同酬。招聘 loop 和最后那通 closing call。PIP，它必须同时做到有人情味和法律上站得住。骚扰投诉，它的证据本身就不被允许存在于任何系统里。留人，一个人已经决定要走、但还没说出口的那四十八小时。以及职业发展，那是人留下来的真正原因。
 
 这些都不是翻译。它们也都不可能被自动化，而原因不是模型不够聪明，是这些工作里有很大一部分被刻意排除在模型能读到的系统之外。校准的争论发生在房间里，投诉在设计上就是保密的。你没法把 AI 接到一份不被允许写下来的证据上。
 
-所以我的论点必须缩小。自动化翻译工作，拿走的是一个 manager 一周里的一部分。我以前以为那是大部分。现在我不这么认为了，我宁愿直说，也不想留着那个更大的主张，指望做过这份工作的人不认真读。
+所以我的论点必须缩小。自动化翻译工作，拿走的是一个 manager 一周里的一部分。很容易以为那是大部分。它不是，我宁愿直说，也不想留着那个更大的主张，指望做过这份工作的人不认真读。
 
 ---
 
