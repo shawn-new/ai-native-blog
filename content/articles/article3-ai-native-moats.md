@@ -204,6 +204,31 @@ Gross margin against inference cost. If inference costs fall and your price hold
 
 ---
 
+## When Not to Build Your Own
+## 什么时候不该自己建
+
+**English:**
+
+Building a harness is expensive. Two situations where the cost is not worth it:
+
+**Your direction overlaps with platform players.** Model providers, cloud platforms, and open source communities are all shipping harness infrastructure: eval frameworks, agent orchestration, retrieval pipelines, correction tooling. If your harness is mostly these generic components, you are competing with organizations that have more engineers, more distribution, and can bundle it for free into something they already sell. That competition is structurally unfair. The only harness worth building is the part that encodes your customer's reality — their approval rules, their domain definitions, their correction history, their specific "good enough."
+
+**A general-purpose harness already gets you there.** If off-the-shelf eval tools, open-source orchestration, and standard correction pipelines cover what your product needs, building your own is pure overhead. The question: does my product need sensing, judgment, or workflow that no general tool provides? If no, use the general tool and spend engineering time on what actually differentiates. Many products do not need a custom harness. They need a custom product on top of a commodity harness.
+
+The line is domain specificity. Build what comes from your customers' reality. Use what comes from shared infrastructure. The mistake is building generic infrastructure and calling it a moat. The other mistake is using generic infrastructure and calling it a product.
+
+**中文：**
+
+建 harness 是贵的。两种情况下这个成本不值得：
+
+**你的方向和平台玩家重叠。** 模型厂商、云平台、开源社区都在交付 harness 基础设施：eval 框架、agent 编排、检索管线、修正工具。如果你的 harness 主要是这些通用组件，你面对的是工程师更多、分发更强、而且能把它免费打包进已有产品的组织。这种竞争在结构上就不公平。唯一值得建的 harness 是编码你客户现实的那部分——他们的审批规则、他们的领域定义、他们的修正历史、他们对"够好"的具体标准。
+
+**通用 harness 已经够用。** 如果现成的 eval 工具、开源编排、标准修正管线已经覆盖了你的产品所需，自己建就是纯粹的开销。问题是：我的产品需不需要通用工具提供不了的感知、判断或工作流？如果不需要，就用通用工具，把工程时间花在真正有差异化的地方。很多产品不需要自定义 harness。它们需要的是建在通用 harness 之上的自定义产品。
+
+分界线是领域特异性。来自你客户现实的部分，自己建。来自共享基础设施的部分，用别人的。错误一是建了通用基础设施然后叫它护城河。错误二是用了通用基础设施然后叫它产品。
+
+---
+
 ## Recap
 ## 收束
 
