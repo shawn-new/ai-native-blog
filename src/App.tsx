@@ -7,7 +7,6 @@ import { articles, type Article } from './data/articles';
 import './styles/App.css';
 
 const showLocalMetadata = import.meta.env.DEV;
-const hiddenArticleIds = new Set(['article5-death-of-middle-management']);
 
 // Locale lives in the path: /articles/<slug> is English, /cn/articles/<slug> is
 // Chinese. Keeping it in the URL rather than in component state means a reader
@@ -135,9 +134,9 @@ function App() {
     return () => hero.removeEventListener('wheel', handleWheel);
   }, [currentArticle]);
 
-  const homepageArticles = articles
-    .filter(article => !hiddenArticleIds.has(article.id))
-    .sort((a, b) => getArticleTimestamp(b) - getArticleTimestamp(a));
+  const homepageArticles = [...articles].sort(
+    (a, b) => getArticleTimestamp(b) - getArticleTimestamp(a),
+  );
 
   const getFilteredMarkdown = (body: string) => {
     const hasLanguageMarkers = body.includes('**English:**') || body.includes('**中文：**');
@@ -317,7 +316,7 @@ function App() {
       </main>
 
       <footer>
-        &copy; 2026 THE SEAN THESIS • {locale === 'cn' ? '逻辑与意图' : 'LOGIC & INTENT'}
+        &copy; {new Date().getFullYear()} SEAN BLOG
       </footer>
     </div>
   );

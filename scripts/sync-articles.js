@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 
+// Only content/articles is published. Work in progress lives in content/drafts,
+// which is deliberately not read from here.
 const defaultArticlesDir = path.join(process.cwd(), 'content/articles');
 const sourceDir =
   process.env.ARTICLES_DIR ||
