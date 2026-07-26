@@ -1,8 +1,8 @@
 ---
 id: "article6-winning-with-taste-in-ai-era"
 slug: "your-teams-taste-is-the-bottleneck"
-titleEn: "Your Team's Taste Is the Bottleneck. Good News: It's Trainable."
-titleZh: "团队的 taste 才是瓶颈。好消息是，它可以练"
+titleEn: "Taste Gets You to What Users Need Faster. Good News: It's Trainable."
+titleZh: "Taste 让团队更快做出用户真正需要的东西。好消息是，它可以练。"
 category: "Opinions"
 date: "2026-05-30"
 author: "Sean"
@@ -36,8 +36,8 @@ history:
   - "Sat Jul 25 2026 00:00:00 GMT-0700 (Pacific Daylight Time): Voice pass: strip em-dashes, plainer sentences, name the pattern in the loop section"
 ---
 
-# Your Team's Taste Is the Bottleneck. Good News: It's Trainable.
-# 团队的 taste 才是瓶颈。好消息是，它可以练
+# Taste Gets You to What Users Need Faster. Good News: It's Trainable.
+# Taste 让团队更快做出用户真正需要的东西。好消息是，它可以练。
 
 ## Coherence Became a Weak Signal
 ## 连贯变成了一个弱信号
@@ -68,6 +68,8 @@ That proxy got much weaker. Coherent docs, coherent code, coherent strategy now 
 
 So the first filter in most review processes is leaning on a signal that has lost most of its weight. Something has to replace it. The replacement is judgment applied before the metrics arrive. That is what I mean by taste.
 
+It is worth being clear about what that judgment is for, because it is not elegance and it is not a matter of standards for their own sake. Every one of these calls is a bet about a user: whether this is the problem worth solving, whether this path reaches them sooner, whether the thing about to be built will land at all. Taste is what keeps the direction and the strategy pointed at that. Pointing correctly is also what makes a team fast, because most lost time is not spent working slowly. It is spent working hard on the wrong thing. A team with taste spends its weeks on what users needed. A team without it can be enormously productive and still arrive nowhere, which is what those two months bought.
+
 **中文：**
 
 Demo 能跑。代码能 compile。Spec 结构完整。然后有人问：agent 中途失败怎么办？用户怎么验证输出？Integration 如果不是两周而是六周呢？
@@ -93,6 +95,8 @@ Pivot 的时候我们把 eval 建起来了。产品没有因此一夜变好，�
 这个替代指标现在弱了很多。连贯的文档、连贯的代码、连贯的策略，几分钟就能产出。连贯性仍然说明这东西能读，而不连贯依然是个坏信号。它不再说明的是：有没有人核对过这东西是不是真的。
 
 也就是说，大多数 review 流程的第一道筛子，靠的是一个已经失去大部分分量的信号。它必须被替换掉。替换它的东西，是在指标出现之前就要做出的判断。这就是我说的 taste。
+
+这个判断是为了什么，值得说清楚。它不是为了优雅，也不是为了标准本身。**每一个这样的判断，本质上都是一个关于用户的赌注**：这是不是值得解决的问题，这条路是不是更快到达他们，即将要建的东西到底会不会落地。Taste 的作用，是让方向和策略始终对准这件事。而对准，恰恰也是一个团队变快的原因——大部分被浪费的时间，并不是因为干得慢，是因为在错的东西上干得很卖力。有 taste 的团队，把一周周花在用户真正需要的东西上；没有 taste 的团队可以极其高产，然后哪儿也没到——开头那两个月买到的就是这个。
 
 ---
 
@@ -241,7 +245,7 @@ The layer worth borrowing is the question. Conclusions do not transfer. They gre
 
 **English:**
 
-The title of this post is a strong claim. Two arguments against it are worth taking seriously. I want the stronger one first.
+The claim underneath all of this is that judgment is the thing holding teams back, which is strong enough to deserve a fight. Two arguments against it are worth taking seriously. I want the stronger one first.
 
 **The bottleneck may be eval infrastructure rather than judgment.** Judgment has always been scarce, and scarce is not the same as bottleneck. The bottleneck is the thing that changed. What changed is the volume of plausible artifacts arriving per week. You do not fix a volume problem with a human filter. You fix it with measurement that scales.
 
@@ -255,7 +259,7 @@ My answer is that the general version was probably wrong those times, and that I
 
 **中文：**
 
-这篇文章的标题是一个强断言。有两个反驳值得认真对待，我先说更强的那个。
+上面这一切底下压着的主张是：卡住团队的是判断力。这个断言够强，值得被认真挑战。有两个反驳站得住，我先说更强的那个。
 
 **瓶颈可能在 eval 基础设施上，而非判断力。** 判断力一直都稀缺，而稀缺和瓶颈不是一回事。瓶颈是那个*变了*的东西。变了的是每周涌进来的、看似成立的产出物的数量。数量问题不靠人肉筛子解决，靠能规模化的测量解决。
 
