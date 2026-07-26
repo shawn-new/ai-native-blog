@@ -88,9 +88,14 @@ function App() {
   // TOC active slug tracking
   useEffect(() => {
     if (!currentArticle) return;
-    const handleScroll = () => {
-      const headings = Array.from(document.querySelectorAll<HTMLElement>('.md-content h2, .md-content h3'));
-      let current = headings[0]?.id || '';
+    // Re-querying the DOM and measuring every heading on each scroll event is enough
+    // work to show up as jank on a long article, so measure at most once per frame.
+    const headings = Array.from(document.querySelectorAll<HTMLElement>('.md-content h2, .md-content h3'));
+    if (headings.length === 0) return;
+    let frame = 0;
+    const measure = () => {
+      frame = 0;
+      let current = headings[0].id;
       let closestDistance = Number.POSITIVE_INFINITY;
       for (const h of headings) {
         const distance = Math.abs(h.getBoundingClientRect().top - tocScrollOffset);
@@ -101,21 +106,33 @@ function App() {
       }
       setActiveSlug(current);
     };
+    const handleScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(measure);
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    measure();
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, [currentArticle, tocScrollOffset]);
 
-  // Hero snap scroll: instant jump to articles on first wheel-down
+  // Hero snap scroll: the first scroll from the very top skips past the hero.
+  // Everything after that is left alone. Without the guards this hijacks every
+  // wheel-down while the pointer is over the hero, so scrolling back up and
+  // easing down again teleports the reader to the bottom of the hero instead.
   useEffect(() => {
     if (currentArticle) return;
     const hero = heroRef.current;
     if (!hero) return;
+    let snapped = false;
     const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY <= 0) return;
+      if (snapped || e.deltaY <= 0 || window.scrollY > 4) return;
+      snapped = true;
       e.preventDefault();
       const bottom = hero.getBoundingClientRect().bottom + window.scrollY;
-      window.scrollTo({ top: bottom, behavior: 'instant' });
+      window.scrollTo({ top: bottom, behavior: 'smooth' });
     };
     hero.addEventListener('wheel', handleWheel, { passive: false });
     return () => hero.removeEventListener('wheel', handleWheel);
