@@ -113,7 +113,7 @@ Not every objection can be found by reading the artifact. Some appear only when 
 
 Engineers already have a word for the readable half of this: code smell. Nothing is broken, the tests pass, but the shape of the code tells you something is wrong. Interfaces have the same property and it is easier to miss, because documents flatten it. "The user confirms the action" is one line in a spec. It is one line in the demo too. Watch enough real sessions and it stops being a line. It is a step, repeated every single time, by someone whose actual work is already stacking up behind them.
 
-That extra step passes the failure-path test, which is what makes it an objection rather than a preference. People will start batching their work to avoid the confirmation, and then the confirmation stops protecting anything. But nobody finds it by reading. It is invisible in the artifact and obvious in the recording. That is why I do not trust judgment formed entirely from specs and demos, including my own.
+That extra step passes the failure-path test, which is what makes it an objection. People will start batching their work to avoid the confirmation, and then the confirmation stops protecting anything. But nobody finds it by reading. It is invisible in the artifact and obvious in the recording. That is why I do not trust judgment formed entirely from specs and demos, including my own.
 
 The failure-path test is worth more to a team than to a person. Kept in my head, it leaves when I leave. Put in the pull request template as one required line, *what happens when this fails*, it becomes something a new engineer inherits in their first week. A vague answer becomes a reason to hold the merge instead of a reason to feel uneasy. I would rather hand someone that one line than an essay about judgment.
 
@@ -131,7 +131,7 @@ Taste 不是风格，也不是你对一个东西的感觉。可以这样定义�
 
 工程师对能读出来的那一半已经有一个词：code smell。什么都没坏，测试也过，但代码的形状告诉你有地方不对。界面也有同样的东西，而且更容易漏掉，因为文档会把它压平。"用户确认这个操作"在 spec 里是一行。在 demo 里也是一行。看够多的真实使用，它就不再是一行了：它是一个每次都要重复一遍的步骤，而做这件事的人，手头的正事本来就已经堆着了。
 
-这个多余步骤通得过失败路径测试，所以它是反对意见，不是偏好。人们会开始攒一批一起做，好绕开那次确认，于是这个确认不再保护任何东西。但没有人能读出它来。它在产出物里看不见，在录屏里一眼就能看见。这也是我不相信完全从 spec 和 demo 里长出来的判断的原因，包括我自己的。
+这个多余步骤通得过失败路径测试，所以它算得上一条反对意见。人们会开始攒一批一起做，好绕开那次确认，于是这个确认不再保护任何东西。但没有人能读出它来。它在产出物里看不见，在录屏里一眼就能看见。这也是我不相信完全从 spec 和 demo 里长出来的判断的原因，包括我自己的。
 
 失败路径这条测试，对团队的价值大于对个人。留在我脑子里，我走了它就走了。写进 PR 模板，变成一行必填，*这东西失败时会发生什么*，它就成了新人第一周就继承到的东西。含糊的回答会变成推迟合并的理由，不再只是一种不安。比起一篇讲判断力的文章，我更愿意给人这一行。
 
@@ -146,7 +146,7 @@ Neutrality does not build judgment. Claims that reality can break do. So I owe y
 
 "AI coding is the future" is unbreakable and therefore useless. Here is the version I actually hold: AI coding pays off in proportion to how much of the correctness criteria already lives outside people's heads.
 
-That ranks the work. Migrations do best, because the old behavior is the spec and you can diff against it. Scaffolding does well, because being conventional is the requirement. Test writing does well when the code under test is stable. Large refactors do worst, and not because they are hard. The invariants that make a refactor correct are usually undocumented, so neither the model nor the reviewer can check the thing that matters.
+That ranks the work. Migrations do best, because the old behavior is the spec and you can diff against it. Scaffolding does well, because being conventional is the requirement. Test writing does well when the code under test is stable. Large refactors do worst. Difficulty is not the reason. The invariants that make a refactor correct are usually undocumented, so neither the model nor the reviewer can check the thing that matters.
 
 That claim needs narrowing. The obvious variable is test coverage. It is not the right one. It is whether failure is *loud*. A repo at eighty percent coverage whose tests never assert on the behavior you changed is worse than a thin smoke test that dies in ten seconds. Coverage measures how much code runs. I care about how fast a wrong change announces itself.
 
@@ -158,7 +158,7 @@ A falsifier is only useful if I cannot wriggle out of it afterward, so here is o
 
 "AI coding 是未来"打不碎，所以没用。我真正持有的版本是：AI coding 的收益，正比于有多少正确性标准已经写在了人脑之外。
 
-这句话能给工作排序。迁移最合适，因为旧行为本身就是规格，你可以直接对比。搭脚手架也合适，因为"照常规来"就是需求。写测试在被测代码稳定时合适。大型重构最不合适，不是因为它难，而是因为决定重构对不对的那些不变量通常没写下来，于是模型和 reviewer 都没法检查真正要紧的东西。
+这句话能给工作排序。迁移最合适，因为旧行为本身就是规格，你可以直接对比。搭脚手架也合适，因为"照常规来"就是需求。写测试在被测代码稳定时合适。大型重构最不合适。难度不是原因，真正的原因是决定重构对不对的那些不变量通常没写下来，于是模型和 reviewer 都没法检查真正要紧的东西。
 
 这个观点还要再窄一点。最容易想到的变量是测试覆盖率。不是它。关键是失败够不够*响*。一个覆盖率八十、但测试从不断言你改动那部分行为的 repo，比一个十秒就挂掉的粗糙冒烟测试更糟。覆盖率衡量的是多少代码被跑过，我在意的是一个错误改动多快会自己叫出来。
 
@@ -218,7 +218,7 @@ Demo 会把最要紧的部分藏起来。在 demo 里，有人替你选好了输
 
 Judgment does not get stronger inside your own head. Taste still acts before the data arrives, which is what it is for. Its accuracy comes from how many times it has been checked afterward by someone who is not you.
 
-The fastest checker available is a customer with something at stake, provided you go to them. The ones who come to you arrive on the schedule from the top of this post. Long before you have an eval harness, you can sit with the people who use the thing and ask what broke. What makes their feedback useful is specificity, and specificity comes from stakes. Someone tells you exactly which step cost them an hour because the hour was actually lost. That is a different filter from loudness. The loudest customer is often the least specific one, and a roadmap can lose a quarter to whoever complains most fluently. So I look for the users who hurt most, not the ones who yell most. Then I still need measurement to tell me how many of them there are.
+The fastest checker available is a customer with something at stake, provided you go to them. The ones who come to you arrive on the schedule from the top of this post. Long before you have an eval harness, you can sit with the people who use the thing and ask what broke. What makes their feedback useful is specificity, and specificity comes from stakes. Someone tells you exactly which step cost them an hour because the hour was actually lost. That is a different filter from loudness. The loudest customer is often the least specific one, and a roadmap can lose a quarter to whoever complains most fluently. So I look for the users who hurt most. Volume is a separate signal, and a weaker one. Then I still need measurement to tell me how many of them there are.
 
 Judgment can also be borrowed from people, and most of us borrow the wrong layer. The wrong layer is vocabulary. Read enough of this genre and you can say *plausible artifact* or *contact with failure* without having earned either. Then it shows up in a design review as a more sophisticated way to say "feels wrong," which makes weak objections harder to challenge. That is the opposite of the point.
 
@@ -228,7 +228,7 @@ The layer worth borrowing is the question. Conclusions do not transfer. They gre
 
 判断在自己脑子里不会变强。Taste 依然在数据之前行动，它的用处就在这里。但它的准确率，来自它事后被一个不是你的人核对过多少次。
 
-最快的核对者，是一个有切身利害的客户，前提是你主动去找他。等他自己找上门的时候，就是开头那个故事的时间表了。在你有 eval 之前很久，你就可以坐到真正在用的人旁边，问他们哪里坏了。他们的反馈之所以有用，是因为具体，而具体来自利害：一个人能说清是哪一步让他多花了一小时，是因为那一小时是真花掉的。这和"声音大"是两个筛子。喊得最响的客户往往是最不具体的那个，而一个 roadmap 可以被最会抱怨的人拿走一个季度。所以我找的是疼得最厉害的用户，不是嗓门最大的用户。找到之后，我仍然需要测量来告诉我这样的人有多少。
+最快的核对者，是一个有切身利害的客户，前提是你主动去找他。等他自己找上门的时候，就是开头那个故事的时间表了。在你有 eval 之前很久，你就可以坐到真正在用的人旁边，问他们哪里坏了。他们的反馈之所以有用，是因为具体，而具体来自利害：一个人能说清是哪一步让他多花了一小时，是因为那一小时是真花掉的。这和"声音大"是两个筛子。喊得最响的客户往往是最不具体的那个，而一个 roadmap 可以被最会抱怨的人拿走一个季度。所以我找的是疼得最厉害的用户。嗓门是另一个信号，而且弱得多。找到之后，我仍然需要测量来告诉我这样的人有多少。
 
 判断也可以从人身上借，而大多数人借错了层。错的那一层是词汇。这类文章读多了，你不需要付出任何代价，就能熟练说出"看似成立的方案""接触失败"。然后它出现在设计评审上，变成一种更高级的方式来说"感觉不对"，弱的反对意见反而更难被反驳。这和本意正好相反。
 
@@ -243,9 +243,9 @@ The layer worth borrowing is the question. Conclusions do not transfer. They gre
 
 The title of this post is a strong claim. Two arguments against it are worth taking seriously. I want the stronger one first.
 
-**The bottleneck may be eval infrastructure, not judgment.** Judgment has always been scarce, and scarce is not the same as bottleneck. The bottleneck is the thing that changed. What changed is the volume of plausible artifacts arriving per week. You do not fix a volume problem with a human filter. You fix it with measurement that scales.
+**The bottleneck may be eval infrastructure rather than judgment.** Judgment has always been scarce, and scarce is not the same as bottleneck. The bottleneck is the thing that changed. What changed is the volume of plausible artifacts arriving per week. You do not fix a volume problem with a human filter. You fix it with measurement that scales.
 
-That is the best case against my title, and it is where I still disagree. Writing an eval harness is maybe two weeks of engineering. Deciding what it measures is not engineering at all: what counts as a regression, what threshold blocks a release, who may override it and on what grounds. Every eval effort I have watched stall, stalled there. Not in the code, in the definition, because signing the definition means owning the release you will one day block. If that is right, eval infrastructure is the form the answer takes and taste is the thing actually missing. I will mark that as my read rather than a measured fact. I have not counted stalled eval projects, and someone with better data may tell me they die in engineering after all.
+That is the best case against my title, and it is where I still disagree. Writing an eval harness is maybe two weeks of engineering. Deciding what it measures is not engineering at all: what counts as a regression, what threshold blocks a release, who may override it and on what grounds. Every eval effort I have watched stall, stalled there. Not in the code, in the definition, because signing the definition means owning the release you will one day block. If that is right, eval infrastructure is the form the answer takes and taste is the thing actually missing. I will mark that as my read. It is not a measured fact. I have not counted stalled eval projects, and someone with better data may tell me they die in engineering after all.
 
 The practical order still holds. If you have no eval at all, go build it before you read another essay about judgment, including this one. Just do not expect the engineering to be the hard part.
 
@@ -257,9 +257,9 @@ My answer is that the general version was probably wrong those times, and that I
 
 这篇文章的标题是一个强断言。有两个反驳值得认真对待，我先说更强的那个。
 
-**瓶颈可能是 eval 基础设施，不是判断力。** 判断力一直都稀缺，而稀缺和瓶颈不是一回事。瓶颈是那个*变了*的东西。变了的是每周涌进来的、看似成立的产出物的数量。数量问题不靠人肉筛子解决，靠能规模化的测量解决。
+**瓶颈可能在 eval 基础设施上，而非判断力。** 判断力一直都稀缺，而稀缺和瓶颈不是一回事。瓶颈是那个*变了*的东西。变了的是每周涌进来的、看似成立的产出物的数量。数量问题不靠人肉筛子解决，靠能规模化的测量解决。
 
-这是反对我这个标题的最强版本，也是我仍然不同意的地方。写一套 eval harness 大概是两周工程。决定它测什么，则完全不是工程问题：什么算退步，什么阈值卡住发布，谁可以 override、凭什么。我见过的 eval 项目卡住，基本都卡在这里。不是卡在代码上，是卡在定义上，因为在定义上签字，等于认领了将来某一次被你卡住的发布。如果这是对的，那 eval 基础设施只是答案的形状，真正缺的还是 taste。这一条我标成我的判断，不是测量结果。我没统计过有多少 eval 项目死在哪一步，有数据的人可能会告诉我它们最终还是死在工程上。
+这是反对我这个标题的最强版本，也是我仍然不同意的地方。写一套 eval harness 大概是两周工程。决定它测什么，则完全不是工程问题：什么算退步，什么阈值卡住发布，谁可以 override、凭什么。我见过的 eval 项目卡住，基本都卡在这里。不是卡在代码上，是卡在定义上，因为在定义上签字，等于认领了将来某一次被你卡住的发布。如果这是对的，那 eval 基础设施只是答案的形状，真正缺的还是 taste。这一条我标成我的判断。它没有被测量过。我没统计过有多少 eval 项目死在哪一步，有数据的人可能会告诉我它们最终还是死在工程上。
 
 但实践顺序不变：如果你现在连 eval 都没有，先去建它，别再读讲判断力的文章了，包括这一篇。只是别指望工程是难的那部分。
 

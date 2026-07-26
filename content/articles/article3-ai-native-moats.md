@@ -39,9 +39,9 @@ Take a legal summarization tool. It calls a frontier model, asks for a summary, 
 
 The tempting image is a countdown. It is wrong in a way that matters. Code being copyable in a weekend is not the same as a business being takeable in a weekend. In between sit security review, procurement, integration, support, and reference customers, and I have watched easily-copied products live on those for years.
 
-The real death is slower and much easier to measure. It shows up first as **price**, not churn: the customer stays, and at renewal the price comes down, because a procurement team that can now name three adequate alternatives negotiates differently. Gross margin drifts down as inference gets bundled into cheaper tiers. Net revenue retention slides from comfortably above a hundred to below it over eighteen to twenty-four months, while the logo-retention chart still looks healthy.
+The real death is slower and much easier to measure. It shows up first in the **price**: the customer stays, and at renewal the price comes down, because a procurement team that can now name three adequate alternatives negotiates differently. Gross margin drifts down as inference gets bundled into cheaper tiers. Net revenue retention slides from comfortably above a hundred to below it over eighteen to twenty-four months, while the logo-retention chart still looks healthy.
 
-That is a chronic disease, not a horror film. Chronic is better, because chronic is observable early.
+This is a chronic disease. That is the better news, because a chronic condition can be measured while it is still early.
 
 One test matters more than any framework: **if a better base model can absorb your product, you do not have a moat. You have a timer.** Everything below is about how to tell which one you have, before the renewal tells you.
 
@@ -53,9 +53,9 @@ One test matters more than any framework: **if a better base model can absorb yo
 
 最顺手的比喻是倒计时。这个比喻错在一个要紧的地方：**代码能在一个周末被复制，不等于生意能在一个周末被夺走。** 中间隔着安全审查、采购流程、集成、支持和参考客户，而我见过大量极易复刻的产品靠这些活了很多年。
 
-真正的死法慢得多，也好量得多。它最先表现为**价格**，不是流失：客户没走，但续约时价格下来了，因为一个现在能说出三个够用替代品的采购团队，谈判姿态是不一样的。毛利率随着推理被打包进更便宜的档位而缓慢下移。净收入留存率在十八到二十四个月里，从一百出头滑到一百以下，而 logo 留存率的图表看起来依然健康。
+真正的死法慢得多，也好量得多。它最先表现在**价格**上：客户没走，但续约时价格下来了，因为一个现在能说出三个够用替代品的采购团队，谈判姿态是不一样的。毛利率随着推理被打包进更便宜的档位而缓慢下移。净收入留存率在十八到二十四个月里，从一百出头滑到一百以下，而 logo 留存率的图表看起来依然健康。
 
-这是慢性病，不是恐怖片。慢性病是更好的消息，因为它可以被早期观测。
+这是一种慢性病。这反而是好消息，因为慢性病在早期就能被量出来。
 
 有一个测试比任何框架都重要：**如果一个更强的基础模型能吸收你的产品，你没有护城河，你只有倒计时。** 下面全部内容，都是关于怎么在续约通知你之前，先判断出你手上是哪一个。
 
@@ -76,7 +76,7 @@ That single number does more work than any framework, for four reasons. It can c
 
 Three more observables, all computable from data you already have:
 
-**Correction rate over cohort age.** For the same class of task, what share of outputs does a user edit in month one versus month nine of the same cohort? Falling means the system is learning from use. Flat means usage is producing volume, not learning, and that distinction is the whole argument of this post.
+**Correction rate over cohort age.** For the same class of task, what share of outputs does a user edit in month one versus month nine of the same cohort? Falling means the system is learning from use. Flat means usage is only producing volume, and that distinction is the whole argument of this post.
 
 **Share of decisions closed inside your product.** How many actions are executed in your system versus exported and executed elsewhere? This is the only honest measure of whether you are a system of action or a very good report.
 
@@ -94,7 +94,7 @@ Three more observables, all computable from data you already have:
 
 再给三个可观测量，都能用你手上已有的数据算出来：
 
-**修正率随 cohort 年龄的变化。** 同一类任务，同一批用户，在第一个月和第九个月，输出被人工编辑的比例各是多少？下降说明系统在从使用中学习。持平说明使用产生的是量，不是学习。**这个区分就是这篇文章的全部论点。**
+**修正率随 cohort 年龄的变化。** 同一类任务，同一批用户，在第一个月和第九个月，输出被人工编辑的比例各是多少？下降说明系统在从使用中学习。持平说明使用只产生了量。**这个区分就是这篇文章的全部论点。**
 
 **决策在你产品内闭环的比例。** 有多少动作是在你的系统里执行的，多少是导出到别处执行的？这是判断你到底是 system of action、还是一份很好的报告，唯一诚实的度量。
 
@@ -109,7 +109,7 @@ Three more observables, all computable from data you already have:
 
 The common counterargument is that the harness around a model (the tools, the retrieval, the evaluation, the correction queue) is scaffolding. A temporary state. Models get better, the scaffolding falls away, and whatever you built on top of it was a bridge to somewhere you have now arrived.
 
-I disagree, and the reason is structural rather than a bet on how good models get.
+I disagree, and the reason is structural. It holds whatever the models do next.
 
 Borrow the frame from control theory. A system that improves toward a goal needs four things: a **reference** (what the desired state is), **sensing** (what the actual state is), a **comparator** (the gap between them), and **actuation** (the ability to change something in the world). The loop runs, the gap shrinks, and the actual converges on the intended.
 
@@ -117,9 +117,9 @@ A model is not that system. A model is the decision function inside it. One comp
 
 That is why the minimal useful harness is not a design preference. It is the minimum a system needs to exist at all: **at least one feedback loop and at least one way to take action.** Remove actuation and the model produces text about a gap it cannot close. Remove sensing and it closes gaps blindly and never learns whether it did. A better model makes a better proposal at one step of the loop. It does not supply the loop.
 
-Now the part that connects this to everything else in this post. Computing a gap is not a capability question. It requires knowing what the desired state is, what to measure, and what counts as closed. Those are domain facts, not model facts.
+Now the part that connects this to everything else in this post. Computing a gap is not a capability question. It requires knowing what the desired state is, what to measure, and what counts as closed. Those are domain facts.
 
-That is what the three assets actually are. They are not three things to accumulate; they are what the loop requires in order to run. **Unique data** is the ability to sense an actual state others cannot see. **Insight** is knowing why a gap is a gap, which gaps matter, and which ones are noise. **Workflow** is the actuation path, plus the place where corrections re-enter and become the next reference. Data answers *what and where*, insight answers *why*, workflow answers *how*. The gap's five Ws are held by whoever runs the loop, not by whoever supplies the decision function.
+That is what the three assets actually are. They are not three things to accumulate; they are what the loop requires in order to run. **Unique data** is the ability to sense an actual state others cannot see. **Insight** is knowing why a gap is a gap, which gaps matter, and which ones are noise. **Workflow** is the actuation path, plus the place where corrections re-enter and become the next reference. Data answers *what and where*, insight answers *why*, workflow answers *how*. The gap's five Ws are held by whoever runs the loop. Supplying the decision function does not come with them.
 
 This argument has a clear failure condition and I would rather name it than let it float. If model providers begin shipping the loop itself (native sensing into your domain's systems, actuation with permissions and audit, memory of what happened last time), then they are no longer supplying the decision function. They are supplying the system, and the harness really was temporary. That is already happening at the edges, and the honest form of my claim is that it is far easier to ship a better decision function than to ship someone else's feedback loop, because the loop is made of that customer's reality.
 
@@ -127,7 +127,7 @@ This argument has a clear failure condition and I would rather name it than let 
 
 常见的反驳是：模型外面那层 harness（工具、检索、评测、修正队列）只是脚手架，是一个中间状态。模型会变强，脚手架会脱落，你在上面建的东西不过是一座通往你现在已经抵达之处的桥。
 
-我不同意，而理由是结构性的，不是在赌模型能强到什么程度。
+我不同意，而理由是结构性的。无论模型接下来变得多强，它都成立。
 
 借控制论的框架来看。一个朝目标改进的系统需要四样东西：**参考值**（理想状态是什么）、**传感**（实际状态是什么）、**比较器**（两者之间的 gap），以及**执行**（改变世界的能力）。回路运转，gap 缩小，实际状态收敛到理想状态。
 
@@ -135,9 +135,9 @@ This argument has a clear failure condition and I would rather name it than let 
 
 所以"最小可用的 harness"不是一种设计偏好，它是**一个系统得以存在的最低配置：至少一个反馈回路，加至少一种执行动作的方式。** 去掉执行，模型只能产出关于一个它关不上的 gap 的文字；去掉传感，它会盲目地去关 gap，并且永远不知道自己关上没有。**更强的模型让回路里某一步的提议更好，但它不提供这个回路。**
 
-现在是把这件事和这篇文章其余部分连起来的那一步。**算出一个 gap 不是能力问题。** 它要求你知道理想状态是什么、该测什么、以及什么算关上了。这些是领域事实，不是模型事实。
+现在是把这件事和这篇文章其余部分连起来的那一步。**算出一个 gap 不是能力问题。** 它要求你知道理想状态是什么、该测什么、以及什么算关上了。这些都是领域事实。
 
-这才是那三样资产真正的身份。**它们不是三样要去积累的东西，而是这个回路得以运转所必需的东西。** 独特数据是**感知别人看不见的实际状态**的能力。洞察是知道**为什么一个 gap 是 gap、哪些 gap 要紧、哪些只是噪音**。工作流是**执行路径**，以及修正重新进入回路、变成下一个参考值的那个位置。数据回答 what 和 where，洞察回答 why，工作流回答 how。**一个 gap 的五个 W，握在运转回路的人手里，而不是握在提供决策函数的人手里。**
+这才是那三样资产真正的身份。**它们不是三样要去积累的东西，而是这个回路得以运转所必需的东西。** 独特数据是**感知别人看不见的实际状态**的能力。洞察是知道**为什么一个 gap 是 gap、哪些 gap 要紧、哪些只是噪音**。工作流是**执行路径**，以及修正重新进入回路、变成下一个参考值的那个位置。数据回答 what 和 where，洞察回答 why，工作流回答 how。**一个 gap 的五个 W，握在运转回路的人手里。提供决策函数的人拿不到它们。**
 
 这个论证有一个明确的失败条件，我宁愿把它写出来也不想让它飘着：**如果模型厂商开始交付回路本身**（原生接入你所在领域系统的传感、带权限和审计的执行、对上一次发生了什么的记忆），那它们提供的就不再是决策函数，而是整个系统，那时 harness 确实只是暂时的。这件事已经在边缘上发生了。我这个主张诚实的形态是：**交付一个更好的决策函数，比交付别人的反馈回路容易得多，因为那个回路是由那个客户的现实构成的。**
 
@@ -158,9 +158,9 @@ That gives the two cases where data genuinely holds:
 
 **Getting the data requires crossing a threshold** that is regulatory, contractual, or physical. Access granted by a licence, a signed data agreement, or a sensor that exists in a place competitors are not.
 
-Everything else is supply chain, not moat.
+Everything else is supply chain.
 
-And a discipline usually applied to other people's moats but not to one's own: **data has a half-life.** Fraud patterns rotate. A regulatory change can invalidate historical labels. Customer behavior drifts with the macro cycle. "It compounds through use" is only true while accumulation outruns decay, and that is a condition to check, not a property to assume.
+And a discipline usually applied to other people's moats but not to one's own: **data has a half-life.** Fraud patterns rotate. A regulatory change can invalidate historical labels. Customer behavior drifts with the macro cycle. "It compounds through use" is only true while accumulation outruns decay, and that is a condition to check every time.
 
 **中文：**
 
@@ -174,9 +174,9 @@ And a discipline usually applied to other people's moats but not to one's own: *
 
 **拿到这些数据需要跨过一道门槛**，监管的、合同的，或者物理的。一张牌照给的准入，一份签署的数据协议，或者一个装在竞争对手到不了的地方的传感器。
 
-除此之外的，都是供应链，不是护城河。
+除此之外的，都属于供应链。
 
-还有一条纪律，人们常拿它衡量别人的护城河，却很少用在自己偏爱的那个上面：**数据是有半衰期的。** 欺诈模式会轮换。一次监管变化可以让历史标签作废。客户行为随宏观周期漂移。"使用会让它复利"只在积累速度快过衰减速度时成立。**这是一个需要检查的条件，不是一个可以假设的属性。**
+还有一条纪律，人们常拿它衡量别人的护城河，却很少用在自己偏爱的那个上面：**数据是有半衰期的。** 欺诈模式会轮换。一次监管变化可以让历史标签作废。客户行为随宏观周期漂移。"使用会让它复利"只在积累速度快过衰减速度时成立。**这是一个每次都要去检查的条件。**
 
 ---
 
@@ -187,7 +187,7 @@ And a discipline usually applied to other people's moats but not to one's own: *
 
 Data alone is inert. A warehouse of facts does not know what matters. Insight is the part that turns reality into a decision, and it is only real when it exists outside someone's head. As artifacts you can count.
 
-Open your repository and count them: schemas, label definitions, evaluation sets, approval rules, ranking functions, review queues. That list is the honest inventory of accumulated judgment. A company whose insight lives entirely in two domain experts has consulting, not a product, and the failure mode is not dramatic. Those two people simply become unreplaceable and then leave.
+Open your repository and count them: schemas, label definitions, evaluation sets, approval rules, ranking functions, review queues. That list is the honest inventory of accumulated judgment. A company whose insight lives entirely in two domain experts is selling consulting, and the failure mode is not dramatic. Those two people simply become unreplaceable and then leave.
 
 Workflow is where judgment becomes repeatable. The property that matters is narrower than "users spend time here": **if the product owns the correction loop, it owns learning.** Where the user fixes the output is where the label is generated, and that stream is the least copyable asset in an AI product, because it carries the answer, the preference, and the process at once.
 
@@ -197,7 +197,7 @@ That is also the transition from a system of record to a system of action. Once 
 
 数据本身是惰性的，它不会自己产生意义。一仓库事实并不知道什么重要。洞察是把现实变成决策的那一部分，而它只有存在于某个人的脑子之外时才算真的存在，以你能数出来的工件形式。
 
-打开你的代码库数一数：schema、标签定义、评测集、审批规则、排序函数、审核队列。这份清单，才是"积累下来的判断力"的诚实盘点。一家公司的洞察如果全部活在两个领域专家的脑子里，那它有的是咨询能力，不是产品；而且失败方式一点都不戏剧化，那两个人只是变得不可替代，然后离职。
+打开你的代码库数一数：schema、标签定义、评测集、审批规则、排序函数、审核队列。这份清单，才是"积累下来的判断力"的诚实盘点。一家公司的洞察如果全部活在两个领域专家的脑子里，那它卖的就是咨询；而且失败方式一点都不戏剧化，那两个人只是变得不可替代，然后离职。
 
 工作流是判断变得可重复的地方。真正要紧的属性比"用户在这里花了很多时间"窄得多：**如果产品拥有修正回路，它就拥有学习。** 用户修改输出的那个地方，正是标签被生成的地方；而这条数据流是 AI 产品里最难被复制的资产，因为它同时携带了答案、偏好和流程。
 
@@ -214,7 +214,7 @@ The easy dismissal of distribution is that it "buys attention" but cannot substi
 
 In enterprise software, distribution is not attention. It is a signed master agreement, a completed security review, an existing budget line, a vendor number already in the procurement system, and a salesperson who has had dinner with the CIO. Those structurally lower customer acquisition cost and shorten the sales cycle, and they compound. Frequently faster than a learning loop does.
 
-The examples run against me. Teams took the collaboration market from Slack largely by being bundled into an enterprise agreement, with none of the trinity this post is built on. And Salesforce, the standard example of deep workflow ownership, had the strongest enterprise sales machine of its era *first*, and grew the account and pipeline vocabulary afterward. The causality usually runs the other way: deep workflow is often the **result** of winning distribution, not the cause.
+The examples run against me. Teams took the collaboration market from Slack largely by being bundled into an enterprise agreement, with none of the trinity this post is built on. And Salesforce, the standard example of deep workflow ownership, had the strongest enterprise sales machine of its era *first*, and grew the account and pipeline vocabulary afterward. The causality usually runs the other way. Distribution is won first, and deep workflow grows on top of it.
 
 So the honest boundary condition: this framework applies where distribution is roughly matched, or where the category is new enough that no incumbent holds the channel. Inside a category where someone can bundle, they usually win, and the moat you build has to be good enough to survive being un-bundled rather than good enough to win on its own.
 
@@ -224,7 +224,7 @@ So the honest boundary condition: this framework applies where distribution is r
 
 在企业软件里，分发不是注意力。它是一份已签的主协议、一次已经通过的安全审查、一条已经存在的预算线、一个已经在采购系统里的供应商编号，以及一个和 CIO 一起吃过饭的销售。这些东西**结构性地压低获客成本、缩短销售周期，而且它们会复利，往往比学习回路复利得更快。**
 
-例子是反对我的。Teams 从 Slack 手里拿走协作市场，主要靠的是被打包进企业协议，而这篇文章赖以成立的三样它一样都没有。而 Salesforce（讲深工作流时最常被举的例子）是**先**有了那个时代最强的企业销售机器，**然后**才长出 account 和 pipeline 那套工作流语言的。因果通常是反过来的：**深工作流常常是赢得分发之后的结果，不是原因。**
+例子是反对我的。Teams 从 Slack 手里拿走协作市场，主要靠的是被打包进企业协议，而这篇文章赖以成立的三样它一样都没有。而 Salesforce（讲深工作流时最常被举的例子）是**先**有了那个时代最强的企业销售机器，**然后**才长出 account 和 pipeline 那套工作流语言的。因果通常是反过来的：**先赢下分发，深工作流才在它上面长出来。**
 
 所以诚实的适用边界是：这个框架适用于分发大致打平的地方，或者品类新到没有在位者握住渠道的时候。在一个有人可以打包的品类里，通常是打包的人赢；而你建的护城河，标准不是"好到能靠自己赢"，是"好到能在被打包之后活下来"。
 
@@ -239,7 +239,7 @@ A framework that takes no risk is worth nothing, so here is the risk.
 
 If a company holding all three. Outcome-linked proprietary data, judgment encoded as artifacts, and a workflow owning the correction loop. Nonetheless loses more than a fifth of its pricing power to general capability improvement within twenty-four months, then the trinity is not what determines outcomes, and I would want to know it.
 
-I also expect the honest use of this to be diagnostic rather than promotional. A founder who tells me their insight layer is currently two domain experts and that this is their largest risk is using it as a knife. A founder who tells me they have all three is using it as a mirror, and a mirror is what this kind of framework turns into by default.
+The honest use of this is diagnostic. A founder who tells me their insight layer is currently two domain experts and that this is their largest risk is using it as a knife. A founder who tells me they have all three is using it as a mirror, and a mirror is what this kind of framework turns into by default.
 
 The version worth defending is much smaller than the one this genre usually offers: one measurement that can fail, two conditions under which data survives, one property that makes workflow defensible, and an admission that distribution outranks all of it more often than the genre likes to say. If your convergence gap is widening this quarter, the rest is commentary. If it is narrowing, no amount of framework will save the renewal.
 
@@ -249,6 +249,6 @@ The version worth defending is much smaller than the one this genre usually offe
 
 如果一家公司三样俱全（带结果标签的私有数据、以工件形式沉淀下来的判断、一个拥有修正回路的工作流），却仍然在二十四个月内，因为通用能力的提升而丢掉超过五分之一的定价能力，那么这个三位一体就不是决定结果的东西，而我想知道这件事。
 
-我还预期它诚实的用法是诊断，不是宣传。一个创始人告诉我"我们的洞察层目前就是两个领域专家的脑子，这是我们最大的风险"，他是在**把它当刀用**。一个创始人告诉我"我们三样都有"，他是在**把它当镜子用**，而这类框架如果不设防，默认就会变成那面镜子。
+它诚实的用法是诊断。一个创始人告诉我"我们的洞察层目前就是两个领域专家的脑子，这是我们最大的风险"，他是在**把它当刀用**。一个创始人告诉我"我们三样都有"，他是在**把它当镜子用**，而这类框架如果不设防，默认就会变成那面镜子。
 
 我愿意守的版本，比这个文体通常给的小得多：**一个可能失败的测量，两种数据得以存活的条件，一条让工作流可防守的属性，以及一句承认：分发赢过上面这一切的频率，比这个文体愿意承认的高。** 如果你这个季度的收敛差距在扩大，剩下的都是注解；如果它在缩小，再完整的框架也救不了那次续约。

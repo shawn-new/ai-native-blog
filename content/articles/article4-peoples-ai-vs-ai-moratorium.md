@@ -63,8 +63,8 @@ Sanders's video and policy push make one argument: control of AI is concentratin
 
 The policy is the AI Data Center Moratorium Act. S.4214, introduced by Sanders on March 25, 2026, with a House companion, H.R.9442, introduced by Alexandria Ocasio-Cortez on June 24. It is worth reading past the press release, because the provisions are both broader and more conditional than the coverage suggests.
 
-- The trigger is **20 megawatts** of power demand, together with liquid cooling and racks rated at 20kW or above. Twenty megawatts is a mid-sized facility, not only a hyperscaler campus.
-- It covers **upgrades to existing data centers**, not just new construction. That is the provision with the most immediate effect, and the one most often left out of summaries.
+- The trigger is **20 megawatts** of power demand, together with liquid cooling and racks rated at 20kW or above. Twenty megawatts is a mid-sized facility. The threshold reaches well past hyperscaler campuses.
+- It covers **upgrades to existing data centers** as well as new construction. That is the provision with the most immediate effect, and the one most often left out of summaries.
 - The pause lifts when **"strong national safeguards" are in place**. There is no sunset date, no numeric threshold, and no named agency that certifies the condition has been met.
 - Projects must show they will **not raise consumer utility bills** and must obtain **local approval**. There are **union labor and prevailing wage requirements**, and a **ban on government subsidies** for data center construction or operation.
 - A separate title bans **US exports of AI computing infrastructure** to countries without comparable safeguards.
@@ -77,8 +77,8 @@ Sanders 的视频和政策动作说的是同一件事：AI 的控制权正在集
 
 政策载体是 AI Data Center Moratorium Act，参议院 S.4214，Sanders 于 2026 年 3 月 25 日提出；众议院对应法案 H.R.9442，Alexandria Ocasio-Cortez 于 6 月 24 日提出。值得越过新闻稿去读条款，因为实际内容比报道里的既更宽，也更带条件。
 
-- 触发门槛是 **20 兆瓦**用电需求，加上液冷、机柜功率 20kW 以上这些技术条件。20 兆瓦是中型设施的量级，不只是巨头园区。
-- 它覆盖**既有数据中心的扩容**，不只是新建。这是影响最直接的一条，也是各种摘要最常漏掉的一条。
+- 触发门槛是 **20 兆瓦**用电需求，加上液冷、机柜功率 20kW 以上这些技术条件。20 兆瓦是中型设施的量级。这个门槛远远越过了巨头园区。
+- 它同时覆盖新建和**既有数据中心的扩容**。这是影响最直接的一条，也是各种摘要最常漏掉的一条。
 - 暂停在**"强有力的国家级保护到位"**时解除。没有 sunset 日期，没有量化门槛，也没有指定哪个机构来认定条件已经达成。
 - 项目必须证明**不会推高居民电费**，并且必须取得**地方批准**。法案还包含**工会用工和 prevailing wage 要求**，以及**禁止政府补贴**数据中心的建设与运营。
 - 另有一部分禁止**向缺乏同等保护的国家出口 AI 算力基础设施**。
@@ -98,7 +98,7 @@ Sanders is worried about concentrated power. The worry is valid. A pause distrib
 
 **Build:** Capacity that keeps growing is capacity that keeps getting cheaper per unit of work, and cheap capability is what puts tools in the hands of people who cannot fund their own.
 
-The second half of that argument needs care, because the convenient version of it does not hold. The claim that a pause squeezes out open-source communities, independent developers, and educators requires three steps: a pause slows supply growth, slower supply growth raises inference prices, and higher inference prices push out the smallest users. Only the first step is solid, and it affects new capacity rather than existing capacity. Token prices have fallen steeply for three years, driven mostly by model efficiency and chip generations rather than by data center count. And if compute genuinely tightened, the first cuts would likely land on marginal internal training runs, not on the consumer subscriptions that anchor these companies' revenue. The squeeze might run the opposite direction from the one usually claimed.
+The second half of that argument needs care, because the convenient version of it does not hold. The claim that a pause squeezes out open-source communities, independent developers, and educators requires three steps: a pause slows supply growth, slower supply growth raises inference prices, and higher inference prices push out the smallest users. Only the first step is solid, and it affects new capacity only. Token prices have fallen steeply for three years, driven mostly by model efficiency and chip generations. And if compute genuinely tightened, the first cuts would likely land on marginal internal training runs, well before the consumer subscriptions that anchor these companies' revenue. The squeeze might run the opposite direction from the one usually claimed.
 
 So the honest version of the claim is narrower: an open-ended pause hurts the firms that need to build, and those firms are the only plausible source of competition for the incumbents. That is a smaller argument than the sweeping one. It is the one I can defend.
 
@@ -110,7 +110,7 @@ Sanders 的核心担心是权力集中。这个担心成立。但暂停不分散
 
 **建造：** 持续增长的产能，意味着单位工作的成本持续下降；而便宜的能力，正是让工具进入那些无力自建的人手里的前提。
 
-第二半必须说得小心，因为那个方便的版本站不住。"暂停会把开源社区、独立开发者和教育者挤出去"这个说法需要三跳：暂停放慢供给增长，供给增长放慢推高推理价格，推理价格上涨挤出最小的用户。只有第一跳站得住，而且它影响的是新增产能，不是存量。过去三年 token 价格大幅下跌，主因是模型效率和芯片代际，不是数据中心数量。而且如果算力真的紧张，先被砍的多半是边际收益最低的内部训练 run，不是撑起这些公司现金流的消费级订阅。挤出的方向，可能和通常的说法正好相反。
+第二半必须说得小心，因为那个方便的版本站不住。"暂停会把开源社区、独立开发者和教育者挤出去"这个说法需要三跳：暂停放慢供给增长，供给增长放慢推高推理价格，推理价格上涨挤出最小的用户。只有第一跳站得住，而且它只影响新增产能。过去三年 token 价格大幅下跌，主因是模型效率和芯片代际。而且如果算力真的紧张，先被砍的多半是边际收益最低的内部训练 run，远早于撑起这些公司现金流的消费级订阅。挤出的方向，可能和通常的说法正好相反。
 
 所以诚实的版本要窄得多：开放式暂停伤害的是那些必须建设的公司，而这些公司是巨头唯一可能的竞争来源。这比那个更大的主张小。但这是我守得住的那个。
 
@@ -127,9 +127,9 @@ In Sanders's story, ordinary people appear in a passive position: workers replac
 
 **After:** An ordinary person can turn AI into a tutor, opposing counsel, research assistant, coding partner, negotiation coach, and fact checker. The cost of that kind of literacy has dropped by orders of magnitude.
 
-Here is where I have to correct my own argument again, because the obvious objection is correct. Capability is not the same thing as power, and treating them as synonyms is the standard mistake technologists make about labor. A warehouse worker who uses AI to raise his own throughput by twenty percent has not gained leverage. He has handed his employer a productivity gain, and who keeps it is settled by his contract, not by his skill. Capability without an institution to capture it is consumer surplus. Consumer surplus is a real good, but it is not a redistribution of power, and it is not by itself a reason to oppose constraints on capital.
+Here is where I have to correct my own argument again, because the obvious objection is correct. Capability is not the same thing as power, and treating them as synonyms is the standard mistake technologists make about labor. A warehouse worker who uses AI to raise his own throughput by twenty percent has not gained leverage. He has handed his employer a productivity gain, and who keeps it is settled by his contract. Capability without an institution to capture it is consumer surplus. Consumer surplus is a real good, but it is not a redistribution of power, and it is not by itself a reason to oppose constraints on capital.
 
-Capability converts into leverage only when something can hold it: a union that can bargain over the gain, a legal aid organization that can bring the case, a regulator that can act on the evidence. So the claim I will defend is conditional rather than triumphant. Widely available capability raises the ceiling on what those institutions can do. It does not build them, and it does not substitute for them.
+Capability converts into leverage only when something can hold it: a union that can bargain over the gain, a legal aid organization that can bring the case, a regulator that can act on the evidence. So the claim I will defend is a conditional one. Widely available capability raises the ceiling on what those institutions can do. It does not build them, and it does not substitute for them.
 
 That conditional still matters, because the floor moves too. A public that cannot use AI can only be organized against. A public that can use AI has some chance of auditing it and organizing with it.
 
@@ -141,9 +141,9 @@ Sanders 的叙事里，普通人站在被动位置：被 AI 替代的工人，�
 
 **之后：** 一个普通人可以把 AI 变成私人导师、对方律师、研究助理、代码搭档、谈判教练、事实核查员。这类识读能力的获取成本，已经下降了几个数量级。
 
-这里我要再次修正自己，因为最明显的那个反驳是对的。能力和权力不是一回事，把它们当同义词是技术人谈论劳动关系时的标准错误。一个仓库工人用 AI 把自己的效率提高两成，他并没有获得议价权，他只是把一份生产率收益交给了雇主；这份收益归谁，由他的合同决定，不由他的技能决定。没有机构承接的能力，是消费者剩余。消费者剩余是真实的好东西，但它不是权力再分配，本身也不构成反对约束资本的理由。
+这里我要再次修正自己，因为最明显的那个反驳是对的。能力和权力不是一回事，把它们当同义词是技术人谈论劳动关系时的标准错误。一个仓库工人用 AI 把自己的效率提高两成，他并没有获得议价权，他只是把一份生产率收益交给了雇主；这份收益归谁，由他的合同决定。没有机构承接的能力，是消费者剩余。消费者剩余是真实的好东西，但它不是权力再分配，本身也不构成反对约束资本的理由。
 
-能力要变成议价权，得有东西接得住：一个能就这份收益谈判的工会，一个能把案子打出来的法律援助机构，一个能依据证据行动的监管者。所以我要守的主张是有条件的，不是凯旋式的，普遍可得的能力抬高了这些机构的能力上限。它不负责把这些机构建起来，也不能替代它们。
+能力要变成议价权，得有东西接得住：一个能就这份收益谈判的工会，一个能把案子打出来的法律援助机构，一个能依据证据行动的监管者。所以我要守的主张是有条件的：普遍可得的能力抬高了这些机构的能力上限。它不负责把这些机构建起来，也不能替代它们。
 
 这个有条件的版本仍然重要，因为下限同时也在移动。一个不会使用 AI 的公众，只能成为被组织的对象。一个会使用 AI 的公众，才有机会审计它，并借助它把自己组织起来。
 
@@ -189,7 +189,7 @@ The best argument is that nobody serious thinks the pause is the endpoint. It is
 
 That argument lands, and I have to concede something to it. Every item on my own list below, externality pricing, mandatory audits, public capacity, needs legislative leverage to pass, and I have not identified where that leverage comes from if not from something like this bill. That is a real hole in my position, and I would rather name it than paper over it.
 
-My disagreement is about the instrument, not the goal. A permitting chokepoint buys safeguards by making capacity scarce, and scarcity is exactly what an incumbent converts into rent. I would rather buy the same safeguards with binding technical standards, published, auditable, enforceable against anyone regardless of size, because a standard does not create a queue that the largest player is best positioned to survive.
+My disagreement is about the instrument. The goal I share. A permitting chokepoint buys safeguards by making capacity scarce, and scarcity is exactly what an incumbent converts into rent. I would rather buy the same safeguards with binding technical standards, published, auditable, enforceable against anyone regardless of size, because a standard does not create a queue that the largest player is best positioned to survive.
 
 And the forced choice, since a reader is entitled to ask it: if I could not have the standards, would I take the pause over the status quo? No. I would take the status quo, and I want to flag how much of that answer is my prior rather than my analysis. I believe most problems are problems of insufficient development. Someone who does not share that belief, and who weighs irreversible harm more heavily than foregone capability, can accept every fact in this post and land on the opposite answer. I do not think they are being unreasonable.
 
@@ -201,7 +201,7 @@ And the forced choice, since a reader is entitled to ask it: if I could not have
 
 这个论点成立，我得让出一些东西。我下面自己那份清单上的每一项，外部性定价、强制审计、公共算力，都需要立法杠杆才能通过，而如果不靠类似这部法案的东西，我没能指出这个杠杆从哪来。这是我立场上的一个真实缺口，我宁愿把它说出来，也不想糊过去。
 
-我的分歧在工具，不在目标。许可闸门是靠制造产能稀缺来换取保护，而稀缺恰恰是在位者最擅长转化成租金的东西。我更愿意用有约束力的技术标准去换同样的保护，公开、可审计、对任何规模的主体一体执行，因为标准不会制造一条队伍，而排队这件事，最大的玩家最耗得起。
+我的分歧在工具上。目标我是认的。许可闸门是靠制造产能稀缺来换取保护，而稀缺恰恰是在位者最擅长转化成租金的东西。我更愿意用有约束力的技术标准去换同样的保护，公开、可审计、对任何规模的主体一体执行，因为标准不会制造一条队伍，而排队这件事，最大的玩家最耗得起。
 
 还有那个被逼到墙角的选择题，读者有权问：如果拿不到标准，我会选暂停还是现状？我选现状。而我要标明，这个答案里有多少来自我的先验，而不是我的分析。我相信大部分问题都是发展不充足的问题。一个不共享这个信念、并且把不可逆的伤害看得比放弃的能力更重的人，可以接受这篇文章里的每一个事实，然后落到相反的答案上。我不认为那样不讲道理。
 
@@ -216,7 +216,7 @@ The useful distinction is between regulating **uses** and regulating **infrastru
 
 So: slow harmful uses, price externalities, force auditability, fund public capability.
 
-- Charge data centers the true electricity, water, and grid-upgrade cost, and fight that fight at the state utility commissions, where special rate classes quietly shift costs onto residential ratepayers. That is where this is actually decided, not in Congress.
+- Charge data centers the true electricity, water, and grid-upgrade cost, and fight that fight at the state utility commissions, where special rate classes quietly shift costs onto residential ratepayers. That is where this is actually decided, long before it reaches Congress.
 - Require independent audit access for high-risk systems, with published methods rather than private attestations.
 - Strengthen data rights and privacy protection.
 - Use antitrust against vertical bundling across chips, cloud, models, and distribution.
@@ -232,7 +232,7 @@ This path is harder than a pause. The goal is not that AI arrives more slowly. I
 
 所以：放慢有害用途，为外部性定价，强制可审计，资助公共能力。
 
-- 让数据中心承担真实的电力、水和电网升级成本，而且这一仗要在各州公用事业委员会打，special rate class 正是在那里悄悄把成本转嫁给居民用户的。真正的决策在那里，不在国会。
+- 让数据中心承担真实的电力、水和电网升级成本，而且这一仗要在各州公用事业委员会打，special rate class 正是在那里悄悄把成本转嫁给居民用户的。真正的决策发生在那里，远早于它走到国会。
 - 要求高风险系统开放独立审计通道，方法必须公开，而不是私下出具的合规声明。
 - 强化数据权利和隐私保护。
 - 用反垄断限制芯片、云、模型、分发渠道之间的纵向捆绑。

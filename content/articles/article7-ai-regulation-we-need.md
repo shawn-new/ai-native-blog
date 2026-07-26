@@ -32,7 +32,7 @@ Anthropic published version 3.0 of its Responsible Scaling Policy this February.
 
 The regulation debate keeps collapsing into two bad choices: pause everything until AI is provably safe, or trust the market to sort it out. One side is right that the danger is real. The other is right that blunt rules will hand power to incumbents. Both stop before finding the actual answer.
 
-The AI regulation we need should be targeted at capability, not general anxiety. It should be auditable. A claim on a press release is not a safety argument. It should protect competition, so that compliance doesn't become a moat for trillion-dollar labs. And it should extend beyond catastrophic risk, because most people will encounter AI harm long before they encounter catastrophe.
+The AI regulation we need should be targeted at capability. It should be auditable. A claim on a press release is not a safety argument. It should protect competition, so that compliance doesn't become a moat for trillion-dollar labs. And it should extend beyond catastrophic risk, because most people will encounter AI harm long before they encounter catastrophe.
 
 Anthropic's Responsible Scaling Policy gets the structure right even though company policy alone is never enough. The if-then logic, stronger capability requires stronger safeguards, is the shape that real regulation should take. But the policy exists inside one company. That is not the same as a rule.
 
@@ -42,7 +42,7 @@ Anthropic's Responsible Scaling Policy gets the structure right even though comp
 
 监管讨论总是陷入两个糟糕选择：全部暂停直到 AI 被证明安全，或者交给市场解决。一边说危险是真实的，没错。另一边说粗暴规则会把权力交给巨头，也没错。但两边都在对的位置停下了，没有继续找真正的答案。
 
-我们需要的 AI 监管，应该针对能力，而不是针对笼统焦虑。应该可审计，公关稿上的声明不是安全论证。应该保护竞争，不让合规变成万亿美元公司的护城河。还应该超出灾难性风险的范围，因为大多数人遇到 AI 伤害，会比遇到灾难早得多。
+我们需要的 AI 监管，应该针对能力本身。应该可审计，因为公关稿上的声明算不上安全论证。应该保护竞争，不让合规变成万亿美元公司的护城河。还应该超出灾难性风险的范围，因为大多数人遇到 AI 伤害，会比遇到灾难早得多。
 
 Anthropic 的 Responsible Scaling Policy 结构上是对的，虽然一家公司的自律从来都不够。"能力越强，要求越高"的 if-then 逻辑，就是真正监管应该有的形状。但这套政策存在于一家公司内部，那不等于一条规则。
 
@@ -55,7 +55,7 @@ Anthropic 的 Responsible Scaling Policy 结构上是对的，虽然一家公司
 
 Senator Sanders is right about the danger. AI power is concentrating. Frontier labs, cloud providers, chip companies, and distribution platforms are building a stack that ordinary people cannot easily leave. If AI becomes the interface for work, education, search, coding, customer service, finance, and media, and it already is, in early form, whoever controls that interface controls far more than software.
 
-That is why a blunt pause fails on its own terms. Freezing the field doesn't freeze the advantage. It locks in whoever already has the compute, models, capital, lobbyists, and distribution. A six-month pause in 2024 would have widened the gap between OpenAI and everyone else, not closed it.
+That is why a blunt pause fails on its own terms. Freezing the field doesn't freeze the advantage. It locks in whoever already has the compute, models, capital, lobbyists, and distribution. A six-month pause in 2024 would have widened the gap between OpenAI and everyone else.
 
 But no regulation fails too. That asks society to trust the same incentives that created surveillance advertising, algorithmic opacity, gig-work arbitrage, dark patterns, and winner-take-most platforms.
 
@@ -65,14 +65,14 @@ The hard path runs between those two failures. Regulation has to slow dangerous 
 
 桑德斯对危险的判断是对的。AI 权力正在集中。前沿模型公司、云厂商、芯片公司和分发平台，正在组成一个普通人很难离开的技术栈。如果 AI 成为工作、教育、搜索、编程、客服、金融和媒体的入口，而它已经在成为了，控制这个入口的人，控制的就不只是软件。
 
-这就是为什么粗暴暂停自打嘴巴。冻结这个领域并不冻结优势。它锁定的是已经拥有算力、模型、资本、游说者和分发渠道的人。2024 年暂停六个月，只会扩大 OpenAI 和其他所有人之间的差距，不会缩小。
+这就是为什么粗暴暂停自打嘴巴。冻结这个领域并不冻结优势。它锁定的是已经拥有算力、模型、资本、游说者和分发渠道的人。2024 年暂停六个月，只会扩大 OpenAI 和其他所有人之间的差距。
 
 但完全不监管也失败。那等于要求社会继续信任同一套激励，而这套激励已经制造过监控广告、算法黑箱、零工套利、暗黑模式和赢家通吃的平台。
 
-真正难的路穿过这两个失败之间。监管要减慢危险行为，但不能减慢普通人获得有用能力。要做到这一点，监管者需要更精确的分析单位，不是笼统的"AI"，不是"大模型就是坏"或"开源模型就是好"，而是能力、风险、部署场景和控制权。
+真正难的路穿过这两个失败之间。监管要减慢危险行为，但不能减慢普通人获得有用能力。要做到这一点，监管者需要一个比笼统的"AI"更精确的分析单位：能力、风险、部署场景和控制权。"大模型就是坏"和"开源模型就是好"都达不到这个精度。
 
-## 1. Target Capability, Not Vibes
-## 1. 针对能力，不针对情绪
+## 1. Target Capability Itself
+## 1. 针对能力本身
 
 **English:**
 
@@ -105,7 +105,7 @@ AI 风险不是均匀到来的。坏监管把所有 AI 当成一回事。好监�
 
 A serious developer should be able to explain why a powerful model is safe enough to deploy.
 
-**Without a safety case:** "We red-teamed it." "The model refused harmful prompts." "We have a policy." These are statements, not arguments. They tell you something happened. They don't let anyone verify whether it was enough.
+**Without a safety case:** "We red-teamed it." "The model refused harmful prompts." "We have a policy." These are statements. Neither one argues for anything. They tell you something happened. They don't let anyone verify whether it was enough.
 
 **With a safety case:** Here are the capabilities we tested. Here are the dangerous behaviors we tried to elicit. Here are the safeguards we built. Here are the failures we found. Here is what remains uncertain. Here is why deployment is still justified under those conditions.
 
@@ -115,7 +115,7 @@ The public does not need every sensitive detail. Some security information shoul
 
 一个严肃的开发者，应该能解释为什么一个强模型可以安全地部署。
 
-**没有 safety case：** "我们做过红队测试。""模型会拒绝危险提示。""我们有一份政策。"这些是陈述，不是论证。它们告诉你发生了什么，不让任何人验证那是否足够。
+**没有 safety case：** "我们做过红队测试。""模型会拒绝危险提示。""我们有一份政策。"这些都是陈述。两句话都没有在论证任何东西。它们告诉你发生了什么，不让任何人验证那是否足够。
 
 **有了 safety case：** 我们测试了哪些能力。尝试诱发了哪些危险行为。建了哪些防护。发现了哪些失败。还有哪些不确定。在这些条件下，为什么仍然可以部署。
 
@@ -176,7 +176,7 @@ Anthropic's framework is sharpest on frontier and catastrophic risks. Biological
 
 They will encounter it as wage pressure from automated systems, opaque loan denials, manipulative recommendation feeds, synthetic scams, surveillance at work, fabricated evidence, biased hiring screens, addictive companion products, and customer-service systems that offer no real path to appeal.
 
-These risks are not cinematic. They accumulate across millions of ordinary decisions, loan denials, hiring screens, automated terminations, not as a single dramatic event.
+These risks are not cinematic. They accumulate across millions of ordinary decisions, loan denials, hiring screens, automated terminations, and it arrives spread across them.
 
 So AI regulation needs two layers that work together.
 
@@ -192,7 +192,7 @@ Anthropic 框架最锋利的地方，是前沿风险和灾难性风险：生物�
 
 他们会先遇到自动化系统带来的工资压力、黑箱贷款拒绝、操纵性推荐流、合成诈骗、工作场所监控、伪造证据、有偏招聘筛选、上瘾型陪伴产品，以及没有真正申诉路径的客服系统。
 
-这些风险没有戏剧感。它们在数以百万计的普通决策中累积，贷款拒绝、招聘筛选、自动化裁员，不是一个戏剧性的单一事件。
+这些风险没有戏剧感。它们在数以百万计的普通决策中累积，贷款拒绝、招聘筛选、自动化裁员，它分散在这些地方发生。
 
 所以 AI 监管需要两层，协同运作。
 
@@ -209,11 +209,11 @@ Anthropic 框架最锋利的地方，是前沿风险和灾难性风险：生物�
 
 Five principles. Any serious regulatory proposal should be tested against all five.
 
-**Publish capability thresholds.** Society should know which model capabilities trigger stronger duties, not after an incident, before deployment.
+**Publish capability thresholds.** Society should know which model capabilities trigger stronger duties before deployment, while there is still time to act on it.
 
 **Require safety cases for frontier deployment.** Powerful systems should not be released on vibes or press releases. Show the work.
 
-**Mandate independent testing where the risk is high enough.** Regulators need access, not summaries.
+**Mandate independent testing where the risk is high enough.** Regulators need access to the system itself.
 
 **Require incident reporting.** If a model enables a serious cyber incident, fraud wave, biosecurity concern, election manipulation campaign, or large-scale rights violation, regulators should not learn about it from journalists months later.
 
@@ -227,11 +227,11 @@ That is the dividing line between AI governance and AI bureaucracy: one creates 
 
 五条原则。任何认真的监管提案，都应该用这五条来测试。
 
-**公开能力阈值。** 社会应该知道哪些模型能力触发更高义务，不是在事故之后，而是在部署之前。
+**公开能力阈值。** 社会应该在部署之前就知道哪些模型能力会触发更高的义务，那时还来得及做点什么。
 
 **前沿模型部署前必须提交 safety case。** 强系统不能靠感觉或公关稿发布。把工作拿出来。
 
-**在风险足够高的地方强制独立测试。** 监管者需要访问权，不是摘要。
+**在风险足够高的地方强制独立测试。** 监管者需要的是对系统本身的访问权。
 
 **要求事故报告。** 如果模型导致严重网络安全事件、诈骗潮、生物安全担忧、选举操纵活动或大规模权利侵害，监管者不应该几个月后才从记者那里知道。
 
@@ -260,7 +260,7 @@ The window for designing this well is not infinite. The capability curves are no
 
 **中文：**
 
-从 Anthropic 这套政策里学到的，不是"让 Anthropic 来监管 AI"。
+从 Anthropic 这套政策里该学的，是它的结构，而不是把监管权交给任何一家公司。
 
 真正该学的是：监管需要可运行的机制。能力阈值比恐慌好。Safety case 比公关稿好。第三方测试比自我认证好。随技术更新的规则，比按照去年模型写死的规则好。
 

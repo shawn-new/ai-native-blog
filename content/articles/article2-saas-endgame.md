@@ -125,7 +125,7 @@ It is tempting to treat these as four separate layers. They are not. They are fo
 
 Now the objection that should worry anyone making this argument, including me. **The lock-in on a system of record was never really the data. It was the cost of moving.** Twelve to eighteen months of implementation, a team spent on field mapping and cleanup, and a procurement process nobody wants to repeat. Data has been exportable for years. So if AI can automate cross-system entity mapping, then the very capability I spent this section describing is the one that dissolves the switching cost.
 
-I think the moat survives, but it has to be relocated to survive honestly. What does not automate is **accountability**: the audit chain, the permission model, the signature on the record when a regulator asks. Mapping is a data problem and it is getting cheaper. Who is liable when the mapping is wrong is not a data problem, and no model accepts that liability. The defensible layer is the one that answers for being wrong.
+I think the moat survives, but it has to be relocated to survive honestly. What does not automate is **accountability**: the audit chain, the permission model, the signature on the record when a regulator asks. Mapping is a data problem, and it is getting cheaper. Who is liable when the mapping is wrong belongs to a different category, and no model accepts that liability. The defensible layer is the one that answers for being wrong.
 
 **中文：**
 
@@ -141,7 +141,7 @@ I think the moat survives, but it has to be relocated to survive honestly. What 
 
 现在说那个应该让任何持这个论点的人（包括我）不安的反驳。**System of record 的锁定从来不真的是数据，而是迁移的成本**：十二到十八个月的实施周期、一个团队一整年的字段映射和数据清洗，以及一套没人想再走一遍的采购流程。数据本身早就能导出了。所以，如果 AI 能自动化跨系统的实体映射，那么我这一节花了大量篇幅描述的那个能力，恰恰就是溶解切换成本的那把钥匙。
 
-我认为护城河仍然成立，但它必须被搬到另一个位置才诚实。**不会被自动化的是问责**：审计链、权限模型，以及监管来问的时候那份记录上的签字。映射是一个数据问题，而且正在变便宜；映射错了谁负责，不是一个数据问题，而且没有任何模型会接下这个责任。**可防守的那一层，是为"错了"负责的那一层。**
+我认为护城河仍然成立，但它必须被搬到另一个位置才诚实。**不会被自动化的是问责**：审计链、权限模型，以及监管来问的时候那份记录上的签字。映射是一个数据问题，而且正在变便宜。映射错了谁负责，则是另一类问题，而且没有任何模型会接下这个责任。**可防守的那一层，是为"错了"负责的那一层。**
 
 ---
 
@@ -195,13 +195,13 @@ Those four have a common property: they are all things that get *more* valuable 
 
 **English:**
 
-Everything above is a claim that value moves. In a software business, value moving has exactly three visible forms: the price changes, retention changes, or the cost of acquiring a customer changes. A version of this argument that never touches any of them is a mood, not a thesis. So here is the money.
+Everything above is a claim that value moves. In a software business, value moving has exactly three visible forms: the price changes, retention changes, or the cost of acquiring a customer changes. A version of this argument that never touches any of them is a mood. So here is the money.
 
 **The unit of value is migrating from the seat.** Seat pricing assumed a human opening the app; when one agent does the work of five people, the meter is measuring the wrong thing. Two real answers are visible in the market right now, and they are not the same answer. Intercom's Fin charges roughly **$0.99 per outcome** (a resolution, a procedure handoff, or a disqualification), regardless of how many steps it took to get there. Salesforce's Agentforce charges per *action* through Flex Credits, with a documented entry point around **$500 for 100,000 credits** and a standard action at 20 credits, or about **$0.10 per action**.
 
 That contrast is the whole strategic question in miniature. Per-outcome prices what the buyer wanted. Per-action prices what the vendor spent. Outcome pricing is far more attractive to a buyer and transfers all the model-cost risk to the vendor, which only works if you are confident your unit costs keep falling.
 
-**Who cuts price first.** Not the weakest product. The one that is easiest for a base model to replicate *and* has the shortest contract. Monthly billing, no integration, no compliance review. Those two conditions together, not product quality, are the predictor.
+**Who cuts price first.** Not the weakest product. The one that is easiest for a base model to replicate *and* has the shortest contract. Monthly billing, no integration, no compliance review. Those two conditions together are the predictor. Product quality is not one of them.
 
 **Whose retention falls, and how.** Seat-based products whose seat count tracks headcount: meeting notes, writing assistants, generic dashboards. And the failure mode is not churn, which is what makes it easy to miss. It is **downsell**. The logo renews, the seat count gets cut, and net revenue retention slides from comfortably above a hundred to below it while the logo-retention chart still looks fine. If you only watch churn you will find out a year late.
 
@@ -209,13 +209,13 @@ One event is worth more than the argument: in June 2026 Salesforce agreed to acq
 
 **中文：**
 
-上面写的全都是"价值在转移"这个主张。而在一门软件生意里，价值转移只有三种可见形式：**价格变了、留存变了、获客成本变了**。一个从不碰这三样的版本，是一种情绪，不是一个论点。所以下面说钱。
+上面写的全都是"价值在转移"这个主张。而在一门软件生意里，价值转移只有三种可见形式：**价格变了、留存变了、获客成本变了**。一个从不碰这三样的版本，只是一种情绪。所以下面说钱。
 
 **计价单位正在离开席位。** 按席位收费的前提是有个人会打开 app；当一个 agent 干五个人的活，这个计价器量的就是错的东西。市场上现在能看到两个真实答案，而且它们不是同一个答案。Intercom 的 Fin 按**约 0.99 美元一个 outcome** 收费（一次解决、一次流程移交、或一次排除），不管中间走了多少步。Salesforce 的 Agentforce 按**动作**收费，走 Flex Credits，公开的入门档大约是 **500 美元买 10 万 credits**，标准动作 20 credits，也就是**每个动作约 0.1 美元**。
 
 这个对比本身就是整个战略问题的缩影：**按结果计价，卖的是买家想要的东西；按动作计价，卖的是供应商花掉的东西。** 结果计价对买家吸引力大得多，同时把模型成本的风险全部转移到供应商身上，这只有在你确信自己的单位成本会持续下降时才成立。
 
-**谁先降价。** 不是产品最弱的那个，而是**最容易被基础模型复刻、并且合同期最短**的那个：月付、无集成、无合规审查。是这两个条件叠加，而不是产品质量，决定了谁先降。
+**谁先降价。** 不是产品最弱的那个，而是**最容易被基础模型复刻、并且合同期最短**的那个：月付、无集成、无合规审查。决定谁先降的是这两个条件叠加。产品质量不在其中。
 
 **谁的留存先掉，以及怎么掉。** 席位数和人头强绑定的产品：会议记录、写作助手、通用 dashboard。而且失败模式不是流失，这正是它容易被漏掉的原因。它是 **downsell**：logo 照常续约，席位数被砍，净收入留存率从一百出头滑到一百以下，而 logo 留存率的图表看起来毫无问题。**只盯流失率的人，会晚一年才知道。**
 
@@ -232,7 +232,7 @@ Everything in the previous two sections is about owning an asset. This one is no
 
 Reaching production inside a real enterprise means passing security review, integrating with identity, satisfying procurement, and surviving a pilot. Companies that can do that repeatedly have something a better model does not confer.
 
-The counterintuitive part, and the piece of this I believe most: **a services motion is an entry point, not a margin failure.** Deployment work buys a position inside the customer that a purely self-serve product cannot buy at any price. But it has to be priced honestly, because services margins run far below software margins, and a company that funds growth this way is trading gross margin for position. That trade is worth making when the position compounds into product, and is worth nothing when it does not. It is the same test as the one for deployment work generally: does the next customer get cheaper, or does the second cost what the first did?
+The counterintuitive part, and the piece of this I believe most: **a services motion is an entry point.** Deployment work buys a position inside the customer that a purely self-serve product cannot buy at any price. But it has to be priced honestly, because services margins run far below software margins, and a company that funds growth this way is trading gross margin for position. That trade is worth making when the position compounds into product, and is worth nothing when it does not. It is the same test as the one for deployment work generally: does the next customer get cheaper, or does the second cost what the first did?
 
 **中文：**
 
@@ -240,7 +240,7 @@ The counterintuitive part, and the piece of this I believe most: **a services mo
 
 在一家真实企业里走到生产环境，意味着通过安全审查、对接身份系统、满足采购要求、熬过 POC。能反复做到这件事的公司，握着的是一个更好的模型给不了的东西。
 
-反直觉的那一半，也是我最相信的一半：**服务动作是入口，不是毛利率上的失败。** 部署工作买到的是一个客户内部的位置，而纯自助产品出多少钱都买不到这个位置。但它必须被诚实地计价，因为服务毛利远低于软件毛利，用这种方式驱动增长的公司，是在**拿毛利率换位置**。这笔交易在位置能沉淀成产品时值得做，在不能时一文不值，这和判断部署工作的标准是同一个：下一个客户有没有变便宜，还是第二个的成本和第一个一样？
+反直觉的那一半，也是我最相信的一半：**服务动作是入口。** 部署工作买到的是一个客户内部的位置，而纯自助产品出多少钱都买不到这个位置。但它必须被诚实地计价，因为服务毛利远低于软件毛利，用这种方式驱动增长的公司，是在**拿毛利率换位置**。这笔交易在位置能沉淀成产品时值得做，在不能时一文不值，这和判断部署工作的标准是同一个：下一个客户有没有变便宜，还是第二个的成本和第一个一样？
 
 ---
 
@@ -251,7 +251,7 @@ The counterintuitive part, and the piece of this I believe most: **a services mo
 
 I previously ended this post with an objection I had already answered, that bad UI still kills adoption, which is not an objection, since I said it myself in the opening. Three real ones:
 
-**Human-in-the-loop means more interface, not less.** The more autonomous the agent, the more the review, correction, and approval surfaces matter. That is not a thinning of UI; it is a relocation of it from execution to supervision, and supervision interfaces are harder to build than forms. If that is what happens, "UI gets thin" is exactly the wrong description.
+**Human-in-the-loop means more interface.** The more autonomous the agent, the more the review, correction, and approval surfaces matter. That is not a thinning of UI; it is a relocation of it from execution to supervision, and supervision interfaces are harder to build than forms. If that is what happens, "UI gets thin" is exactly the wrong description.
 
 **Renewals often have nothing to do with whether the product is good.** Process lock-in, compliance certification, sunk integration cost, and a procurement team that does not want another evaluation. A product that agents route around entirely can still renew for three years. Any version of this argument that treats B2B software as a market decided by product quality is missing how the money actually behaves. That is the deepest flaw this kind of argument has.
 
@@ -261,7 +261,7 @@ I previously ended this post with an objection I had already answered, that bad 
 
 这篇文章原来的结尾放了一个我自己已经回答过的反对意见，差 UI 仍然会杀死 adoption，那不是反对意见，因为开头就是我自己说的。下面是三个真的：
 
-**人在环内意味着更多界面，不是更少。** Agent 越自主，审核、纠错、批准这些界面就越关键。这不是 UI 变薄，是 UI 从"执行"搬到了"监督"，而监督界面比表单更难做。如果事情朝这个方向走，"UI 变薄"恰恰是错误的描述。
+**人在环内意味着界面更多。** Agent 越自主，审核、纠错、批准这些界面就越关键。这不是 UI 变薄，是 UI 从"执行"搬到了"监督"，而监督界面比表单更难做。如果事情朝这个方向走，"UI 变薄"恰恰是错误的描述。
 
 **续约经常和产品好不好完全无关。** 流程绑定、合规认证、已经沉没的集成成本，以及一个不想再做一次评估的采购团队。一个被 agent 完全绕过去的产品，照样可以续三年。任何把 B2B 软件当成一个由产品优劣决定胜负的市场的论证，都没搞懂钱实际上是怎么走的。**这是这类论证里最深的一处外行味。**
 
@@ -280,7 +280,7 @@ Enter where you can own an outcome end to end in one narrow domain, then earn th
 
 That path has a specific failure mode worth naming: you own the outcome, the incumbent exposes the same outcome as one more command on top of the record they already hold, and your wedge closes before your history compounds. Which is roughly the shape of the Fin acquisition, read one way. Reach the outcome layer fast, and the record layer buys you rather than beats you. Whether that is a failure depends on what you were building toward.
 
-So the test I would apply to my own roadmap: **which layer do I enter first, and does anything I accumulate there make the next layer cheaper?** If the answer is nothing compounds, you have a product, not a position.
+So the test I would apply to my own roadmap: **which layer do I enter first, and does anything I accumulate there make the next layer cheaper?** If the answer is nothing compounds, you have a product. A position is something else.
 
 **中文：**
 
@@ -290,7 +290,7 @@ So the test I would apply to my own roadmap: **which layer do I enter first, and
 
 这条路有一个具体的失败模式，值得写出来：你拥有了那个结果，在位者把同一个结果做成它已经握有的那份记录之上的又一条命令，于是你的楔子在你的历史积累起来之前就闭合了。**换一个角度读，Fin 被收购大致就是这个形状**：快速抵达结果层，然后记录层不是打败你，而是买下你。这算不算失败，取决于你当初要去哪里。
 
-所以我会拿来照自己路线图的那个测试是：**我先进入哪一层，以及我在那一层积累的东西，有没有让下一层变便宜？** 如果答案是"什么都不复利"，那你有的是一个产品，不是一个位置。
+所以我会拿来照自己路线图的那个测试是：**我先进入哪一层，以及我在那一层积累的东西，有没有让下一层变便宜？** 如果答案是"什么都不复利"，那你有的只是一个产品。位置是另一回事。
 
 ---
 

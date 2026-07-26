@@ -127,7 +127,7 @@ Cutting management layers is not a new idea that AI just enabled. Delayering has
 
 The findings are worth sitting with. A Harvard Business School working paper on flattening is titled, without much subtlety, *The Flattened Firm. Not as Advertised*. A review by the Institute for Employment Studies found little credible evidence that flattening actually produces fewer middle managers; what it found instead was a smaller number of middle managers carrying a wider range of responsibilities. The same review concluded that delayering on its own is unlikely to deliver sustainable cost advantage, and that removing low-value work matters at least as much as removing the levels of people doing it.
 
-Read that last sentence again, because it is the whole argument of this post stated by someone who studied it before I did. **Remove the work, not the layer.** Automating status relay, roadmap first drafts, and meeting summaries is removing the work. Deleting the layer that holds calibration, hiring, and retention is a different move that the evidence does not support.
+Read that last sentence again, because it is the whole argument of this post stated by someone who studied it before I did. **Remove the work. Leave the layer.** Automating status relay, roadmap first drafts, and meeting summaries is removing the work. Deleting the layer that holds calibration, hiring, and retention is a different move that the evidence does not support.
 
 There is also a timing trap specific to this decision, and it explains why the idea keeps coming back. Management work has a long feedback delay. Skipped one-on-ones do not show up as a metric this quarter; they show up next year as someone you could not keep. Cutting the layer produces immediate, visible gains, fewer meetings, shorter decision chains, and defers the cost past the horizon on which the decision gets judged. Any proposal to flatten that does not account for that asymmetry is quoting you a price without the interest.
 
@@ -137,7 +137,7 @@ There is also a timing trap specific to this decision, and it explains why the i
 
 研究结论值得停下来看。哈佛商学院一篇关于扁平化的工作论文，标题几乎不加掩饰：*The Flattened Firm — Not as Advertised*（扁平化的公司，和宣传的不一样）。英国 Institute for Employment Studies 的一份综述发现，几乎没有可信证据表明扁平化真的让中层变少了；它发现的是**更少的中层承担了更宽的职责**。同一份综述还认为，单靠 delayering 不太可能带来可持续的成本优势，而移除低价值的**工作**，至少和移除做这些工作的**层级**同样重要。
 
-最后这句话请再读一遍，因为它就是这篇文章的全部论点，只不过是由比我更早研究它的人说出来的。**要移除的是工作，不是层级。** 自动化状态转发、roadmap 初稿和会议纪要，是移除工作。删掉那个承载校准、招聘和留人的层级，是另一回事，而证据不支持它。
+最后这句话请再读一遍，因为它就是这篇文章的全部论点，只不过是由比我更早研究它的人说出来的。**要移除的是工作。层级留着。** 自动化状态转发、roadmap 初稿和会议纪要，是移除工作。删掉那个承载校准、招聘和留人的层级，是另一回事，而证据不支持它。
 
 这个决定还有一个特有的时间陷阱，它解释了为什么这个想法总是卷土重来：管理工作的反馈延迟很长。少开的 1:1 不会在这个季度变成任何指标退化，它会在明年变成一个你留不住的人。砍掉层级带来的收益是立刻可见的，会议变少，决策链变短，而代价被推到了这个决定被评判的时间点之后。任何不处理这个不对称的扁平化提案，都是在给你报价的时候略去了利息。
 
@@ -179,17 +179,17 @@ AI 给出十个合理方案时，仍然需要有人做选择。这个人还要�
 
 The strongest objection to all of this: AI will get much better at company context. Connect it to Slack, Jira, Salesforce, GitHub, docs, meetings, and financial systems, and it will learn how decisions were made, which teams are overloaded, which projects keep slipping.
 
-I think that is right, and it sharpens rather than weakens the argument. If your value is remembering what happened in meetings, AI will remember more. If your value is forwarding status, it will forward faster. If your value is the first roadmap draft, it will write it cheaper.
+I think that is right, and it sharpens the argument. If your value is remembering what happened in meetings, AI will remember more. If your value is forwarding status, it will forward faster. If your value is the first roadmap draft, it will write it cheaper.
 
-But notice what that objection cannot reach. The connected systems contain what the organization was willing to write down. Calibration disputes, pay-equity corrections, complaints, and the real reason someone is about to quit are not in Jira, and keeping them out is often a legal requirement rather than an oversight. The better the AI gets at the recorded organization, the more clearly the unrecorded organization stands out as the part that stays human.
+But notice what that objection cannot reach. The connected systems contain what the organization was willing to write down. Calibration disputes, pay-equity corrections, complaints, and the real reason someone is about to quit are not in Jira, and keeping them out is often a legal requirement. The better the AI gets at the recorded organization, the more clearly the unrecorded organization stands out as the part that stays human.
 
 **中文：**
 
 对上面这一切最强的反对意见是：AI 会越来越懂公司 context。接入 Slack、Jira、Salesforce、GitHub、文档、会议、财务系统，它就能学到决策过去怎么发生，哪些团队过载，哪些项目总是延期。
 
-我认为这是对的，而且它让论证更锋利，不是更弱。如果你的价值是记得会议里发生过什么，AI 会记得更多。如果你的价值是转发状态，它转得更快。如果你的价值是写第一版 roadmap，它写得更便宜。
+我认为这是对的，而且它让论证更锋利。如果你的价值是记得会议里发生过什么，AI 会记得更多。如果你的价值是转发状态，它转得更快。如果你的价值是写第一版 roadmap，它写得更便宜。
 
-但要注意这个反驳够不到的地方。那些被接入的系统里，装的是这个组织**愿意写下来**的东西。校准时的争执、薪酬公平性的修正、投诉，以及一个人即将离职的真实原因，都不在 Jira 里；而把它们排除在外，往往是法律要求，不是疏忽。AI 对"被记录的组织"越熟练，"未被记录的组织"就越清楚地凸显为仍然属于人的那部分。
+但要注意这个反驳够不到的地方。那些被接入的系统里，装的是这个组织**愿意写下来**的东西。校准时的争执、薪酬公平性的修正、投诉，以及一个人即将离职的真实原因，都不在 Jira 里；而把它们排除在外，往往是法律要求。AI 对"被记录的组织"越熟练，"未被记录的组织"就越清楚地凸显为仍然属于人的那部分。
 
 ---
 
@@ -202,7 +202,7 @@ But notice what that objection cannot reach. The connected systems contain what 
 
 **What gets heavier:** judgment under ambiguity, strategy under constraints, cross-functional trust, direction grounded in business reality, finding sponsors, owning execution, and all the people work that was never translation in the first place: calibration, hiring, retention, the conversations that keep someone.
 
-That second list is longer than the first, and every item on it is harder to hire for. That is the whole finding. The middle compresses in tasks and expands in difficulty. Fewer people will be able to do the job, which is a strange way of saying the job becomes more valuable, not less.
+That second list is longer than the first, and every item on it is harder to hire for. That is the whole finding. The middle compresses in tasks and expands in difficulty. Fewer people will be able to do the job, which is a strange way of saying the job becomes more valuable.
 
 The old question was: are you an IC or an EM? The sharper question now: can you convert ambiguity into direction, sponsorship, and execution, carry part of that execution yourself, and still do the unrecorded work that keeps a team intact?
 
@@ -214,7 +214,7 @@ Most people cannot do all four. That is why this gets expensive.
 
 **会变重的：** 模糊环境下的判断，约束下的 strategy，跨 function 的信任，扎在业务现实里的方向感，找到 sponsor，拥有执行，以及所有那些从一开始就不是翻译的人的工作：校准、招聘、留人，以及那些让一个人留下来的对话。
 
-第二份清单比第一份长，而且上面每一项都更难招到人。这就是全部结论：中层在任务上被压缩，在难度上被放大。能干这份工作的人会变少，这是"这份工作变得更值钱而不是更不值钱"的另一种说法。
+第二份清单比第一份长，而且上面每一项都更难招到人。这就是全部结论：中层在任务上被压缩，在难度上被放大。能干这份工作的人会变少，这是"这份工作变得更值钱"的另一种说法。
 
 旧问题是：你是 IC 还是 EM？现在更尖锐的问题是：你能不能把 ambiguity 变成方向、sponsorship 和执行，亲自扛起其中一部分，同时还做好那些不会被记录下来、但决定团队会不会散掉的工作？
 
@@ -227,7 +227,7 @@ Most people cannot do all four. That is why this gets expensive.
 
 **English:**
 
-If you want to check whether your own organization is quietly automating its judgment instead of its paperwork, here is a test that runs on evidence you already have. Take the last five roadmaps at your company that were drafted with AI and then adopted. Pull the review history. Count how many were substantively changed, not reworded, because someone objected that a piece was technically infeasible or that a dependency would not be available. If fewer than two of five were, nobody is doing the job this post is about.
+If you want to check whether your own organization is quietly automating its judgment instead of its paperwork, here is a test that runs on evidence you already have. Take the last five roadmaps at your company that were drafted with AI and then adopted. Pull the review history. Count how many were substantively changed in content, because someone objected that a piece was technically infeasible or that a dependency would not be available. If fewer than two of five were, nobody is doing the job this post is about.
 
 And here is my own prediction, so this is not just advice. **By the end of 2027, at least one company that publicly announced it was removing a management layer because AI made it unnecessary will have quietly rebuilt that layer.** If that has not happened by then, the argument in this post is wrong: the layer really was mostly translation, the arithmetic I ran was wrong, and the delayering research did not generalize to the AI case. I will write that follow-up if it comes to that.
 
@@ -235,7 +235,7 @@ I started this piece intending to write about the death of middle management. Th
 
 **中文：**
 
-如果你想检查自己的组织是不是在悄悄自动化判断力、而不是自动化文书工作，这里有一个用你已有材料就能跑的测试。找出你公司最近五份由 AI 起草、最终被采纳的 roadmap，调出评审记录，数一件事：有多少份因为有人提出"这在技术上做不到"或"这个依赖拿不到"而被实质性修改过，是内容改动，不是措辞改动。如果五份里少于两份，那就没有人在做这篇文章讲的那件事。
+如果你想检查自己的组织是不是在悄悄自动化判断力、而不是自动化文书工作，这里有一个用你已有材料就能跑的测试。找出你公司最近五份由 AI 起草、最终被采纳的 roadmap，调出评审记录，数一件事：有多少份因为有人提出"这在技术上做不到"或"这个依赖拿不到"而在内容上被实质性修改过（措辞改动不算）。如果五份里少于两份，那就没有人在做这篇文章讲的那件事。
 
 再给一个我自己的预测，这样它就不只是建议。**到 2027 年底，至少会有一家曾公开宣布"AI 让我们可以去掉一层管理"的公司，悄悄把那一层重建起来。** 如果到那时没有发生，这篇文章的论证就是错的：那个层级确实主要是翻译，我算的那笔账是错的，delayering 的研究也不适用于 AI 这一轮。真到那一步，我会写那篇认错的文章。
 

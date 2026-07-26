@@ -37,7 +37,7 @@ Now AI drafts across all of them, and the usual summary of what happened is impr
 
 Those things got more expensive, for the ordinary reason that their share of the remaining work went up. When one input to a process collapses in price and the others hold, the others are what you are now paying for. The review, the verification, the argument about whether the change should exist, and, in enterprise software, the six weeks it takes to find out who owns the data you need: none of that moved.
 
-So the interesting change is not that engineers got cheaper or more expensive. It is that **the axis we sort them on rotated.** Stack was the old axis because implementation was the hard part, and each layer of the stack was hard in its own way. Once the layers stop being individually hard, sorting by layer stops carrying information. What is left to sort by is what you understand well enough to own.
+The interesting change is elsewhere. **The axis we sort engineers on rotated.** Stack was the old axis because implementation was the hard part, and each layer of the stack was hard in its own way. Once the layers stop being individually hard, sorting by layer stops carrying information. What is left to sort by is what you understand well enough to own.
 
 That is the claim I want to defend, and it is falsifiable. If the ability to write in a language or framework were still the scarce thing, hiring would still be organized around it. If instead the scarce thing is understanding a problem well enough to own the decisions, hiring reorganizes around problems.
 
@@ -53,7 +53,7 @@ I should be precise about what kind of claim that is. These are not three job ca
 
 这些东西反而变贵了，理由很朴素：它们在剩下的工作里的占比上升了。**当一项投入的价格塌掉、其余不动，你付的钱就都花在其余上面。** Review、验证、"这个变更到底该不该存在"的争论，以及在企业软件里那六周：你要花六周才搞清楚需要的那份数据归谁管。这些一样都没动。
 
-所以真正有意思的变化，不是工程师变便宜了还是变贵了，而是**我们给他们分类的那根轴，转了方向**。技术栈曾经是那根轴，因为实现是难的部分，而每一层都难得各有各的方式。当每一层不再各自艰难，按层分类就不再携带信息。剩下能用来分类的，是你理解到什么程度、足以为它负责。
+所以真正有意思的变化在别处：**我们给他们分类的那根轴，转了方向。**技术栈曾经是那根轴，因为实现是难的部分，而每一层都难得各有各的方式。当每一层不再各自艰难，按层分类就不再携带信息。剩下能用来分类的，是你理解到什么程度、足以为它负责。
 
 这是我要守的主张，而且它可以被证伪：如果"会用某个语言或框架"仍然是稀缺项，招聘就会继续围绕它组织；如果稀缺的是"把一个问题理解到足以承担它的决定"，招聘就会围绕问题重新组织。
 
@@ -158,7 +158,7 @@ If the company sells software that is not a platform, none of that has anywhere 
 
 So the diagnostic is not how the role is described in a job posting. It is whether deployment number six is meaningfully faster than deployment number two in the same segment, and whether you can point to the artifact each earlier deployment left behind. If nothing was left behind, the knowledge left with the engineer.
 
-This also explains why *we'll abstract it next time* fails so reliably in the second case. There is no platform for the abstraction to go into. It is fragile even in the first case, because the cost of abstracting falls on the deployment team while the benefit lands on the product team, and only the deployment team is carrying a customer date. That asymmetry, not laziness, is why next time keeps not arriving.
+This also explains why *we'll abstract it next time* fails so reliably in the second case. There is no platform for the abstraction to go into. It is fragile even in the first case, because the cost of abstracting falls on the deployment team while the benefit lands on the product team, and only the deployment team is carrying a customer date. That asymmetry is why next time keeps not arriving. Nobody involved is being lazy.
 
 Which is why this role needs unit economics attached to it, and almost no writing about it supplies them. Palantir is the useful public case, because it is the only company at scale that has had to explain the model to analysts every quarter, and both sides of that argument are really arguing about which of the two businesses above it is. The recurring argument is worth reading directly: the company reports software-grade adjusted gross margins, while skeptics point out that a share of forward-deployed engineering cost sits in R&D and sales and marketing rather than in cost of revenue, and that reclassifying it would move gross margin materially. Professional services have been running at roughly a fifth of revenue. The compressed version of the bear case is *a software multiple on a services gross margin*, and it has not been settled in either direction.
 
@@ -185,7 +185,7 @@ Two numbers make this legible inside your own company, and both are computable f
 
 所以判别式不是招聘启事上怎么描述这个角色，而是：**同一个客户区间里，第六次部署有没有明显快过第二次？以及，你能不能指出前面每一次部署留下了什么工件？** 如果什么都没留下，那知识是跟着工程师走的。
 
-这也解释了为什么"下次再抽象"在第二种公司里失败得如此可靠：**没有平台可以让这个抽象落进去。** 即使在第一种公司里它也很脆弱，因为抽象的成本落在部署团队，收益落在产品团队，而只有部署团队背着一个客户的交付日期。让"下次"永远不到来的是这个不对称，不是懒。
+这也解释了为什么"下次再抽象"在第二种公司里失败得如此可靠：**没有平台可以让这个抽象落进去。** 即使在第一种公司里它也很脆弱，因为抽象的成本落在部署团队，收益落在产品团队，而只有部署团队背着一个客户的交付日期。让"下次"永远不到来的是这个不对称。没有人在偷懒。
 
 所以这个角色必须配上单位经济账，而几乎所有写它的文章都不给。Palantir 是有用的公开样本，因为它是唯一一家做到规模、又必须每个季度向分析师解释这套模式的公司，而那场争论的两方，其实争的正是它属于上面两种生意里的哪一种。那场反复出现的争论值得直接去读：公司报出的是软件级别的调整后毛利率，而质疑者指出，有一部分前线部署工程的成本被计在研发和销售费用里、而不是营业成本里，重新归类会让毛利率明显下移；专业服务收入长期占营收约五分之一。空方的说法压缩成一句就是：**用软件的估值倍数，买一门服务的毛利率**。这场争论到今天没有向任何一方了结。
 
@@ -203,7 +203,7 @@ Two numbers make this legible inside your own company, and both are computable f
 
 The section above is written for whoever owns the P&L. This one is for the person actually taking the role, because the honest version of that conversation is rarely written down.
 
-Three years of deployment work ends in one of three places, and which one is not decided at the end. It is decided in the first year.
+Three years of deployment work ends in one of three places, and which one is settled in the first year.
 
 **You become an unusually strong product engineer.** You are the only person in the company who has watched software die inside a real organization, and that is not a story you can acquire any other way. This is the outcome most articles describe as though it were the default.
 
@@ -211,9 +211,9 @@ Three years of deployment work ends in one of three places, and which one is not
 
 **You move to solutions architecture or sales engineering.** Not a failure, and often a better-paid one. But it is a one-way switch out of the engineering track, and it deserves to be chosen rather than discovered.
 
-Here is the part that took me too long to see: which path you land on is mostly decided by which of the two businesses above you joined, not by how hard you work. In a platform company your knowledge has somewhere to settle, so it accumulates outside your own head: in a connector, a mapping, a config surface. That residue is what makes you the first kind of engineer. In a company without a platform underneath, there is nowhere for it to go, so it accumulates in you. That is the same sentence as "you become a hostage," only stated as a property of the employer rather than a failure of the person.
+Here is the part that took me too long to see: which path you land on is mostly decided by which of the two businesses above you joined. Effort barely moves it. In a platform company your knowledge has somewhere to settle, so it accumulates outside your own head: in a connector, a mapping, a config surface. That residue is what makes you the first kind of engineer. In a company without a platform underneath, there is nowhere for it to go, so it accumulates in you. That is the same sentence as "you become a hostage," only stated as a property of the employer rather than a failure of the person.
 
-Which means the two questions worth asking at the end of year one are really questions about the company. Is any of your work in the main repository, or does all of it live in customer forks? Can you name a decision you made that changed the product, not just a deployment? If both answers are no, you are on the second path, and since the cause is structural, the fix is a transfer, not more effort.
+Which means the two questions worth asking at the end of year one are really questions about the company. Is any of your work in the main repository, or does all of it live in customer forks? Can you name a decision you made that changed the product itself? If both answers are no, you are on the second path, and since the cause is structural, the fix is a transfer. More effort will not touch it.
 
 It also means you can run those questions before you accept the offer, on someone already doing the job. Ask them what their last deployment left behind. If the answer is a description of a customer rather than an artifact, you have your answer.
 
@@ -221,7 +221,7 @@ It also means you can run those questions before you accept the offer, on someon
 
 上一节是写给背 P&L 的人的。这一节写给真正要去坐这个位子的人，因为这场对话诚实的版本很少有人写下来。
 
-三年的部署工作，会通向三个终点之一。而走向哪一个，不是在第三年决定的，是在第一年决定的。
+三年的部署工作，会通向三个终点之一。而走向哪一个，在第一年就决定了。
 
 **你会变成一个异常强的产品工程师。** 你是全公司唯一亲眼见过软件在真实组织里怎么死的人，这种经验没有第二条路可以获得。大多数文章描述的就是这个结果，而且把它写得像是默认结局。
 
@@ -229,9 +229,9 @@ It also means you can run those questions before you accept the offer, on someon
 
 **你会转去做解决方案架构或售前工程。** 这不是失败，而且往往薪水更高。但它是一次离开工程序列的单向换轨，它值得被主动选择，而不是某天发现自己已经在轨道那一边了。
 
-下面这一层我看清楚得太晚：**你最后走到哪一条，主要不由你多努力决定，而由你进的是上面两种生意里的哪一种决定。** 在平台公司里，你的知识有地方沉淀，于是它积累在你的脑子之外，积累成一个连接器、一份映射、一个配置面；正是这些残留物把你变成第一种工程师。在底下没有平台的公司里，它无处可去，于是只能积累在你身上。这和"你会变成人质"是同一句话，只不过换成了雇主的属性来表述，而不是个人的失败。
+下面这一层我看清楚得太晚：**你最后走到哪一条，主要由你进的是上面两种生意里的哪一种决定。努力几乎推不动它。** 在平台公司里，你的知识有地方沉淀，于是它积累在你的脑子之外，积累成一个连接器、一份映射、一个配置面；正是这些残留物把你变成第一种工程师。在底下没有平台的公司里，它无处可去，于是只能积累在你身上。这和"你会变成人质"是同一句话，只不过换成了雇主的属性来表述，而不是个人的失败。
 
-所以第一年末那两个问题，问的其实是公司：你的工作有没有任何一部分进了主仓库，还是全都活在客户分支里？你能不能说出一个由你做出、并且改变了产品本身（而不只是改变了某次部署）的决定？如果两个答案都是否定的，你在第二条路上，而既然成因是结构性的，解法就是换岗，不是更努力。
+所以第一年末那两个问题，问的其实是公司：你的工作有没有任何一部分进了主仓库，还是全都活在客户分支里？你能不能说出一个由你做出、并且改变了产品本身的决定？如果两个答案都是否定的，你在第二条路上，而既然成因是结构性的，解法就是换岗。再努力也推不动它。
 
 这也意味着这两个问题可以在你接 offer 之前就问，问一个已经在做这份工作的人：**你上一次部署留下了什么？** 如果他描述的是一个客户，而不是一件工件，你就已经拿到答案了。
 
@@ -250,7 +250,7 @@ It does not break at the deployment end. It breaks at intake.
 
 Field signal arrives in the weakest possible form: n equals one, attributable to a single named customer, and usually phrased as *account X needs Y before Q3*. A product team's prioritization machinery is built to discount exactly that shape of input, because it is indistinguishable from a sales escalation, and frequently is one. So the loop is not occasionally broken. **It is disconnected by default**, and connecting it takes a deliberate mechanism.
 
-The mechanism that works is a threshold rule: when the same customization appears at a third customer, it becomes a platform item automatically, and the platform team owns building it, not the deployment team that found it. That last clause is the whole mechanism, because it removes the asymmetry that keeps *next time* from arriving.
+The mechanism that works is a threshold rule: when the same customization appears at a third customer, it becomes a platform item automatically, and the platform team owns building it. The deployment team that found it hands it off. That last clause is the whole mechanism, because it removes the asymmetry that keeps *next time* from arriving.
 
 And the honest part: that rule gets suspended in any quarter where the revenue number is at risk, which is most of the quarters where it matters. A rule that only survives calm quarters is a preference. If you want it to hold, someone senior has to spend credibility defending it in a bad quarter, and that is the real cost of running this loop.
 
@@ -264,7 +264,7 @@ And the honest part: that rule gets suspended in any quarter where the revenue n
 
 现场信号抵达时永远是最弱的形态：样本量为一，可归因到某个具名客户，而且通常被表述成"X 客户要在 Q3 之前拿到 Y"。产品团队的排期机制天生就要给这种形状的输入打折，因为它和一条销售特殊要求长得一模一样，而且经常就是。所以这个回路不是"有时候会断"，**它默认就是断的**，接上它需要一个专门的机制。
 
-有效的机制是一条阈值规则：当同一个定制需求出现在第三个客户身上时，它自动进入平台待办，并且**由平台团队而不是发现它的部署团队来建**。最后这半句才是机制本身，因为它拆掉了那个让"下次再抽象"永远不到来的不对称。
+有效的机制是一条阈值规则：当同一个定制需求出现在第三个客户身上时，它自动进入平台待办，并且**由平台团队来建**，发现它的部署团队就此交出去。最后这半句才是机制本身，因为它拆掉了那个让"下次再抽象"永远不到来的不对称。
 
 还有诚实的那一半：这条规则会在任何一个收入数字有风险的季度被暂停，而那恰好就是它最要紧的那些季度。一条只能在太平季度存活的规则是一种偏好。要让它真的成立，得有一个够资深的人在一个糟糕的季度里押上自己的信誉去守它，这才是运行这个回路的真实成本。
 
@@ -279,9 +279,9 @@ The obvious objection: if AI lets anyone cross the stack, why wouldn't it compre
 
 The easy answer is that it only compresses *shallow* ownership. That answer is circular: "shallow" was defined as the compressible kind, so the claim could never lose. Here is the version that can.
 
-What AI compresses is not ownership but **how many owners you need**. One person can now hold more surface than before, which means the three dimensions collapse back into one person at small scale and only separate when the surface exceeds what one person can carry. My claim is therefore about organizations above a certain size, not about engineering in general. Below that size it is simply wrong, and I should have said so.
+What AI compresses is not ownership but **how many owners you need**. One person can now hold more surface than before, which means the three dimensions collapse back into one person at small scale and only separate when the surface exceeds what one person can carry. My claim is therefore about organizations above a certain size. Below that size it is simply wrong, and I should have said so.
 
-So here is what would falsify the rest of it. If two years from now the job descriptions for these three kinds of work are still largely interchangeable and the hiring funnels stay shared, the specialization I am describing did not happen. If deployment engineers mostly exit the company rather than moving into product or platform roles, then the loop is not a loop and that role is an absorption pit. And if FDE hours per new dollar of ARR do not fall at companies running this model, then the loop is a drawing rather than a machine.
+So here is what would falsify the rest of it. If two years from now the job descriptions for these three kinds of work are still largely interchangeable and the hiring funnels stay shared, the specialization I am describing did not happen. If deployment engineers mostly exit the company rather than moving into product or platform roles, then the loop is not a loop and that role is an absorption pit. And if FDE hours per new dollar of ARR do not fall at companies running this model, then the loop is a drawing on a slide.
 
 I would rather name those than keep an argument that survives every observation.
 
@@ -291,9 +291,9 @@ I would rather name those than keep an argument that survives every observation.
 
 容易给的回答是：它只压缩*浅层* ownership。但这个回答是循环的："浅层"的定义就是"可被压缩的那种"，所以这个主张永远不会输。下面是一个会输的版本。
 
-AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能持有比以前更大的面，这意味着在小规模下这三个维度会塌回同一个人身上，只有当这个面超出一个人能扛的范围时它们才分开。所以我这个主张是关于**超过某个规模的组织**的，不是关于工程这件事本身。在那个规模以下它就是错的，我本该早点说清楚。
+AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能持有比以前更大的面，这意味着在小规模下这三个维度会塌回同一个人身上，只有当这个面超出一个人能扛的范围时它们才分开。所以我这个主张只关于**超过某个规模的组织**。在那个规模以下它就是错的，我本该早点说清楚。
 
-那么，什么能证伪剩下的部分？如果两年后这三类工作的招聘 JD 仍然高度可互换、招聘漏斗仍然共用，那我说的分化没有发生。如果部署工程师的去向主要是离开公司、而不是转入产品或平台岗位，那这个回路就不是回路，那个位置是个吸收槽。如果在跑这套模式的公司里，每新增一美元 ARR 所需的 FDE 工时不下降，那这个回路是一张图，不是一台机器。
+那么，什么能证伪剩下的部分？如果两年后这三类工作的招聘 JD 仍然高度可互换、招聘漏斗仍然共用，那我说的分化没有发生。如果部署工程师的去向主要是离开公司、而不是转入产品或平台岗位，那这个回路就不是回路，那个位置是个吸收槽。如果在跑这套模式的公司里，每新增一美元 ARR 所需的 FDE 工时不下降，那这个回路只是一张画在幻灯片上的图。
 
 我宁愿把这些写出来，也不想留着一个能在任何观察下都活下来的论证。
 
@@ -308,7 +308,7 @@ When writing code was hard, narrow specialization was a good bargain. That barga
 
 The obvious test is: what do you own that AI cannot own for you? Nobody fails that test, because the acceptable answers are printed next to the question. Two better ones:
 
-**What is the last decision you made that turned out wrong, and what did it cost in money or in weeks?** If you cannot name one, you are not an owner. You are an implementer with a wide surface area. Ownership is defined by carrying the downside, not by how many layers you touch.
+**What is the last decision you made that turned out wrong, and what did it cost in money or in weeks?** If you cannot name one, you are not an owner. You are an implementer with a wide surface area. Ownership is defined by carrying the downside. Surface area has nothing to do with it.
 
 **If you left tomorrow, which decision could nobody reconstruct?** If the answer is none, you do not have ownership. You have workload.
 
@@ -320,7 +320,7 @@ Both questions can be answered badly, which is what makes them worth asking. Nex
 
 最容易想到的测试是：你拥有什么，是 AI 无法替你拥有的？没有人会不及格，因为可接受的答案就印在问题旁边。换两个更好的：
 
-**你最近一次做错的决定是什么？代价是多少钱、多少周？** 说不出来的人不是 owner，是一个覆盖面很宽的执行者。Ownership 的定义是承担下行，不是能碰多少层。
+**你最近一次做错的决定是什么？代价是多少钱、多少周？** 说不出来的人不是 owner，是一个覆盖面很宽的执行者。Ownership 的定义是承担下行。覆盖多少层和它无关。
 
 **如果你明天离职，哪一个决定是没有人能重建的？** 如果答案是"没有"，你没有 ownership，你有工作量。
 
