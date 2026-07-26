@@ -34,9 +34,9 @@ An agent can draft the update, summarize the account, fill the ticket, query the
 
 The usual way to describe this is that SaaS won by owning the screen, and AI is taking the screen away. I wrote that version myself, and it does not survive contact with the list of companies that actually won.
 
-CRM, ERP, HRIS, ITSM, billing, observability: those categories have been mocked for their interfaces for twenty years while renewing above ninety-five percent. They did not win on the screen. They won on implementation cost, integration depth, compliance posture, and a procurement department that does not want to run another vendor evaluation. UI has never been in the top three of an enterprise buying scorecard, and when it appears at all it usually arrives disguised as training cost.
+CRM, ERP, HRIS, ITSM, billing, observability: those categories have been mocked for their interfaces for twenty years while renewing above ninety-five percent. They did not win on the screen. They won on implementation cost, integration depth, compliance posture, and a procurement department that does not want to run another vendor evaluation. UI rarely makes the top three on an enterprise buying scorecard, and when it does appear it usually arrives disguised as training cost.
 
-So the honest version is narrower. **The screen was a real moat on one side of the market and never on the other.** In product-led and SMB software, the interface was the whole funnel: self-serve signup, no implementation, and activation determined by how good the first screen was. In enterprise it was decoration on top of switching costs.
+So the honest version is narrower. **The screen was a real moat on one side of the market and a much weaker one on the other.** In product-led and SMB software, the interface was the whole funnel: self-serve signup, no implementation, and activation determined by how good the first screen was. In enterprise it was decoration on top of switching costs.
 
 What AI changes is that it flattens the side where the screen actually mattered. Which means both halves of the market now compete on the same thing, and it is the thing enterprise software has always competed on: who owns the context the work runs through.
 
@@ -46,9 +46,9 @@ Agent 可以写更新、总结 account、填 ticket、查数据库、触发 work
 
 通常的讲法是：SaaS 靠占住屏幕赢，而 AI 正在把屏幕拿走。这个版本我自己也写过，但它经不起和真正赢家的名单对照。
 
-CRM、ERP、HRIS、ITSM、billing、observability：这些品类的界面被吐槽了二十年，续约率一直在九成五以上。它们不是靠屏幕赢的，是靠实施成本、集成深度、合规资质，以及一个不想再走一遍供应商评估流程的采购部门。UI 从来没有进过企业采购评分表的前三名；它偶尔出现的时候，通常是伪装成培训成本进来的。
+CRM、ERP、HRIS、ITSM、billing、observability：这些品类的界面被吐槽了二十年，续约率一直在九成五以上。它们不是靠屏幕赢的，是靠实施成本、集成深度、合规资质，以及一个不想再走一遍供应商评估流程的采购部门。UI 很少能进企业采购评分表的前三名；它真出现的时候，通常是伪装成培训成本进来的。
 
-所以诚实的版本要窄得多：**屏幕在市场的一侧曾经是真护城河，在另一侧从来不是。** 在 PLG 和中小客户那一侧，界面就是整条漏斗，自助注册、无需实施，激活率直接由第一屏决定。在企业侧，它只是盖在切换成本之上的装饰。
+所以诚实的版本要窄得多：**屏幕在市场的一侧曾经是真护城河，在另一侧则弱得多。** 在 PLG 和中小客户那一侧，界面就是整条漏斗，自助注册、无需实施，激活率直接由第一屏决定。在企业侧，它只是盖在切换成本之上的装饰。
 
 AI 改变的是：它把屏幕真正起作用的那一侧抹平了。于是市场的两半现在竞争的是同一件事，而这件事正是企业软件一直以来竞争的东西：**谁拥有工作赖以流经的 context。**
 
@@ -123,7 +123,7 @@ It is tempting to treat these as four separate layers. They are not. They are fo
 
 **The industry shape.** The same object model means different things in insurance than in logistics, and generic AI has no map of either.
 
-Now the objection that should worry anyone making this argument, including me. **The lock-in on a system of record was never really the data. It was the cost of moving.** Twelve to eighteen months of implementation, a team spent on field mapping and cleanup, and a procurement process nobody wants to repeat. Data has been exportable for years. So if AI can automate cross-system entity mapping, then the very capability I spent this section describing is the one that dissolves the switching cost.
+Now the objection that should worry anyone making this argument, including me. **The lock-in on a system of record came mostly from the cost of moving, far more than from the data itself.** Twelve to eighteen months of implementation, a team spent on field mapping and cleanup, and a procurement process nobody wants to repeat. Data has been exportable for years. So if AI can automate cross-system entity mapping, then the very capability I spent this section describing is the one that dissolves the switching cost.
 
 I think the moat survives, but it has to be relocated to survive honestly. What does not automate is **accountability**: the audit chain, the permission model, the signature on the record when a regulator asks. Mapping is a data problem, and it is getting cheaper. Who is liable when the mapping is wrong belongs to a different category, and no model accepts that liability. The defensible layer is the one that answers for being wrong.
 
@@ -139,7 +139,7 @@ I think the moat survives, but it has to be relocated to survive honestly. What 
 
 **行业形状。** 同一套对象模型，在保险业和在物流业里含义不同，而通用 AI 对两者都没有地图。
 
-现在说那个应该让任何持这个论点的人（包括我）不安的反驳。**System of record 的锁定从来不真的是数据，而是迁移的成本**：十二到十八个月的实施周期、一个团队一整年的字段映射和数据清洗，以及一套没人想再走一遍的采购流程。数据本身早就能导出了。所以，如果 AI 能自动化跨系统的实体映射，那么我这一节花了大量篇幅描述的那个能力，恰恰就是溶解切换成本的那把钥匙。
+现在说那个应该让任何持这个论点的人（包括我）不安的反驳。**System of record 的锁定主要来自迁移成本，而非数据本身**：十二到十八个月的实施周期、一个团队一整年的字段映射和数据清洗，以及一套没人想再走一遍的采购流程。数据本身早就能导出了。所以，如果 AI 能自动化跨系统的实体映射，那么我这一节花了大量篇幅描述的那个能力，恰恰就是溶解切换成本的那把钥匙。
 
 我认为护城河仍然成立，但它必须被搬到另一个位置才诚实。**不会被自动化的是问责**：审计链、权限模型，以及监管来问的时候那份记录上的签字。映射是一个数据问题，而且正在变便宜。映射错了谁负责，则是另一类问题，而且没有任何模型会接下这个责任。**可防守的那一层，是为"错了"负责的那一层。**
 

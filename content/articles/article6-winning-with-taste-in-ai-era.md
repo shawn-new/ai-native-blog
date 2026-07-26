@@ -39,8 +39,8 @@ history:
 # Your Team's Taste Is the Bottleneck. Good News: It's Trainable.
 # 团队的 taste 才是瓶颈。好消息是，它可以练
 
-## Coherence Stopped Being a Signal
-## 连贯不再是信号
+## Coherence Became a Weak Signal
+## 连贯变成了一个弱信号
 
 **English:**
 
@@ -54,7 +54,7 @@ Without that answer, every change was a guess. Customer feedback went from encou
 
 I was not on that team. I am the one who pivoted the project afterward, so I could not leave the question open. Before pointing the project anywhere new, I had to decide what had actually gone wrong.
 
-Working that out convinced me of something bigger, and it is the real subject of this post. Coherence has stopped meaning that anyone thought it through.
+Working that out convinced me of something bigger, and it is the real subject of this post. Coherence says much less than it used to about whether anyone thought it through.
 
 "We needed evals" is the most comfortable conclusion a post-mortem can reach. It blames nobody, it is purely technical, and it converts neatly into a project. So the harder reading deserves saying out loud: maybe the product was solving a problem nobody had, and the missing eval had nothing to do with the outcome.
 
@@ -64,9 +64,9 @@ When we pivoted, we built one. The product did not become good overnight. Other 
 
 That is why I think the bottleneck moved. For most of my career, coherence was a decent proxy for quality. If a design doc held together, someone had probably thought it through, because writing it coherently cost about as much work as thinking it through. Reviewers leaned on that. I leaned on that.
 
-That proxy is gone. Coherent docs, coherent code, coherent strategy now cost minutes. Coherence still tells me an artifact is readable. It tells me nothing about whether it is true.
+That proxy got much weaker. Coherent docs, coherent code, coherent strategy now cost minutes. Coherence still tells me an artifact is readable, and incoherence is still a bad sign. What it no longer tells me is whether anyone checked that the thing is true.
 
-So the first filter in most review processes is firing on a signal that carries no information. Something has to replace it. The replacement is judgment applied before the metrics arrive. That is what I mean by taste.
+So the first filter in most review processes is leaning on a signal that has lost most of its weight. Something has to replace it. The replacement is judgment applied before the metrics arrive. That is what I mean by taste.
 
 **中文：**
 
@@ -80,7 +80,7 @@ Demo 能跑。代码能 compile。Spec 结构完整。然后有人问：agent �
 
 我不在那个团队里。我是后来 pivot 这个项目的人，所以我没法让这个问题悬着。在把这个项目指向新方向之前，我得先判断上一轮到底错在哪。
 
-把这件事想清楚，也让我确认了一个更大的变化，那才是这篇文章真正要谈的：连贯，已经不再说明有人想清楚了。
+把这件事想清楚，也让我确认了一个更大的变化，那才是这篇文章真正要谈的：连贯这件事，现在能说明的东西比过去少得多。
 
 "我们缺 eval"是复盘会最舒服的结论。它不指向任何人，纯技术，而且可以立项。所以更难听的那种读法必须说出来：也许这个产品解决的问题本身就不存在，缺 eval 和后来的结果无关。
 
@@ -90,9 +90,9 @@ Pivot 的时候我们把 eval 建起来了。产品没有因此一夜变好，�
 
 这就是我认为瓶颈已经移动的原因。过去很长一段时间里，连贯性是质量的一个不错的替代指标。一份设计文档如果自洽，通常说明有人真的想清楚了，因为把它写连贯，和把它想清楚，成本差不多。Reviewer 靠这个筛第一遍。我也靠这个。
 
-这个替代指标现在失效了。连贯的文档、连贯的代码、连贯的策略，几分钟就能产出。连贯性现在只说明这东西能读，不说明这东西是不是真的。
+这个替代指标现在弱了很多。连贯的文档、连贯的代码、连贯的策略，几分钟就能产出。连贯性仍然说明这东西能读，而不连贯依然是个坏信号。它不再说明的是：有没有人核对过这东西是不是真的。
 
-也就是说，大多数 review 流程的第一道筛子，筛的是一个不带信息的信号。它必须被替换掉。替换它的东西，是在指标出现之前就要做出的判断。这就是我说的 taste。
+也就是说，大多数 review 流程的第一道筛子，靠的是一个已经失去大部分分量的信号。它必须被替换掉。替换它的东西，是在指标出现之前就要做出的判断。这就是我说的 taste。
 
 ---
 
@@ -251,7 +251,7 @@ The practical order still holds. If you have no eval at all, go build it before 
 
 **The second argument: every cycle says this.** Code is cheap, vision is valuable. I heard it through offshoring, through the no-code wave, through the app-store gold rush. Each time, execution turned out to be the hard part anyway. That history should make you suspicious of this post.
 
-My answer is that the general version was probably wrong those times, and that I am making a narrower one. I am not saying ideas now matter more than execution. I am saying one specific heuristic broke: the reviewer's habit of treating a coherent artifact as evidence that someone thought it through. That habit is old, deeply wired, and now actively wrong.
+My answer is that the general version was probably wrong those times, and that I am making a narrower one. I am not saying ideas now matter more than execution. I am saying one specific heuristic broke: the reviewer's habit of treating a coherent artifact as evidence that someone thought it through. That habit is old, deeply wired, and now far less reliable than it feels.
 
 **中文：**
 
@@ -265,7 +265,7 @@ My answer is that the general version was probably wrong those times, and that I
 
 **第二个反驳：每一轮周期都这么说。** 代码不值钱，眼光值钱。外包那轮我听过，no-code 那轮我听过，"人人都能做 App"那轮我也听过。每一次，最后难的还是执行。这段历史应该让你对这篇文章保持怀疑。
 
-我的回答是：那几次的通用版说法大概是错的，而我提的是一个更窄的版本。我没有说现在想法比执行更重要。我说的是一个具体的启发式坏掉了：reviewer 习惯把"这东西写得连贯"当成"有人想清楚了"的证据。这个习惯很老，长在肌肉里，而它现在是错的。
+我的回答是：那几次的通用版说法大概是错的，而我提的是一个更窄的版本。我没有说现在想法比执行更重要。我说的是一个具体的启发式坏掉了：reviewer 习惯把"这东西写得连贯"当成"有人想清楚了"的证据。这个习惯很老，长在肌肉里，而它现在远没有感觉上那么可靠。
 
 ---
 
@@ -282,7 +282,7 @@ The thirty seconds are not the hard part. Looking is. What I found when I starte
 
 You can run the same check backwards, on work you have already done. Pull up the last three calls you made: something you shipped, something you killed, something you sent back. For each one, what did you predict at the time, specifically enough to check now? Go check. Most people cannot start, because the prediction was never written down. That result is the useful one.
 
-I am running the same test on this post. The claim on the table is that coherence stopped carrying information, and that review habits built on it are failing quietly. Here is the check, and it runs on evidence your team already has. Pull up three artifacts that went through review last quarter without an argument. How many turned out to be wrong in a way the review should have caught? If that rate is no different from two years ago, coherence still carries information where you work, and I am wrong.
+I am running the same test on this post. The claim on the table is that coherence carries much less information than it used to, and that review habits built on it are failing quietly. Here is the check, and it runs on evidence your team already has. Pull up three artifacts that went through review last quarter without an argument. How many turned out to be wrong in a way the review should have caught? If that rate is no different from two years ago, coherence still carries its old weight where you work, and I am wrong.
 
 I would rather hear that than not. It is the only version of this post that could teach me anything.
 
@@ -296,6 +296,6 @@ Taste 在数据到来之前行动，这也是这个词特别容易被滥用的�
 
 同样的核对可以往回做，用在已经做完的事情上。翻出你最近的三个决定：一个 ship 的，一个 kill 的，一个打回去的。每一个，你当时的预测是什么，具体到现在可以核对？去核对。大多数人卡在第一步，因为预测从来没被写下来。这个结果才是有用的。
 
-我对这篇文章做同样的测试。摆在桌上的观点是：连贯性不再携带信息，建立在它之上的 review 习惯正在悄悄失效。检验它用的是你团队已经有的材料。翻出上个季度三个没有争论就通过 review 的产出物，其中有几个后来被证明是错的，而且是 review 本该拦下的那种错？如果这个比例和两年前没有差别，那连贯性在你那里仍然携带信息，我就是错的。
+我对这篇文章做同样的测试。摆在桌上的观点是：连贯性携带的信息比过去少得多，而建立在它之上的 review 习惯正在悄悄失效。检验它用的是你团队已经有的材料。翻出上个季度三个没有争论就通过 review 的产出物，其中有几个后来被证明是错的，而且是 review 本该拦下的那种错？如果这个比例和两年前没有差别，那连贯性在你那里仍然保有旧的分量，我就是错的。
 
 我宁可听到这个结果。只有这一种版本的反馈，能让我学到东西。
