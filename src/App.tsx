@@ -9,10 +9,25 @@ import './styles/App.css';
 const showLocalMetadata = import.meta.env.DEV;
 const hiddenArticleIds = new Set(['article5-death-of-middle-management']);
 
-const articlePath = (article: Article) => `/articles/${article.slug}`;
+// Locale lives in the path: /articles/<slug> is English, /cn/articles/<slug> is
+// Chinese. Keeping it in the URL rather than in component state means a reader
+// can link to, share, or bookmark a specific language.
+type Locale = 'en' | 'cn';
+
+const localeFromPath = (path: string): Locale =>
+  path === '/cn' || path.startsWith('/cn/') ? 'cn' : 'en';
+
+const stripLocale = (path: string) => path.replace(/^\/cn(?=\/|$)/, '') || '/';
+
+const localePrefix = (locale: Locale) => (locale === 'cn' ? '/cn' : '');
+
+const homePath = (locale: Locale) => `${localePrefix(locale)}/`;
+
+const articlePath = (article: Article, locale: Locale) =>
+  `${localePrefix(locale)}/articles/${article.slug}`;
 
 const findArticleByPath = (path: string) => {
-  const match = path.replace(/\/+$/, '').match(/^\/articles\/([^/]+)$/);
+  const match = stripLocale(path).replace(/\/+$/, '').match(/^\/articles\/([^/]+)$/);
   if (!match) return null;
   const slug = decodeURIComponent(match[1]).toLowerCase();
   return articles.find(a => a.slug === slug) ?? null;
@@ -27,7 +42,7 @@ const findArticleByLegacyLocation = (path: string, hash: string) => {
     const byHash = articles.find(a => a.id === legacyHashId);
     if (byHash) return byHash;
   }
-  const legacyPathId = path.replace(/^\/+|\/+$/g, '');
+  const legacyPathId = stripLocale(path).replace(/^\/+|\/+$/g, '');
   return articles.find(a => a.id === legacyPathId) ?? null;
 };
 
@@ -36,17 +51,16 @@ const getArticleTimestamp = (article: Article) => {
   return Number.isNaN(timestamp) ? 0 : timestamp;
 };
 
-const getInitialLocale = (): 'en' | 'cn' => {
-  const path = window.location.pathname.toLowerCase();
-  const params = new URLSearchParams(window.location.search);
-  const queryLang = params.get('locale') || params.get('lang');
-  return path.includes('/cn/') || queryLang === 'cn' || queryLang === 'zh' ? 'cn' : 'en';
+// ?lang=cn was the old way to pick a language. Those links still exist, so honour
+// the query once on arrival and then rewrite the address bar to the path form.
+const legacyQueryLocale = (search: string): Locale | null => {
+  const q = new URLSearchParams(search).get('locale') || new URLSearchParams(search).get('lang');
+  return q === 'cn' || q === 'zh' ? 'cn' : q === 'en' ? 'en' : null;
 };
 
 function App() {
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
-  // Locale is chosen by the URL (?lang=cn) and does not change after load.
-  const [locale] = useState<'en' | 'cn'>(getInitialLocale);
+  const [locale, setLocale] = useState<Locale>(() => localeFromPath(window.location.pathname));
   const [activeSlug, setActiveSlug] = useState<string>('');
   const heroRef = useRef<HTMLElement>(null);
   // Keep in step with --nav-height in App.css.
@@ -56,18 +70,24 @@ function App() {
     const selectArticleFromLocation = () => {
       const { pathname, hash, search } = window.location;
 
-      const article = findArticleByPath(pathname);
+      // An old ?lang= link decides the language once, then the query is dropped
+      // so the canonical path form is what ends up in the address bar.
+      const fromQuery = legacyQueryLocale(search);
+      const activeLocale = fromQuery ?? localeFromPath(pathname);
+      setLocale(activeLocale);
+
+      const article = findArticleByPath(pathname) ?? findArticleByLegacyLocation(pathname, hash);
+      const canonical = article
+        ? articlePath(article, activeLocale)
+        : `${localePrefix(activeLocale)}${stripLocale(pathname).replace(/\/+$/, '') || '/'}`;
+
+      if (canonical !== pathname || search) {
+        window.history.replaceState(null, '', canonical);
+      }
+
       if (article) {
         setCurrentArticle(article);
         if (!hash) window.scrollTo(0, 0);
-        return;
-      }
-
-      const legacyArticle = findArticleByLegacyLocation(pathname, hash);
-      if (legacyArticle) {
-        window.history.replaceState(null, '', `${articlePath(legacyArticle)}${search}`);
-        setCurrentArticle(legacyArticle);
-        window.scrollTo(0, 0);
         return;
       }
 
@@ -196,9 +216,8 @@ function App() {
   };
 
   const navigateTo = (id: string | null) => {
-    const params = window.location.search;
     const article = id ? articles.find(a => a.id === id) ?? null : null;
-    window.history.pushState(null, '', `${article ? articlePath(article) : '/'}${params}`);
+    window.history.pushState(null, '', article ? articlePath(article, locale) : homePath(locale));
     setCurrentArticle(article);
     window.scrollTo(0, 0);
   };

@@ -34,9 +34,14 @@ const writeRoute = (routePath, title) => {
 let canonical = 0;
 let legacy = 0;
 
+// Language is part of the path (/articles/... and /cn/articles/...), so both need a
+// real file or a pasted Chinese URL 404s on a cold load.
+writeRoute('cn', 'Sean Blog');
+
 for (const article of articles) {
   writeRoute(path.join('articles', article.slug), article.titleEn);
-  canonical += 1;
+  writeRoute(path.join('cn', 'articles', article.slug), article.titleZh || article.titleEn);
+  canonical += 2;
 
   // Links minted before articles had real URLs used the id as a path. Serve those with
   // a 200 as well — the app rewrites them to the canonical URL once it boots. A 404
