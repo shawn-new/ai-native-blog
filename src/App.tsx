@@ -233,28 +233,32 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        <div className="container nav-content">
-          <div className="logo" onClick={() => navigateTo(null)}>
-            The Sean Thesis
+      {/* The landing page is the title. A nav bar above it would just repeat the
+          name, so it only appears once the reader is inside an article. */}
+      {currentArticle ? (
+        <nav>
+          <div className="container nav-content">
+            <div className="logo" onClick={() => navigateTo(null)}>
+              Sean
+            </div>
+            <button
+              className="language-switch"
+              type="button"
+              onClick={toggleLocale}
+              aria-label={locale === 'cn' ? 'Switch to English' : '切换到中文'}
+            >
+              {locale === 'cn' ? 'EN' : '中'}
+            </button>
           </div>
-          <button
-            className="language-switch"
-            type="button"
-            onClick={toggleLocale}
-            aria-label={locale === 'cn' ? 'Switch to English' : '切换到中文'}
-          >
-            {locale === 'cn' ? 'EN' : '中'}
-          </button>
-        </div>
-      </nav>
+        </nav>
+      ) : null}
 
-      <main className="container">
+      <main className={currentArticle ? 'container' : 'container container-no-nav'}>
         {!currentArticle ? (
           <>
             <section className="hero" ref={heroRef}>
-              <h1>Logic<br/>& Intent</h1>
-              <p>{locale === 'cn' ? 'Sean 论题 • 关于技术与商业的系统性思考' : 'The Sean Thesis • Systemic Thoughts on Technology & Business'}</p>
+              <h1>Sean's Blog</h1>
+              <p>{locale === 'cn' ? '关于技术与商业的系统性思考' : 'Systemic Thoughts on Technology & Business'}</p>
             </section>
             {homepageArticles.length > 0 && (
               <div className="category-section">

@@ -108,6 +108,10 @@ main {
   margin-top: var(--nav-height);
 }
 
+.container-no-nav {
+  margin-top: 0;
+}
+
 /* --- Hero --- */
 .hero {
   padding: 8rem 0 5rem 0;
@@ -116,12 +120,15 @@ main {
 
 .hero h1 {
   font-family: var(--font-vogue);
-  font-size: clamp(3.8rem, 13vw, 9.5rem);
+  /* Sits on one line, so the size is driven by viewport width rather than a
+     fixed ceiling, and never wraps. */
+  font-size: clamp(2rem, 11.5vw, 8rem);
   font-weight: 900;
-  line-height: 0.82;
+  line-height: 0.9;
   text-transform: uppercase;
   letter-spacing: -0.16rem;
   margin-bottom: 2.5rem;
+  white-space: nowrap;
 }
 
 .hero p {
@@ -627,8 +634,8 @@ footer {
   }
 
   .hero h1 {
-    font-size: clamp(4rem, 18vw, 7rem);
-    letter-spacing: -0.3rem;
+    font-size: clamp(1.6rem, 12vw, 4rem);
+    letter-spacing: -0.12rem;
     margin-bottom: 3rem;
   }
 
@@ -748,3 +755,4 @@ footer {
     padding-top: 4rem;
   }
 }
+
