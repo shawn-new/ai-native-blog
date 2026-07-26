@@ -6,7 +6,7 @@ titleZh: "没人打开 app 之后，你靠什么收费？"
 category: "Opinions"
 date: "2026-03-29"
 author: "Sean"
-release: "published"
+release: "draft"
 keywords:
   - "SaaS Endgame"
   - "AI Agents"

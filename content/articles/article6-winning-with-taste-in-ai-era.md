@@ -111,7 +111,7 @@ One test tells me whether I have that ability in a given moment. Can I write my 
 
 "This feels wrong" fails the test. "The agent has no recovery path when it fails halfway" passes it. So does: there is no eval, so we cannot tell a regression from noise. There is no approval step before the write. This prompt contains a product decision nobody reviewed. The agent cannot say what it changed. The UI has no undo.
 
-Every one of those can be argued with, priced, and scheduled. "Feels wrong" can only be deferred to whoever has more seniority in the room.
+Every one of those can be argued with, priced, and scheduled. "Feels wrong" can only be deferred to whoever has more seniority in the room. The difference is who pays for the mistake and when. An objection written as a failure path gets fixed this week. One that stays a feeling gets fixed by a user, months later, in production.
 
 Not every objection can be found by reading the artifact. Some appear only when you watch someone use the thing.
 
@@ -129,7 +129,7 @@ Taste 不是风格，也不是你对一个东西的感觉。可以这样定义�
 
 "这里感觉不对"通不过。"Agent 中途失败时没有恢复路径"能通过。同样能通过的还有：没有 eval，所以我们分不清是退步还是噪音；写入之前没有确认步骤；这个 prompt 里藏了一个没人 review 过的产品决策；agent 说不清自己改了什么；界面没有撤销。
 
-这些都可以被反驳、被估价、被排期。"感觉不对"只能交给房间里资历最深的那个人裁决。
+这些都可以被反驳、被估价、被排期。"感觉不对"只能交给房间里资历最深的那个人裁决。**区别在于谁来为这个错误买单、什么时候买单。** 写成失败路径的反对意见，这周就被修掉；停留在感觉上的那个，几个月后由用户在生产环境里替你修。
 
 但不是所有反对意见都能靠读文档发现。有些只有在你看着别人用的时候才会冒出来。
 
@@ -154,7 +154,7 @@ That ranks the work. Migrations do best, because the old behavior is the spec an
 
 That claim needs narrowing. The obvious variable is test coverage. It is not the right one. It is whether failure is *loud*. A repo at eighty percent coverage whose tests never assert on the behavior you changed is worse than a thin smoke test that dies in ten seconds. Coverage measures how much code runs. I care about how fast a wrong change announces itself.
 
-A falsifier is only useful if I cannot wriggle out of it afterward, so here is one with the numbers filled in. Take a codebase over 100k lines with no assertion-level tests on the paths being touched. A team lands an agent-driven cross-module refactor there, big enough that no single reviewer read the whole diff, and ninety days later there has been no rollback and no P1 traced to it. Same team does it twice. That kills my model, and I would want to hear about it.
+The payoff of a claim this small is measured in weeks. A team holding it stops betting quarters on agent-driven refactors of undocumented code, and spends them where the criteria already exist. A falsifier is only useful if I cannot wriggle out of it afterward, so here is one with the numbers filled in. Take a codebase over 100k lines with no assertion-level tests on the paths being touched. A team lands an agent-driven cross-module refactor there, big enough that no single reviewer read the whole diff, and ninety days later there has been no rollback and no P1 traced to it. Same team does it twice. That kills my model, and I would want to hear about it.
 
 **中文：**
 
@@ -166,7 +166,7 @@ A falsifier is only useful if I cannot wriggle out of it afterward, so here is o
 
 这个观点还要再窄一点。最容易想到的变量是测试覆盖率。不是它。关键是失败够不够*响*。一个覆盖率八十、但测试从不断言你改动那部分行为的 repo，比一个十秒就挂掉的粗糙冒烟测试更糟。覆盖率衡量的是多少代码被跑过，我在意的是一个错误改动多快会自己叫出来。
 
-一个证伪条件如果事后能被我自己解释掉，就不算数，所以我把数字填进去：一个十万行以上的代码库，被改动的路径上没有断言级测试。某个团队在这里用 agent 完成了一次跨模块重构，改动大到没有任何一个 reviewer 完整读过整个 diff，上线九十天内没有回滚，也没有能追溯到它的 P1。同一个团队做到两次。那我的模型就是错的，我想知道。
+把观点缩到这么小，回报是用周来计的。持有这个观点的团队，不会再把一个季度押在对没有文档的代码做 agent 重构上，而是把这些周花在正确性标准已经写下来的地方。一个证伪条件如果事后能被我自己解释掉就不算数，所以我把数字填进去：一个十万行以上的代码库，被改动的路径上没有断言级测试。某个团队在这里用 agent 完成了一次跨模块重构，改动大到没有任何一个 reviewer 完整读过整个 diff，上线九十天内没有回滚，也没有能追溯到它的 P1。同一个团队做到两次。那我的模型就是错的，我想知道。
 
 ---
 
@@ -189,7 +189,7 @@ Under schedule pressure, three of them get cut, in a predictable order. Notice w
 
 **Eval goes first**, because it is the only step with no visible output. That is the cut behind the two months I described at the top, and the cost is always deferred. Someone changes a prompt, quality "feels" different, and there is no way to separate a regression from noise. Teams in that state stop touching the prompt. Quality freezes at whatever it was on the day the last person who understood it left.
 
-**Write-back goes second.** Users correct the model, the correction fixes that one session, and nothing flows back. This one hurts most. Corrections are the highest-quality labeled data the product will ever generate: a domain expert telling you exactly what was wrong, for free, at the moment of the error. Throw that away and the product cannot get better at the thing its own users care most about.
+**Write-back goes second.** Users correct the model, the correction fixes that one session, and nothing flows back. This one hurts most. Corrections are the highest-quality labeled data the product will ever generate: a domain expert telling you exactly what was wrong, for free, at the moment of the error. Throw that away and the product cannot get better at the thing its own users care most about. Every correction thrown away is a lap the team has to run again.
 
 **Owner goes third, and this is the one I would fix first.** Agent-generated code has no author. When it breaks at 2 a.m., nobody has the context, because nobody built any. The reviewer read a diff for eight minutes and approved it. Human code carries an invisible index: who wrote it, what they were worried about, what they tried first. Agent code arrives with none of that, and I have not seen a team replace it with anything.
 
@@ -209,7 +209,7 @@ Demo 会把最要紧的部分藏起来。在 demo 里，有人替你选好了输
 
 **eval 最先被砍**，因为它是唯一没有可见产出的一步。开头那两个月砍掉的就是它，而代价总是延后出现：有人改了 prompt，质量"感觉"变了，但没有办法把退步和噪音分开。走到这一步的团队，会变得不敢碰 prompt。质量就冻结在最后一个懂它的人离职那天。
 
-**写回第二个被砍。** 用户纠正了模型，这次纠正修好了这一次会话，然后什么都没有流回去。这一刀最疼。纠正是这个产品能拿到的质量最高的标注数据：一个领域专家在错误发生的当下，免费告诉你到底哪里错了。扔掉它，这个产品在用户最在意的事情上就不会变好。
+**写回第二个被砍。** 用户纠正了模型，这次纠正修好了这一次会话，然后什么都没有流回去。这一刀最疼。纠正是这个产品能拿到的质量最高的标注数据：一个领域专家在错误发生的当下，免费告诉你到底哪里错了。扔掉它，这个产品在用户最在意的事情上就不会变好。**每一条被扔掉的纠正，都是团队要重跑一遍的一圈。**
 
 **归属第三个被砍，而这是我会最先补回来的一个。** Agent 生成的代码没有作者。它凌晨两点坏掉的时候，没有人有上下文，因为根本没有人建立过上下文：reviewer 花了八分钟看完 diff，点了同意。人写的代码带着一层看不见的索引：谁写的，他当时担心什么，他先试过什么。Agent 的代码不带这些，而我还没见过哪个团队拿别的东西补上。
 
@@ -294,6 +294,8 @@ I am running the same test on this post. The claim on the table is that coherenc
 
 I would rather hear that than not. It is the only version of this post that could teach me anything.
 
+And the reason to care about any of it: every week spent on something users did not need is a week the team cannot get back. Taste is what shortens that list.
+
 **中文：**
 
 Taste 在数据到来之前行动，这也是这个词特别容易被滥用的原因。"这个没有 taste"可以是"我职级比你高"的另一种说法。我在真实的评审里听过有人这么用。
@@ -307,3 +309,5 @@ Taste 在数据到来之前行动，这也是这个词特别容易被滥用的�
 我对这篇文章做同样的测试。摆在桌上的观点是：连贯性携带的信息比过去少得多，而建立在它之上的 review 习惯正在悄悄失效。检验它用的是你团队已经有的材料。翻出上个季度三个没有争论就通过 review 的产出物，其中有几个后来被证明是错的，而且是 review 本该拦下的那种错？如果这个比例和两年前没有差别，那连贯性在你那里仍然保有旧的分量，我就是错的。
 
 我宁可听到这个结果。只有这一种版本的反馈，能让我学到东西。
+
+而所有这些之所以值得在意，理由只有一个：**每一周花在用户不需要的东西上，团队就再也拿不回来。Taste 的作用，是让这份清单变短。**
