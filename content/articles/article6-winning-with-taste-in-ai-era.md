@@ -215,8 +215,8 @@ Demo 会把最要紧的部分藏起来。在 demo 里，有人替你选好了输
 
 ---
 
-## Borrow the Question, Not the Conclusion
-## 借问题，不借结论
+## Borrow the Question. Leave the Conclusion.
+## 借问题，把结论留下
 
 **English:**
 

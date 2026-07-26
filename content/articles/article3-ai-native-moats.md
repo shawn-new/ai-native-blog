@@ -28,8 +28,8 @@ history:
 # You Don't Have a Moat. You Have a Timer.
 # 你没有护城河，你有倒计时
 
-## The Death Is Chronic, Not Sudden
-## 死法是慢性病，不是猝死
+## The Death Is a Chronic One
+## 死法是一种慢性病
 
 **English:**
 
