@@ -32,7 +32,7 @@ history:
 
 An agent can draft the update, summarize the account, fill the ticket, query the database, trigger the workflow, and write the result back. The user may never open the full app. They ask from Slack, email, a browser sidebar, or another AI workspace.
 
-The usual way to describe this is that SaaS won by owning the screen, and AI is taking the screen away. I wrote that version myself, and it does not survive contact with the list of companies that actually won.
+The usual way to describe this is that SaaS won by owning the screen, and AI is taking the screen away. It does not survive contact with the list of companies that actually won.
 
 CRM, ERP, HRIS, ITSM, billing, observability: those categories have been mocked for their interfaces for twenty years while renewing above ninety-five percent. They did not win on the screen. They won on implementation cost, integration depth, compliance posture, and a procurement department that does not want to run another vendor evaluation. UI rarely makes the top three on an enterprise buying scorecard, and when it does appear it usually arrives disguised as training cost.
 
@@ -44,7 +44,7 @@ What AI changes is that it flattens the side where the screen actually mattered.
 
 Agent 可以写更新、总结 account、填 ticket、查数据库、触发 workflow，再把结果写回系统。用户可能根本不打开完整的 app，他在 Slack、邮件、浏览器侧边栏，或者另一个 AI workspace 里就把事办了。
 
-通常的讲法是：SaaS 靠占住屏幕赢，而 AI 正在把屏幕拿走。这个版本我自己也写过，但它经不起和真正赢家的名单对照。
+通常的讲法是：SaaS 靠占住屏幕赢，而 AI 正在把屏幕拿走。但这个说法经不起和真正赢家的名单对照。
 
 CRM、ERP、HRIS、ITSM、billing、observability：这些品类的界面被吐槽了二十年，续约率一直在九成五以上。它们不是靠屏幕赢的，是靠实施成本、集成深度、合规资质，以及一个不想再走一遍供应商评估流程的采购部门。UI 很少能进企业采购评分表的前三名；它真出现的时候，通常是伪装成培训成本进来的。
 

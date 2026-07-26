@@ -278,7 +278,7 @@ My answer is that the general version was probably wrong those times, and that I
 
 **English:**
 
-Taste acts before the data arrives, which is also what makes the word so easy to abuse. "This lacks taste" can mean "I outrank you." I have heard it used that way, and I have used it that way.
+Taste acts before the data arrives, which is also what makes the word so easy to abuse. "This lacks taste" can mean "I outrank you." I have heard it used that way in real reviews.
 
 One habit keeps me honest, and it costs about thirty seconds. Before shipping a call I care about, I write the prediction down in one sentence, with a number and a date. Then I set a reminder for that date and go look.
 
@@ -292,7 +292,7 @@ I would rather hear that than not. It is the only version of this post that coul
 
 **中文：**
 
-Taste 在数据到来之前行动，这也是这个词特别容易被滥用的原因。"这个没有 taste"可以是"我职级比你高"的另一种说法。我听过有人这么用，我自己也这么用过。
+Taste 在数据到来之前行动，这也是这个词特别容易被滥用的原因。"这个没有 taste"可以是"我职级比你高"的另一种说法。我在真实的评审里听过有人这么用。
 
 有一个习惯让我保持诚实，成本大概三十秒：在做一个我在意的决定之前，我把预测写成一句话，带一个数字和一个日期。然后在那个日期设一个提醒，到点去看。
 

@@ -275,7 +275,7 @@ The obvious objection: if AI lets anyone cross the stack, why wouldn't it compre
 
 The easy answer is that it only compresses *shallow* ownership. That answer is circular: "shallow" was defined as the compressible kind, so the claim could never lose. Here is the version that can.
 
-What AI compresses is not ownership but **how many owners you need**. One person can now hold more surface than before, which means the three dimensions collapse back into one person at small scale and only separate when the surface exceeds what one person can carry. My claim is therefore about organizations above a certain size. Below that size it is simply wrong, and I should have said so.
+What AI compresses is not ownership but **how many owners you need**. One person can now hold more surface than before, which means the three dimensions collapse back into one person at small scale and only separate when the surface exceeds what one person can carry. My claim is therefore about organizations above a certain size. Below that size it does not apply.
 
 So here is what would falsify the rest of it. If two years from now the job descriptions for these three kinds of work are still largely interchangeable and the hiring funnels stay shared, the specialization I am describing did not happen. If deployment engineers mostly exit the company rather than moving into product or platform roles, then the loop is not a loop and that role is an absorption pit. And if FDE hours per new dollar of ARR do not fall at companies running this model, then the loop is a drawing on a slide.
 
@@ -287,7 +287,7 @@ I would rather name those than keep an argument that survives every observation.
 
 容易给的回答是：它只压缩*浅层* ownership。但这个回答是循环的："浅层"的定义就是"可被压缩的那种"，所以这个主张永远不会输。下面是一个会输的版本。
 
-AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能持有比以前更大的面，这意味着在小规模下这三个维度会塌回同一个人身上，只有当这个面超出一个人能扛的范围时它们才分开。所以我这个主张只关于**超过某个规模的组织**。在那个规模以下它就是错的，我本该早点说清楚。
+AI 压缩的不是 ownership，是**你需要几个 owner**。一个人现在能持有比以前更大的面，这意味着在小规模下这三个维度会塌回同一个人身上，只有当这个面超出一个人能扛的范围时它们才分开。所以我这个主张只关于**超过某个规模的组织**。在那个规模以下，它不适用。
 
 那么，什么能证伪剩下的部分？如果两年后这三类工作的招聘 JD 仍然高度可互换、招聘漏斗仍然共用，那我说的分化没有发生。如果部署工程师的去向主要是离开公司、而不是转入产品或平台岗位，那这个回路就不是回路，那个位置是个吸收槽。如果在跑这套模式的公司里，每新增一美元 ARR 所需的 FDE 工时不下降，那这个回路只是一张画在幻灯片上的图。
 
