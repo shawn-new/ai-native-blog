@@ -224,6 +224,8 @@ Judgment does not get stronger inside your own head. Taste still acts before the
 
 The fastest checker available is a customer with something at stake, provided you go to them. The ones who come to you arrive on the schedule from the top of this post. Long before you have an eval harness, you can sit with the people who use the thing and ask what broke. What makes their feedback useful is specificity, and specificity comes from stakes. Someone tells you exactly which step cost them an hour because the hour was actually lost. That is a different filter from loudness. The loudest customer is often the least specific one, and a roadmap can lose a quarter to whoever complains most fluently. So I look for the users who hurt most. Volume is a separate signal, and a weaker one. Then I still need measurement to tell me how many of them there are.
 
+The number worth watching is the gap between having an idea and hearing someone credible say it is wrong. Compressing that gap is what makes taste compound, because it turns one large bet into many small tests, and each test returns a correction you can act on. Let the gap stretch and you get the two months at the top of this post: a confident team, a coherent product, and the first real verification arriving as a rollback.
+
 Judgment can also be borrowed from people, and most of us borrow the wrong layer. The wrong layer is vocabulary. Read enough of this genre and you can say *plausible artifact* or *contact with failure* without having earned either. Then it shows up in a design review as a more sophisticated way to say "feels wrong," which makes weak objections harder to challenge. That is the opposite of the point.
 
 The layer worth borrowing is the question. Conclusions do not transfer. They grew out of constraints you do not have. "Who operates this at 3 a.m.?" travels anywhere. "This should be a narrow workflow, not a platform" does not, because it was an answer to their situation. And the borrow only counts once you take the question back to your own constraints and let it be wrong there.
@@ -233,6 +235,8 @@ The layer worth borrowing is the question. Conclusions do not transfer. They gre
 判断在自己脑子里不会变强。Taste 依然在数据之前行动，它的用处就在这里。但它的准确率，来自它事后被一个不是你的人核对过多少次。
 
 最快的核对者，是一个有切身利害的客户，前提是你主动去找他。等他自己找上门的时候，就是开头那个故事的时间表了。在你有 eval 之前很久，你就可以坐到真正在用的人旁边，问他们哪里坏了。他们的反馈之所以有用，是因为具体，而具体来自利害：一个人能说清是哪一步让他多花了一小时，是因为那一小时是真花掉的。这和"声音大"是两个筛子。喊得最响的客户往往是最不具体的那个，而一个 roadmap 可以被最会抱怨的人拿走一个季度。所以我找的是疼得最厉害的用户。嗓门是另一个信号，而且弱得多。找到之后，我仍然需要测量来告诉我这样的人有多少。
+
+**真正该盯的那个数，是从"有一个想法"到"听见一个可信的人说它不对"之间隔了多久。** 把这个间隔压短，taste 才会复利，因为它把一次大赌拆成很多次小测试，而每次测试都带回一条可以照着改的修正。让这个间隔拉长，你得到的就是开头那两个月：一个自信的团队，一个连贯的产品，第一次真正的验证以 rollback 的形式到达。
 
 判断也可以从人身上借，而大多数人借错了层。错的那一层是词汇。这类文章读多了，你不需要付出任何代价，就能熟练说出"看似成立的方案""接触失败"。然后它出现在设计评审上，变成一种更高级的方式来说"感觉不对"，弱的反对意见反而更难被反驳。这和本意正好相反。
 
