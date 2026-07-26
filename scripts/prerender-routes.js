@@ -31,8 +31,7 @@ const writeRoute = (routePath, title) => {
   fs.writeFileSync(path.join(outDir, 'index.html'), html);
 };
 
-let canonical = 0;
-let legacy = 0;
+let routes = 0;
 
 // Language is part of the path (/articles/... and /cn/articles/...), so both need a
 // real file or a pasted Chinese URL 404s on a cold load.
@@ -41,15 +40,7 @@ writeRoute('cn', 'Sean Blog');
 for (const article of articles) {
   writeRoute(path.join('articles', article.slug), article.titleEn);
   writeRoute(path.join('cn', 'articles', article.slug), article.titleZh || article.titleEn);
-  canonical += 2;
-
-  // Links minted before articles had real URLs used the id as a path. Serve those with
-  // a 200 as well — the app rewrites them to the canonical URL once it boots. A 404
-  // fallback would also render, but it would tell crawlers the page is gone.
-  if (article.id !== article.slug) {
-    writeRoute(article.id, article.titleEn);
-    legacy += 1;
-  }
+  routes += 2;
 }
 
 // Anything else — a typo, a deleted slug — still boots the app rather than showing
@@ -57,5 +48,5 @@ for (const article of articles) {
 fs.writeFileSync(path.join(distDir, '404.html'), template);
 
 console.log(
-  `Prerendered ${canonical} article route(s) at /articles/<slug>, ${legacy} legacy path(s), and a 404 fallback.`,
+  `Prerendered ${routes} article route(s) across /articles and /cn/articles, plus a 404 fallback.`,
 );

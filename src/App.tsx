@@ -33,30 +33,12 @@ const findArticleByPath = (path: string) => {
   return articles.find(a => a.slug === slug) ?? null;
 };
 
-// Links minted before articles had real URLs pointed at `/#<article id>`, and one
-// article had a hand-built path of its own. Both still exist in the wild, so resolve
-// them here and rewrite the address bar to the canonical URL instead of 404ing.
-const findArticleByLegacyLocation = (path: string, hash: string) => {
-  const legacyHashId = hash.replace(/^#/, '');
-  if (legacyHashId && !legacyHashId.startsWith('section-')) {
-    const byHash = articles.find(a => a.id === legacyHashId);
-    if (byHash) return byHash;
-  }
-  const legacyPathId = stripLocale(path).replace(/^\/+|\/+$/g, '');
-  return articles.find(a => a.id === legacyPathId) ?? null;
-};
 
 const getArticleTimestamp = (article: Article) => {
   const timestamp = Date.parse(article.date);
   return Number.isNaN(timestamp) ? 0 : timestamp;
 };
 
-// ?lang=cn was the old way to pick a language. Those links still exist, so honour
-// the query once on arrival and then rewrite the address bar to the path form.
-const legacyQueryLocale = (search: string): Locale | null => {
-  const q = new URLSearchParams(search).get('locale') || new URLSearchParams(search).get('lang');
-  return q === 'cn' || q === 'zh' ? 'cn' : q === 'en' ? 'en' : null;
-};
 
 function App() {
   const [currentArticle, setCurrentArticle] = useState<Article | null>(null);
@@ -68,23 +50,10 @@ function App() {
 
   useEffect(() => {
     const selectArticleFromLocation = () => {
-      const { pathname, hash, search } = window.location;
+      const { pathname, hash } = window.location;
+      setLocale(localeFromPath(pathname));
 
-      // An old ?lang= link decides the language once, then the query is dropped
-      // so the canonical path form is what ends up in the address bar.
-      const fromQuery = legacyQueryLocale(search);
-      const activeLocale = fromQuery ?? localeFromPath(pathname);
-      setLocale(activeLocale);
-
-      const article = findArticleByPath(pathname) ?? findArticleByLegacyLocation(pathname, hash);
-      const canonical = article
-        ? articlePath(article, activeLocale)
-        : `${localePrefix(activeLocale)}${stripLocale(pathname).replace(/\/+$/, '') || '/'}`;
-
-      if (canonical !== pathname || search) {
-        window.history.replaceState(null, '', canonical);
-      }
-
+      const article = findArticleByPath(pathname);
       if (article) {
         setCurrentArticle(article);
         if (!hash) window.scrollTo(0, 0);
