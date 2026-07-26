@@ -1,8 +1,6 @@
 # Controlled indexing: nothing is crawlable unless it is listed here on purpose.
-# The article previously exposed to Googlebot (/articles/the-death-of-middle-management)
-# was moved back to draft, so its Allow line was removed rather than left pointing at a
-# page that no longer exists. Add an Allow line when choosing the next article to expose.
 User-agent: Googlebot
+Allow: /articles/your-teams-taste-is-the-bottleneck
 Allow: /assets/
 Allow: /favicon.svg
 Disallow: /
